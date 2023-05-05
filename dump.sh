@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DEST=$(dirname "$(readlink -f "$0")")
 
 usage() {
