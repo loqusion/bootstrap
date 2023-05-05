@@ -1,33 +1,7 @@
-  bluetooth.service                                     loaded active running Bluetooth service
-  dbus.service                                          loaded active running D-Bus System Message Bus
-  dhcpcd.service                                        loaded active running dhcpcd on all interfaces
-  getty@tty1.service                                    loaded active running Getty on tty1
-  iwd.service                                           loaded active running Wireless service
-  kmod-static-nodes.service                             loaded active exited  Create List of Static Device Nodes
-  laptop-mode.service                                   loaded active exited  Laptop Mode Tools
-  lvm2-monitor.service                                  loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
-  polkit.service                                        loaded active running Authorization Manager
-  rtkit-daemon.service                                  loaded active running RealtimeKit Scheduling Policy Service
-  systemd-backlight@backlight:intel_backlight.service   loaded active exited  Load/Save Screen Backlight Brightness of backlight:intel_backlight
-  systemd-backlight@leds:dell::kbd_backlight.service    loaded active exited  Load/Save Screen Backlight Brightness of leds:dell::kbd_backlight
-  systemd-boot-random-seed.service                      loaded active exited  Update Boot Loader Random Seed
-  systemd-fsck@dev-disk-by\x2duuid-7193\x2d9205.service loaded active exited  File System Check on /dev/disk/by-uuid/7193-9205
-  systemd-journal-flush.service                         loaded active exited  Flush Journal to Persistent Storage
-  systemd-journald.service                              loaded active running Journal Service
-  systemd-logind.service                                loaded active running User Login Management
-  systemd-modules-load.service                          loaded active exited  Load Kernel Modules
-  systemd-random-seed.service                           loaded active exited  Load/Save OS Random Seed
-  systemd-remount-fs.service                            loaded active exited  Remount Root and Kernel File Systems
-  systemd-resolved.service                              loaded active running Network Name Resolution
-  systemd-sysctl.service                                loaded active exited  Apply Kernel Variables
-  systemd-tmpfiles-setup-dev.service                    loaded active exited  Create Static Device Nodes in /dev
-  systemd-tmpfiles-setup.service                        loaded active exited  Create Volatile Files and Directories
-  systemd-udev-trigger.service                          loaded active exited  Coldplug All udev Devices
-  systemd-udevd.service                                 loaded active running Rule-based Manager for Device Events and Files
-  systemd-update-utmp.service                           loaded active exited  Record System Boot/Shutdown in UTMP
-  systemd-user-sessions.service                         loaded active exited  Permit User Sessions
-  thermald.service                                      loaded active running Thermal Daemon Service
-  upower.service                                        loaded active running Daemon for power management
-  user-runtime-dir@1000.service                         loaded active exited  User Runtime Directory /run/user/1000
-  user@1000.service                                     loaded active running User Manager for UID 1000
-  wpa_supplicant.service                                loaded active running WPA supplicant
+bluetooth.service
+dhcpcd.service
+firewalld.service
+iwd.service
+laptop-mode.service
+thermald.service
+plocate-updatedb.timer
