@@ -20,9 +20,9 @@ config() {
 
 git clone --bare git@github.com:loqusion/dotfiles.git "$DEST"
 
-SPARSE="$DIR/sparse-checkout/$OS.txt"
-if [ -e "$SPARSE" ]; then
-	config sparse-checkout set --stdin <"$SPARSE"
+SPARSE_CHECKOUT_EXCLUDE="$DIR/sparse-checkout-exclude/$OS.txt"
+if [ -e "$SPARSE_CHECKOUT_EXCLUDE" ]; then
+	sed -e 's/^/!/' -e $'1i\\\n/*' "$SPARSE_CHECKOUT_EXCLUDE" | config sparse-checkout set --stdin
 fi
 
 config checkout
