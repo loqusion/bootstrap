@@ -1,0 +1,8 @@
+dunst
+gtk-*
+hypr
+mako
+rofi
+user-tmpfiles.d
+waybar
+wofi
