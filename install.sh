@@ -5,7 +5,6 @@ set -euo pipefail
 DIR=$(dirname "$(readlink -f "$0")")
 DEST=${DEST:-"$HOME/.local/share/dotfiles/"}
 PARENT=$(dirname "$DEST")
-OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
 if [ ! -d "$PARENT" ]; then
 	mkdir -p "$PARENT"
@@ -20,10 +19,7 @@ config() {
 
 git clone --bare git@github.com:loqusion/dotfiles.git "$DEST"
 
-SPARSE_CHECKOUT_EXCLUDE="$DIR/sparse-checkout-exclude/$OS.txt"
-if [ -e "$SPARSE_CHECKOUT_EXCLUDE" ]; then
-	sed -e 's/^/!/' -e $'1i\\\n/*' "$SPARSE_CHECKOUT_EXCLUDE" | config sparse-checkout set --stdin
-fi
+"$DIR/sparse-checkout.sh"
 
 config checkout
 config config --local status.showUntrackedFiles no
