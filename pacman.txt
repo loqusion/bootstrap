@@ -90,6 +90,7 @@ nftables
 notion-app-enhanced
 noto-fonts-emoji
 nvidia-open-dkms
+nwg-look
 obs-studio
 obsidian
 openssh
@@ -138,6 +139,7 @@ texinfo
 thermald
 tmux
 tmux-plugin-manager
+tokei
 topgrade
 transmission-cli
 tree
@@ -146,6 +148,7 @@ ttf-iosevka-nerd
 ttf-jetbrains-mono
 ttf-ms-fonts
 ttf-nerd-fonts-symbols-mono
+ttf-tamzen-font-git
 ttf-victor-mono
 ttf-victor-mono-nerd
 udisks2
@@ -162,6 +165,7 @@ wl-clipboard
 wlsunset-git
 wofi
 wtype
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xkeysnail
