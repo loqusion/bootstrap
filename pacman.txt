@@ -72,6 +72,7 @@ jq
 just
 kitty
 laptop-mode-tools
+lazydocker-bin
 lazygit
 lib32-nvidia-utils
 libva-nvidia-driver
@@ -96,11 +97,12 @@ nftables
 nm-connection-editor
 notion-app-enhanced
 noto-fonts-emoji
-nvidia-open-dkms
+nvidia-dkms
 nwg-look
 obs-studio
 obsidian
 openssh
+openvpn-update-systemd-resolved
 opera
 opera-ffmpeg-codecs
 pacman-contrib
@@ -128,7 +130,7 @@ reflector
 ripgrep
 rofi-lbonn-wayland-git
 rofimoji
-rtx
+rtx-bin
 sassc
 slurp
 socat
