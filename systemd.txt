@@ -4,4 +4,5 @@ firewalld.service
 iwd.service
 laptop-mode.service
 thermald.service
+fstrim.timer
 plocate-updatedb.timer
