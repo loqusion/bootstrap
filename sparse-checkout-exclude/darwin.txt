@@ -2,8 +2,8 @@ dunst
 fcitx5
 gtk-*
 hypr
-hypr
 mako
+paru
 rofi
 user-tmpfiles.d
 waybar
