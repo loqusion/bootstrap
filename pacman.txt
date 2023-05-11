@@ -154,6 +154,7 @@ topgrade
 transmission-cli
 tree
 ttf-google-fonts-typewolf
+ttf-intel-one-mono
 ttf-iosevka-nerd
 ttf-jetbrains-mono
 ttf-ms-fonts
