@@ -93,6 +93,7 @@ nerd-fonts-complete-starship
 networkmanager
 networkmanager-openvpn
 nftables
+nm-connection-editor
 notion-app-enhanced
 noto-fonts-emoji
 nvidia-open-dkms
@@ -159,7 +160,6 @@ ttf-tamzen-font-git
 ttf-victor-mono
 ttf-victor-mono-nerd
 udisks2
-uim
 unzip
 vlc
 waybar-hyprland-git
