@@ -35,6 +35,11 @@ dunst
 element-desktop
 eww-wayland
 exa
+fcitx5
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-mozc-ut
+fcitx5-qt
 fd
 firefox
 firewalld
@@ -80,6 +85,7 @@ mailspring
 man-db
 man-pages
 mdcat
+mozc-ut
 neofetch
 neovim-git
 neovim-symlinks
@@ -170,5 +176,7 @@ xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xkeysnail
 xorg-xhost
+xorg-xlsclients
 zellij
+zip
 zoxide
