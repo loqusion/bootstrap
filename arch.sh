@@ -13,9 +13,9 @@ cd "$DEST/paru" && makepkg -si
 paru -S --needed - <"$DEST/pacman.txt"
 
 # Copy etc files
-# for file in "$DEST/etc"/*; do
-#   sudo cp -r "$file" /etc
-# done
+for file in "$DEST/etc"/*; do
+	sudo cp -ri "$file" /etc
+done
 
 # Enable systemd services
 while read -r service; do
