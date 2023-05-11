@@ -123,6 +123,7 @@ qbittorrent
 qt5-wayland
 qt6-wayland
 ranger
+reflector
 ripgrep
 rofi-lbonn-wayland-git
 rofimoji
