@@ -14,7 +14,7 @@ paru -S --needed - <"$DEST/pacman.txt"
 
 # Copy etc files
 for file in "$DEST/etc"/*; do
-	sudo cp -ri "$file" /etc
+	sudo cp -riv "$file" /etc
 done
 
 # Enable systemd services
