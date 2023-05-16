@@ -7,5 +7,6 @@ NetworkManager-wait-online.service
 NetworkManager.service
 thermald.service
 fstrim.timer
+man-db.timer
 plocate-updatedb.timer
 reflector.timer

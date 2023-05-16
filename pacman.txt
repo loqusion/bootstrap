@@ -32,6 +32,7 @@ discord_arch_electron
 dos2unix
 dotbare
 dunst
+dura-git
 element-desktop
 eww-wayland
 exa
@@ -41,6 +42,7 @@ fcitx5-gtk
 fcitx5-mozc-ut
 fcitx5-qt
 fd
+feh
 firefox
 firewalld
 fish
@@ -87,6 +89,7 @@ man-db
 man-pages
 mdcat
 mozc-ut
+mpv
 neofetch
 neovim-git
 neovim-symlinks
@@ -131,6 +134,7 @@ ripgrep
 rofi-lbonn-wayland-git
 rofimoji
 rtx-bin
+rustup
 sassc
 slurp
 socat
@@ -181,6 +185,7 @@ xdg-user-dirs
 xkeysnail
 xorg-xhost
 xorg-xlsclients
+xxd-standalone
 zellij
 zip
 zoxide
