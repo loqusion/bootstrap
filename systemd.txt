@@ -1,10 +1,8 @@
 bluetooth.service
+dhcpcd.service
 firewalld.service
 iwd.service
 laptop-mode.service
-NetworkManager-dispatcher.service
-NetworkManager-wait-online.service
-NetworkManager.service
 thermald.service
 fstrim.timer
 man-db.timer
