@@ -46,6 +46,7 @@ feh
 firefox
 firewalld
 fish
+fisher-git
 fluent-gtk-theme
 fluent-icon-theme-git
 fm-bin
