@@ -26,6 +26,7 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 cliphist
+deno
 dhcpcd
 dictd
 discord_arch_electron
