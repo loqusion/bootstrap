@@ -25,6 +25,7 @@ catppuccin-gtk-theme-latte
 catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
+clang
 cliphist
 deno
 dhcpcd
