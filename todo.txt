@@ -1,0 +1,6 @@
+# TODO
+
+- [x] Make `install.sh` idempotent
+- [ ] Automate github authentication with `gh auth`
+- [ ] Switch dotfiles to ssh after authentication
+- [ ] Add `multilib` to `/etc/pacman.conf`
