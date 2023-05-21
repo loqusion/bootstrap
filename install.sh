@@ -6,22 +6,23 @@ DIR=$(dirname "$(readlink -f "$0")")
 DEST=${DEST:-"$HOME/.local/share/dotfiles/"}
 PARENT=$(dirname "$DEST")
 
-if [ ! -d "$PARENT" ]; then
-	mkdir -p "$PARENT"
-elif [ -e "$DEST" ]; then
-	echo "'$DEST' already exists" >&2
-	exit 1
-fi
-
 config() {
 	/usr/bin/git --git-dir="$DEST" --work-tree="$HOME" "$@"
 }
 
-git clone --bare git@github.com:loqusion/dotfiles.git "$DEST"
+mkdir -p "$PARENT"
+if [ ! -e "$DEST/HEAD" ]; then
+	rm -rfI "$DEST"
+	git clone --bare https://github.com/loqusion/dotfiles "$DEST"
+else
+	read -r -p "Pull newest changes from loqusion/dotfiles? (y/N)" yes
+	[[ "$yes" =~ "y" ]] && config pull
+fi
 
 "$DIR/sparse-checkout.sh"
 
 config checkout
+config submodule update --init --remote
 config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
