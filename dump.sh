@@ -9,13 +9,13 @@ usage() {
 case "$1" in
 arch)
 	HOSTNAME=$(cat /etc/hostname)
-	ETC_DIR="$DEST/profiles/$HOSTNAME/etc"
+	PROFILE_DIR="$DEST/profiles/$HOSTNAME"
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | cut -d' ' -f 1 >"$DEST/systemd.txt"
 	paru -Qqe >"$DEST/pacman.txt"
-	find "$ETC_DIR" -type f -not -path "*.orig" -print0 |
+	find "$PROFILE_DIR" -type f -not -path "*.orig" -not -regex ".*/xdg_.*" -print0 |
 		while IFS= read -r -d '' file; do
-			rel=$(realpath --relative-to="$ETC_DIR" "$file")
-			src="/etc/$rel"
+			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
+			src="/$rel"
 			if [[ "$file" =~ \.patch$ ]]; then
 				src="${src%.patch}"
 				orig="${file%.patch}.orig"
