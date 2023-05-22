@@ -8,12 +8,21 @@ usage() {
 
 case "$1" in
 arch)
+	HOSTNAME=$(cat /etc/hostname)
+	ETC_DIR="$DEST/profiles/$HOSTNAME/etc"
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | cut -d' ' -f 1 >"$DEST/systemd.txt"
 	paru -Qqe >"$DEST/pacman.txt"
-	find "$DEST/etc" -type f -print0 |
+	find "$ETC_DIR" -type f -not -path "*.orig" -print0 |
 		while IFS= read -r -d '' file; do
-			rel=$(realpath --relative-to="$DEST/etc" "$file")
-			cp -fvu "/etc/$rel" "$file"
+			rel=$(realpath --relative-to="$ETC_DIR" "$file")
+			src="/etc/$rel"
+			if [[ "$file" =~ \.patch$ ]]; then
+				src="${src%.patch}"
+				orig="${file%.patch}.orig"
+				diff -ut "$orig" "$src" | sed -E "/^[+-]{3}/d" >"$file"
+			else
+				cp -fvu "$src" "$file"
+			fi
 		done
 	;;
 macos)
