@@ -2,10 +2,6 @@
 
 set -euo pipefail
 
-DEST=$(dirname "$(readlink -f "$0")")
-HOSTNAME=$(cat /etc/hostname)
-PROFILE_DIR="$DEST/profiles/$HOSTNAME"
-
 declare -A DEFAULTS=(
 	[XDG_CONFIG_HOME]="$HOME/.config"
 )
@@ -13,15 +9,23 @@ declare -A XDG_MAP=(
 	[xdg_config]="XDG_CONFIG_HOME"
 )
 
+BOOTSTRAP_DIR=$(dirname "$(readlink -f "$0")")
+HOSTNAME=$(cat /etc/hostname)
+PROFILE_DIR="$BOOTSTRAP_DIR/profiles/$HOSTNAME"
+
 # Request credentials so that sudo doesn't prompt later
 sudo -v
+
+PARU_DIR=$(mktemp -d)
+finish() { rm -rf "$PARU_DIR"; }
+trap finish EXIT
 
 # Install paru
 if ! command -v paru &>/dev/null; then
 	sudo pacman -S --needed base-devel rustup
 	rustup default stable
-	git clone https://aur.archlinux.org/paru.git "$DEST/paru"
-	cd "$DEST/paru" && makepkg -si && cd "$DEST" && rm -rf "$DEST/paru"
+	git clone https://aur.archlinux.org/paru.git "$PARU_DIR"
+	(cd "$PARU_DIR" && makepkg -si)
 fi
 
 # Install system config files
@@ -61,9 +65,9 @@ find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 	done
 
 # Install packages with paru
-paru -S --needed - <"$DEST/pacman.txt"
+paru -S --needed - <"$PROFILE_DIR/pacman.txt"
 
 # Enable systemd services
 while read -r service; do
 	sudo systemctl enable --now "$service"
-done <"$DEST/systemd.txt"
+done <"$PROFILE_DIR/systemd.txt"

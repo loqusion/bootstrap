@@ -1,0 +1,9 @@
+bluetooth.service
+dhcpcd.service
+firewalld.service
+iwd.service
+thermald.service
+fstrim.timer
+man-db.timer
+plocate-updatedb.timer
+reflector.timer

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEST=$(dirname "$(readlink -f "$0")")
+BOOTSTRAP_DIR=$(dirname "$(readlink -f "$0")")
 
 usage() {
 	echo "Usage: $0 <arch|macos>"
@@ -9,9 +9,9 @@ usage() {
 case "$1" in
 arch)
 	HOSTNAME=$(cat /etc/hostname)
-	PROFILE_DIR="$DEST/profiles/$HOSTNAME"
-	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | cut -d' ' -f 1 >"$DEST/systemd.txt"
-	paru -Qqe >"$DEST/pacman.txt"
+	PROFILE_DIR="$BOOTSTRAP_DIR/profiles/$HOSTNAME"
+	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
+	paru -Qqe >"$PROFILE_DIR/pacman.txt"
 	find "$PROFILE_DIR" -type f -not -path "*.orig" -not -regex ".*/xdg_.*" -print0 |
 		while IFS= read -r -d '' file; do
 			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
@@ -26,7 +26,9 @@ arch)
 		done
 	;;
 macos)
-	brew bundle dump -f --file "$DEST/Brewfile"
+	HOSTNAME=$(hostname -s)
+	PROFILE_DIR="$BOOTSTRAP_DIR/profiles/$HOSTNAME"
+	brew bundle dump -f --file "$PROFILE_DIR/Brewfile"
 	;;
 *)
 	usage
