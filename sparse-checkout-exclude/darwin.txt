@@ -8,5 +8,6 @@ paru
 rofi
 user-tmpfiles.d
 waybar
+wireplumber
 wofi
 xsettingsd
