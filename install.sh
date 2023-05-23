@@ -31,7 +31,7 @@ OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
 DEST=${DEST:-"$HOME/.local/share/bootstrap"}
 if [ ! -d "$DEST/.git" ]; then
-	[ -d "$DEST" ] && rm -rfiv "$DEST"
+	[ -e "$DEST" ] && rm -rfiv "$DEST"
 	mkdir -p "$DEST"
 	git clone "https://github.com/loqusion/bootstrap.git" "$DEST"
 else

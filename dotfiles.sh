@@ -11,7 +11,7 @@ config() {
 
 mkdir -p "$DOTFILES"
 if [ ! -e "$DOTFILES/HEAD" ]; then
-	rm -rfI "$DOTFILES"
+	[ -e "$DOTFILES" ] && rm -rfIv "$DOTFILES"
 	git clone --bare https://github.com/loqusion/dotfiles.git "$DOTFILES"
 else
 	read -r -p "Pull newest changes from loqusion/dotfiles? [y/N] " reply
