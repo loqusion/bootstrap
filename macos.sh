@@ -13,4 +13,4 @@ softwareupdate -i -a
 rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 # Install Homebrew packages
-brew bundle --file="$PROFILE_DIR/Brewfile"
+brew bundle --no-lock --file="$PROFILE_DIR/Brewfile"
