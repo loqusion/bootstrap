@@ -52,7 +52,6 @@ find "$PROFILE_DIR" -type f -not -path "*.orig" -not -regex ".*/xdg_.*" -print0 
 # Install XDG files
 find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 	while IFS= read -r -d '' file; do
-		echo "$file"
 		rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 		xdg_name=$(cut -d'/' -f1 <<<"$rel")
 		xdg_var="${XDG_MAP[$xdg_name]}"
