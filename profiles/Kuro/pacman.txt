@@ -4,6 +4,7 @@ adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 ansible
 atool
+autotrash
 avizo
 base
 base-devel
@@ -100,6 +101,7 @@ man-db
 man-pages
 mdcat
 mpv
+nautilus
 neofetch
 neovide
 neovim-git
@@ -140,6 +142,7 @@ python-pillow
 python-pip
 python-pyxdg
 qbittorrent
+qgnomeplatform-qt5
 qpwgraph
 qt5-wayland
 qt5ct
