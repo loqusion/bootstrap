@@ -2,6 +2,7 @@ bluetooth.service
 dhcpcd.service
 firewalld.service
 iwd.service
+ntpd.service
 thermald.service
 fstrim.timer
 man-db.timer
