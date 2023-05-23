@@ -3,17 +3,17 @@
 set -euo pipefail
 
 DIR=$(dirname "$(readlink -f "$0")")
-DEST=${DEST:-"$HOME/.local/share/dotfiles/"}
-PARENT=$(dirname "$DEST")
+DOTFILES=${DOTFILES:-"$HOME/.local/share/dotfiles/"}
+PARENT=$(dirname "$DOTFILES")
 
 config() {
-	/usr/bin/git --git-dir="$DEST" --work-tree="$HOME" "$@"
+	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
 }
 
 mkdir -p "$PARENT"
-if [ ! -e "$DEST/HEAD" ]; then
-	rm -rfI "$DEST"
-	git clone --bare https://github.com/loqusion/dotfiles "$DEST"
+if [ ! -e "$DOTFILES/HEAD" ]; then
+	rm -rfI "$DOTFILES"
+	git clone --bare https://github.com/loqusion/dotfiles "$DOTFILES"
 else
 	read -r -p "Pull newest changes from loqusion/dotfiles? (y/N)" yes
 	[[ "$yes" =~ "y" ]] && config pull

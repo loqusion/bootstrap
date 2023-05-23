@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 DIR=$(dirname "$(readlink -f "$0")")
-DEST=${DEST:-"$HOME/.local/share/dotfiles/"}
+DOTFILES=${DOTFILES:-"$HOME/.local/share/dotfiles/"}
 
 config() {
-	/usr/bin/git --git-dir="$DEST" --work-tree="$HOME" "$@"
+	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
 }
 
 xdg-open https://www.dashlane.com/download

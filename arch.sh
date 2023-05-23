@@ -9,9 +9,9 @@ declare -A XDG_MAP=(
 	[xdg_config]="XDG_CONFIG_HOME"
 )
 
-BOOTSTRAP_DIR=$(dirname "$(readlink -f "$0")")
+DIR=$(dirname "$(readlink -f "$0")")
 HOSTNAME=$(cat /etc/hostname)
-PROFILE_DIR="$BOOTSTRAP_DIR/profiles/$HOSTNAME"
+PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 
 # Request credentials so that sudo doesn't prompt later
 sudo -v
