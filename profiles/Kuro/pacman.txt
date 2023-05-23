@@ -175,6 +175,7 @@ tmux-plugin-manager
 tokei
 topgrade
 transmission-cli
+trashman
 tree
 ttf-google-fonts-typewolf
 ttf-intel-one-mono
