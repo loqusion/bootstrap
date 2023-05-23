@@ -4,4 +4,4 @@
 - [x] Automate github authentication with `gh auth`
 - [x] Switch dotfiles to ssh after authentication
 - [x] Add `multilib` to `/etc/pacman.conf`
-- [ ] Profile-specific `pacman.txt` and `systemd.txt`
+- [x] Profile-specific `pacman.txt` and `systemd.txt`
