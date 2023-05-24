@@ -4,5 +4,5 @@ exists() {
 	command -v "$@"
 } &>/dev/null
 
-exists bat && bat cache build
+exists bat && bat cache --build
 exists tldr && command tldr --update
