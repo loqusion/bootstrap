@@ -130,6 +130,7 @@ paru
 pcloud-drive
 pcloudcc-git
 pipewire-alsa
+pipewire-jack
 pipewire-pulse
 pkgfile
 playerctl
