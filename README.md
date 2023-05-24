@@ -1,4 +1,4 @@
-# Installing dotfiles onto a new system
+# Installing onto a new system
 
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/loqusion/bootstrap/main/install.sh)"
