@@ -1,2 +1,3 @@
 wireplumber.service
 xdg-user-dirs-update.service
+autotrash.timer

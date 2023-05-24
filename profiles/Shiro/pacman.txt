@@ -4,6 +4,7 @@ adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 ansible
 atool
+autotrash
 avizo
 base
 base-devel
@@ -49,6 +50,7 @@ firefox
 firewalld
 fish
 fisher-git
+floorp
 fluent-gtk-theme
 fluent-icon-theme-git
 fm-bin
@@ -64,7 +66,10 @@ gnome-keyring
 gobject-introspection
 grc
 grim
+helvum
 htop
+hunspell
+hunspell-en_us
 hyperfine
 hyprland
 hyprpaper
@@ -87,6 +92,8 @@ light-git
 linux
 linux-firmware
 linux-headers
+lua-sec
+luarocks
 lynx
 mailspring
 man-db
@@ -94,6 +101,7 @@ man-pages
 mdcat
 mozc-ut
 mpv
+nautilus
 neofetch
 neovim-git
 neovim-symlinks
@@ -104,7 +112,9 @@ nftables
 nm-connection-editor
 notion-app-enhanced
 noto-fonts-emoji
+ntp
 nvidia-dkms
+nvidia-settings
 nwg-look
 obs-studio
 obsidian
@@ -121,6 +131,7 @@ pcloudcc-git
 pipewire
 pipewire-alsa
 pipewire-pulse
+pkgfile
 playerctl
 plocate
 polkit-gnome
@@ -132,6 +143,7 @@ python-pip
 python-pyxdg
 qbittorrent
 qt5-wayland
+qt5ct
 qt6-wayland
 ranger
 reflector
@@ -161,6 +173,7 @@ tmux-plugin-manager
 tokei
 topgrade
 transmission-cli
+trashman
 tree
 ttf-google-fonts-typewolf
 ttf-intel-one-mono
@@ -183,6 +196,7 @@ wl-clip-persist-git
 wl-clipboard
 wlsunset-git
 wofi
+wqy-zenhei
 wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
