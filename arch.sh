@@ -66,7 +66,7 @@ find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 	done
 
 # Install packages with paru
-paru -S --noconfirm --needed - <"$PROFILE_DIR/pacman.txt"
+paru -S --needed - <"$PROFILE_DIR/pacman.txt"
 
 # Enable systemd services
 while read -r service; do
