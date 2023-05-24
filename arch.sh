@@ -29,7 +29,7 @@ if ! command -v paru &>/dev/null; then
 fi
 
 # Install system config files
-find "$PROFILE_DIR" -type f -not -path "*.orig" -not -regex ".*/xdg_.*" -print0 |
+find "$PROFILE_DIR" -type f -path "$PROFILE_DIR/etc/*" -not -path "*.orig" -print0 |
 	while IFS= read -r -d '' file; do
 		rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 		dest="/$rel"
@@ -45,6 +45,7 @@ find "$PROFILE_DIR" -type f -not -path "*.orig" -not -regex ".*/xdg_.*" -print0 
 				sudo patch "$dest" "$file"
 			fi
 		else
+			sudo mkdir -pv "$(dirname "$dest")"
 			sudo cp -fvu "$file" "$dest"
 		fi
 	done
