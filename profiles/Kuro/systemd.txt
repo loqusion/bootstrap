@@ -1,7 +1,10 @@
+avahi-daemon.service
 bluetooth.service
 dhcpcd.service
 firewalld.service
 iwd.service
+samba.service
+smb.service
 thermald.service
 fstrim.timer
 man-db.timer
