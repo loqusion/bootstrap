@@ -75,3 +75,5 @@ done <"$PROFILE_DIR/systemd.txt"
 while read -r service; do
 	systemctl --user enable --now "$service"
 done <"$PROFILE_DIR/systemd.user.txt"
+
+"$DIR/misc.sh"
