@@ -20,8 +20,8 @@ fi
 
 "$DIR/sparse-checkout.sh"
 
-config checkout
 config submodule update --init --remote
+config checkout --force
 config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
