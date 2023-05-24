@@ -12,7 +12,11 @@ arch)
 	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
-	paru -Qqe >"$PROFILE_DIR/pacman.txt"
+	PKGS=$(paru -Qqe)
+	if [ -e "$PROFILE_DIR/pacman-optional.txt" ]; then
+		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman-optional.txt" <<<"$PKGS")
+	fi
+	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
 	find "$PROFILE_DIR" -type f -path "$PROFILE_DIR/etc/*" -not -path "*.orig" -print0 |
 		while IFS= read -r -d '' file; do
 			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")

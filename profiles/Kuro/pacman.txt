@@ -3,7 +3,6 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 ansible
-aria2
 atool
 autotrash
 avizo
@@ -160,7 +159,6 @@ qt5-styleplugins
 qt5-wayland
 qt5ct
 qt6-wayland
-quickemu
 ranger
 reflector
 ripgrep
