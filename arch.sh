@@ -22,7 +22,7 @@ trap finish EXIT
 
 # Install paru
 if ! command -v paru &>/dev/null; then
-	sudo pacman -S --needed base-devel rustup
+	sudo pacman -S --noconfirm --needed base-devel rustup
 	rustup default stable
 	git clone https://aur.archlinux.org/paru.git "$PARU_DIR"
 	(cd "$PARU_DIR" && makepkg -si)
@@ -66,7 +66,7 @@ find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 	done
 
 # Install packages with paru
-paru -S --needed - <"$PROFILE_DIR/pacman.txt"
+paru -S --noconfirm --needed - <"$PROFILE_DIR/pacman.txt"
 
 # Enable systemd services
 while read -r service; do
