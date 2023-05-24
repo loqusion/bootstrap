@@ -61,6 +61,7 @@ find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 		fi
 		xdg_dir="${!xdg_var%/}"
 		dest="$xdg_dir/${rel#*/}"
+		mkdir -pv "$(dirname "$dest")"
 		ln -sfv "$file" "$dest"
 	done
 
