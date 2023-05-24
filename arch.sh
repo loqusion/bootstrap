@@ -70,3 +70,6 @@ paru -S --needed - <"$PROFILE_DIR/pacman.txt"
 while read -r service; do
 	sudo systemctl enable --now "$service"
 done <"$PROFILE_DIR/systemd.txt"
+while read -r service; do
+	systemctl --user enable --now "$service"
+done <"$PROFILE_DIR/systemd.user.txt"
