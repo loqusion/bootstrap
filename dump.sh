@@ -10,7 +10,7 @@ case "$1" in
 arch)
 	HOSTNAME=$(cat /etc/hostname)
 	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
-	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
+	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
 	paru -Qqe >"$PROFILE_DIR/pacman.txt"
 	find "$PROFILE_DIR" -type f -path "$PROFILE_DIR/etc/*" -not -path "*.orig" -print0 |
