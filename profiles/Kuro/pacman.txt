@@ -113,7 +113,6 @@ nftables
 nm-connection-editor
 notion-app-enhanced
 noto-fonts-emoji
-ntp
 nvidia-dkms
 nvidia-settings
 nwg-look
