@@ -52,3 +52,7 @@ if [ "$OS" = "linux" ]; then
 elif [ "$OS" = "darwin" ]; then
 	./macos.sh
 fi
+
+if [ -x "$DEST/postinstall.sh" ]; then
+	"$DEST/postinstall.sh"
+fi
