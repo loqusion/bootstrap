@@ -182,7 +182,6 @@ swaylockd
 sxhkd
 tealdeer
 texinfo
-thermald
 tmux
 tmux-plugin-manager
 tokei

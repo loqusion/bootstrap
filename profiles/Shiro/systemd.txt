@@ -6,5 +6,6 @@ laptop-mode.service
 thermald.service
 fstrim.timer
 man-db.timer
+paccache.timer
 plocate-updatedb.timer
 reflector.timer
