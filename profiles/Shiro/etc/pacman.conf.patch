@@ -1,3 +1,12 @@
+@@ -34,7 +34,7 @@
+ #NoProgressBar
+ CheckSpace
+ #VerbosePkgLists
+-#ParallelDownloads = 5
++ParallelDownloads = 5
+ 
+ # By default, pacman accepts packages signed by keys that its local keyring
+ # trusts (see pacman-key and its man page), as well as unsigned packages.
 @@ -90,8 +90,8 @@
  #[multilib-testing]
  #Include = /etc/pacman.d/mirrorlist

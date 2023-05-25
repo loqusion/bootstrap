@@ -17,6 +17,7 @@ bluez-utils
 brightnessctl
 browsh
 btop
+caffeinated
 catppuccin-cursors-frappe
 catppuccin-cursors-latte
 catppuccin-cursors-macchiato
@@ -92,6 +93,7 @@ light-git
 linux
 linux-firmware
 linux-headers
+lshw
 lua-sec
 luarocks
 lynx
