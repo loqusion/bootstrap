@@ -82,7 +82,7 @@ just
 kitty
 lazydocker-bin
 lazygit
-lib32-mangohud-git
+lib32-mangohud
 lib32-nvidia-utils
 libva
 libva-nvidia-driver
@@ -99,6 +99,7 @@ lynx
 mailspring
 man-db
 man-pages
+mangohud
 mdcat
 mpv
 nautilus
