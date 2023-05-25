@@ -70,7 +70,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland
+hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
 imagemagick
