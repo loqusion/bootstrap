@@ -6,12 +6,13 @@ cpupower.service
 dhcpcd.service
 firewalld.service
 greetd.service
+irqbalance.service
 iwd.service
-lm_sensors.service
 smb.service
 sshd.service
 thermald.service
 fstrim.timer
+fwupd-refresh.timer
 man-db.timer
 paccache.timer
 pkgfile-update.timer

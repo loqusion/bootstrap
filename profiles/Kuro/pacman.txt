@@ -82,6 +82,7 @@ hyprpicker-git
 imagemagick
 intel-ucode
 iptables-nft
+irqbalance
 iwd
 jq
 just
