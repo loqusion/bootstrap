@@ -80,6 +80,7 @@ hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
 imagemagick
+inetutils
 intel-ucode
 iptables-nft
 irqbalance
