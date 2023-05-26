@@ -60,8 +60,6 @@ font-manager
 fwupd
 gamemode
 gammastep
-gdm
-gdm-settings
 git
 git-delta
 github-cli
@@ -72,7 +70,6 @@ gobject-introspection
 goverlay-bin
 grc
 greetd
-greetd-wlgreet
 grim
 helvum
 htop
@@ -179,7 +176,6 @@ rtx
 rustup
 samba
 sassc
-sddm-git
 slurp
 socat
 spotify-launcher

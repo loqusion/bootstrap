@@ -5,6 +5,7 @@ coolercontrold.service
 cpupower.service
 dhcpcd.service
 firewalld.service
+greetd.service
 iwd.service
 lm_sensors.service
 smb.service
