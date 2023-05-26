@@ -10,7 +10,7 @@ if [ ! -d "$DEST/.git" ]; then
 	mkdir -p "$DEST"
 	git clone "https://github.com/loqusion/bootstrap.git" "$DEST"
 else
-	git -C "$DEST" fetch && git -C "$DEST" reset --hard FETCH_HEAD
+	git -C "$DEST" fetch && git -C "$DEST" reset FETCH_HEAD
 fi
 cd "$DEST"
 
