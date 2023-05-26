@@ -1,11 +1,14 @@
 avahi-daemon.service
 bluetooth.service
+coolercontrold.service
 dhcpcd.service
 firewalld.service
 iwd.service
 smb.service
+sshd.service
 fstrim.timer
 man-db.timer
 paccache.timer
+pkgfile-update.timer
 plocate-updatedb.timer
 reflector.timer

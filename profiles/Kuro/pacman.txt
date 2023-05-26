@@ -28,6 +28,7 @@ catppuccin-gtk-theme-mocha
 cava
 clang
 cliphist
+coolercontrol
 deno
 dhcpcd
 dictd
@@ -62,6 +63,7 @@ git-delta
 github-cli
 glow
 gnome-keyring
+gnu-netcat
 gobject-introspection
 grc
 grim
@@ -181,6 +183,7 @@ swayidle
 swaylock-effects-git
 swaylockd
 sxhkd
+systemd-boot-pacman-hook
 tealdeer
 texinfo
 tmux
