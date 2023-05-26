@@ -13,7 +13,7 @@ dump_arch() {
 		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman-optional.txt" <<<"$PKGS")
 	fi
 	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
-	find "$PROFILE_DIR" -type f -path "$PROFILE_DIR/etc/*" -not -path "*.orig" -print0 |
+	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/boot/*" \) -not -path "*.orig" -print0 |
 		while IFS= read -r -d '' file; do
 			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 			src="/$rel"
