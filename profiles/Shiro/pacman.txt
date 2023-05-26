@@ -27,12 +27,14 @@ catppuccin-gtk-theme-latte
 catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
+chrony
 clang
 cliphist
 deno
 dhcpcd
 dictd
 discord_arch_electron
+dmidecode
 dos2unix
 dotbare
 dunst
@@ -64,15 +66,17 @@ git-delta
 github-cli
 glow
 gnome-keyring
+gnu-netcat
 gobject-introspection
 grc
+greetd
 grim
 helvum
 htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland
+hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
 icat
@@ -101,6 +105,7 @@ mailspring
 man-db
 man-pages
 mdcat
+mesa-utils
 mozc-ut
 mpv
 nautilus
@@ -137,6 +142,7 @@ playerctl
 plocate
 polkit-gnome
 poppler
+powertop
 pv
 python-argcomplete
 python-pillow
@@ -148,6 +154,7 @@ qt5ct
 qt6-wayland
 ranger
 reflector
+retroarch
 ripgrep
 rofi-lbonn-wayland-git
 rofimoji
@@ -166,6 +173,7 @@ swayidle
 swaylock-effects-git
 swaylockd
 sxhkd
+systemd-boot-pacman-hook
 tealdeer
 texinfo
 thermald
@@ -188,6 +196,7 @@ ttf-victor-mono-nerd
 udisks2
 unzip
 vlc
+vulkan-tools
 waybar-hyprland-git
 wezterm
 wf-recorder
