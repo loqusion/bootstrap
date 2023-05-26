@@ -1,11 +1,15 @@
 avahi-daemon.service
 bluetooth.service
+coolercontrol-liqctld.service
 coolercontrold.service
+cpupower.service
 dhcpcd.service
 firewalld.service
 iwd.service
+lm_sensors.service
 smb.service
 sshd.service
+thermald.service
 fstrim.timer
 man-db.timer
 paccache.timer

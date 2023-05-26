@@ -29,6 +29,7 @@ cava
 clang
 cliphist
 coolercontrol
+cpupower
 deno
 dhcpcd
 dictd
@@ -57,7 +58,10 @@ fluent-icon-theme-git
 fm-bin
 font-manager
 fwupd
+gamemode
 gammastep
+gdm
+gdm-settings
 git
 git-delta
 github-cli
@@ -65,7 +69,10 @@ glow
 gnome-keyring
 gnu-netcat
 gobject-introspection
+goverlay-bin
 grc
+greetd
+greetd-wlgreet
 grim
 helvum
 htop
@@ -164,6 +171,7 @@ qt5ct
 qt6-wayland
 ranger
 reflector
+retroarch
 ripgrep
 rofi-lbonn-wayland-git
 rofimoji
@@ -171,6 +179,7 @@ rtx
 rustup
 samba
 sassc
+sddm-git
 slurp
 socat
 spotify-launcher
@@ -186,6 +195,7 @@ sxhkd
 systemd-boot-pacman-hook
 tealdeer
 texinfo
+thermald
 tmux
 tmux-plugin-manager
 tokei
@@ -205,6 +215,7 @@ ttf-victor-mono-nerd
 udisks2
 unzip
 via-bin
+vkbasalt-git
 vlc
 waybar-hyprland-git
 wezterm-git
@@ -212,6 +223,7 @@ wf-recorder
 wget
 wl-clip-persist-git
 wl-clipboard
+wlr-randr
 wlsunset-git
 wofi
 wqy-zenhei
