@@ -11,6 +11,7 @@ base-devel
 bat
 bc
 betterdiscordctl
+bind
 blueberry-wayland
 bluez
 bluez-utils
@@ -34,6 +35,7 @@ deno
 dhcpcd
 dictd
 discord_arch_electron
+dmidecode
 dos2unix
 dotbare
 dunst
@@ -82,6 +84,7 @@ hyprpicker-git
 imagemagick
 inetutils
 intel-ucode
+inxi
 iptables-nft
 irqbalance
 iwd
@@ -109,6 +112,7 @@ man-db
 man-pages
 mangohud
 mdcat
+mesa-utils
 mpv
 nautilus
 neofetch
