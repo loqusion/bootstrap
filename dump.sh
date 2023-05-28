@@ -9,8 +9,8 @@ dump_arch() {
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
 	PKGS=$(paru -Qqe)
-	if [ -e "$PROFILE_DIR/pacman-optional.txt" ]; then
-		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman-optional.txt" <<<"$PKGS")
+	if [ -e "$PROFILE_DIR/pacman.optional.txt" ]; then
+		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman.optional.txt" <<<"$PKGS")
 	fi
 	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
 	# TODO: generate -paths from array
