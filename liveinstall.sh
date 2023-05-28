@@ -112,9 +112,6 @@ ext4)
 	;;
 esac
 
-echo "Exiting..."
-exit
-
 # shellcheck disable=SC2086
 pacstrap -K /mnt base base-devel alsa-utils "$TARGET_KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode iwd dhcpcd man-db man-pages texinfo "$SHELL_PACKAGE" "$EDITOR_PACKAGE" "$FS_UTILS_PACKAGE" $ADDITIONAL_PACKAGES
 
