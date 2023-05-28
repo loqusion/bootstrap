@@ -96,7 +96,7 @@ btrfs)
 	mount -m -o subvol=@home "$ROOT_PARTITION" /mnt/home
 	mount -m -o subvol=@snapshots "$ROOT_PARTITION" /mnt/.snapshots
 	mount -m -o subvol=@var_log "$ROOT_PARTITION" /mnt/var/log
-	mount -m "BOOT_PARTITION" /mnt/boot
+	mount -m "$BOOT_PARTITION" /mnt/boot
 	swapon "$SWAP_PARTITION"
 	;;
 ext4)
