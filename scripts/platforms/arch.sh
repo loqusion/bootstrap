@@ -9,7 +9,7 @@ declare -A XDG_MAP=(
 	[xdg_config]="XDG_CONFIG_HOME"
 )
 
-DIR=$(dirname "$(readlink -f "$0")")
+DIR=$(dirname "$(readlink -f "$0")")/../..
 HOSTNAME=$(cat /etc/hostname)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 

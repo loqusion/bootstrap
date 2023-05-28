@@ -2,14 +2,12 @@
 
 set -euo pipefail
 
-DIR=$(dirname "$(readlink -f "$0")")
+DIR=$(dirname "$(readlink -f "$0")")/..
 DOTFILES=${DOTFILES:-"$HOME/.local/share/dotfiles/"}
 
 config() {
 	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
 }
-
-cd "$DIR" || exit 1
 
 mkdir -p "$DOTFILES"
 if [ ! -e "$DOTFILES/HEAD" ]; then
@@ -20,7 +18,7 @@ else
 	[[ "$reply" =~ ^[Yy]$ ]] && config pull
 fi
 
-./sparse-checkout.sh
+"$DIR"/sparse-checkout.sh
 
 config submodule update --init --remote
 config checkout --force
