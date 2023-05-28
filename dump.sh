@@ -24,11 +24,16 @@ dump_arch() {
 	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
 
 	# TODO: generate -paths from array
-	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -not -path "*.patch" -print0 |
+	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -print0 |
 		while IFS= read -r -d '' file; do
 			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 			src="/$rel"
-			if [[ "$file" =~ \.orig$ ]]; then
+			if [[ "$file" =~ \.patch$ ]]; then
+				if [ ! -e "${file%.patch}.orig" ]; then
+					echo "Missing original file for $file, try executing the following:" >&2
+					echo "  cp $src ${file%.patch}.orig"
+				fi
+			elif [[ "$file" =~ \.orig$ ]]; then
 				dump_patch "${src%.orig}"
 			else
 				cp -fvu "$src" "$file"
