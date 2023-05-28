@@ -8,6 +8,7 @@ firewalld.service
 greetd.service
 irqbalance.service
 iwd.service
+preload.service
 smb.service
 sshd.service
 thermald.service

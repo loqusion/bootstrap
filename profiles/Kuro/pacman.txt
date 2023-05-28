@@ -27,6 +27,7 @@ catppuccin-gtk-theme-latte
 catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
+ccache
 clang
 cliphist
 coolercontrol
@@ -59,6 +60,7 @@ fluent-gtk-theme-git
 fluent-icon-theme-git
 fm-bin
 font-manager
+fragments
 fwupd
 gamemode
 gammastep
@@ -150,6 +152,7 @@ playerctl
 plocate
 polkit-gnome
 poppler
+preload
 python
 python-argcomplete
 python-brotli
@@ -191,8 +194,7 @@ swappy
 sway-audio-idle-inhibit-git
 sway-git
 swayidle
-swaylock-effects-git
-swaylockd
+swaylock-effects
 sxhkd
 systemd-boot-pacman-hook
 tealdeer
@@ -220,6 +222,7 @@ via-bin
 vkbasalt-git
 vlc
 waybar-hyprland-git
+webapp-manager
 wezterm-git
 wf-recorder
 wget
