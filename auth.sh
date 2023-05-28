@@ -7,6 +7,8 @@ config() {
 	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
 }
 
+echo "GitHub authentication requires a browser, make sure you're running in a graphical environment."
+
 xdg-open https://www.dashlane.com/download
 gh auth login --git-protocol ssh --web
 
