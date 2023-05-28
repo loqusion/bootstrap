@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-declare -A DEFAULTS=(
+declare -A XDG_DEFAULTS=(
 	[XDG_CONFIG_HOME]="$HOME/.config"
 )
 declare -A XDG_MAP=(
@@ -59,7 +59,7 @@ find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
 		xdg_name=$(cut -d'/' -f1 <<<"$rel")
 		xdg_var="${XDG_MAP[$xdg_name]}"
 		if [ -z "${!xdg_var:-}" ]; then
-			declare "$xdg_var"="${DEFAULTS[$xdg_var]}"
+			declare "$xdg_var"="${XDG_DEFAULTS[$xdg_var]}"
 		fi
 		xdg_dir="${!xdg_var%/}"
 		dest="$xdg_dir/${rel#*/}"
