@@ -29,7 +29,7 @@ if ! command -v paru &>/dev/null; then
 fi
 
 # Install system config files
-find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/boot/*" \) -not -path "*.orig" -print0 |
+find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -not -path "*.orig" -print0 |
 	while IFS= read -r -d '' file; do
 		rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 		dest="/$rel"
