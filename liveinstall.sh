@@ -3,11 +3,15 @@
 set -euo pipefail
 
 TARGET_DISK=${TARGET_DISK:-${1:-}}
-HOSTNAME=${HOSTNAME:-arch}
+HOSTNAME=${HOSTNAME:-}
+USER=${USER:-loqusion}
 KERNEL=${KERNEL:-linux}
 FILESYSTEM=${FILESYSTEM:-btrfs}
-ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES:-}
 FORCE=${FORCE:-false}
+
+EDITOR_PACKAGE=${EDITOR_PACKAGE:-neovim}
+SHELL_PACKAGE=${SHELL_PACKAGE:-fish}
+ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES:-}
 
 if ! [ -d /sys/firmware/efi/efivars ]; then
 	echo "ERROR: UEFI is not enabled. This script is only for UEFI systems."
@@ -21,7 +25,13 @@ linux | linux-lts | linux-zen) KERNEL_HEADERS="$KERNEL-headers" ;;
 	exit 1
 	;;
 esac
-
+case "$FILESYSTEM" in
+ext4 | btrfs) ;;
+*)
+	echo "ERROR: Unsupported filesystem: $FILESYSTEM"
+	exit 1
+	;;
+esac
 if [ -z "$TARGET_DISK" ]; then
 	echo -e "ERROR: No target disk specified.\nSpecify a block device with TARGET_DISK or as an argument to this script."
 	exit 1
@@ -30,7 +40,12 @@ elif ! [ -b "$TARGET_DISK" ]; then
 	exit 1
 fi
 
-if [ "$FORCE" != true ]; then
+if [ -z "$HOSTNAME" ]; then
+	read -p "Enter a hostname: " -r HOSTNAME
+	[ -z "$HOSTNAME" ] && echo "ERROR: Hostname cannot be empty." && exit 1
+fi
+
+if [ "$FORCE" != true ] && [ "$FORCE" != "1" ]; then
 	echo "WARNING: This script will destroy all data on $TARGET_DISK."
 	read -p "Continue? [y/N] " -r REPLY
 	if ! [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -67,22 +82,42 @@ mount --mkdir "BOOT_PARTITION" /mnt/boot
 swapon "$SWAP_PARTITION"
 
 # shellcheck disable=SC2086
-pacstrap -K /mnt base base-devel alsa-utils "$KERNEL" "$KERNEL_HEADERS" linux-firmware iwd dhcpcd neovim man-db man-pages texinfo $ADDITIONAL_PACKAGES
+pacstrap -K /mnt base base-devel alsa-utils "$KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode iwd dhcpcd man-db man-pages texinfo "$SHELL_PACKAGE" "$EDITOR_PACKAGE" $ADDITIONAL_PACKAGES
 
 genfstab -U /mnt >>/mnt/etc/fstab
 
-# FIXME: This doesn't actually execute all the commands in the chroot
-arch-chroot /mnt
+arch-chroot /mnt ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
+arch-chroot /mnt hwclock --systohc
 
-ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
-hwclock --systohc
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /mnt/etc/locale.gen
+arch-chroot /mnt locale-gen
+echo "LANG=en_US.UTF-8" >/mnt/etc/locale.conf
 
-sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
-locale-gen
-echo "LANG=en_US.UTF-8" >/etc/locale.conf
+echo "$HOSTNAME" >/mnt/etc/hostname
 
-echo "$HOSTNAME" >/etc/hostname
+arch-chroot /mnt mkinitcpio -P
 
-mkinitcpio -P
+arch-chroot /mnt bootctl install
+cat >/mnt/boot/loader/loader.conf <<EOF
+default   arch.conf
+timeout   0
+console-mode max
+editor    yes
+EOF
+cat >/mnt/boot/loader/entries/arch.conf <<EOF
+title   Arch Linux
+linux   /vmlinuz-$KERNEL
+initrd  /intel-ucode.img
+initrd  /initramfs-$KERNEL.img
+options root=LABEL=arch_os rw
+EOF
+cat >/mnt/boot/loader/entries/arch-fallback.conf <<EOF
+title   Arch Linux (fallback initramfs)
+linux   /vmlinuz-$KERNEL
+initrd  /intel-ucode.img
+initrd  /initramfs-$KERNEL-fallback.img
+options root=LABEL=arch_os rw
+EOF
 
-# TODO: Create user
+arch-chroot /mnt useradd -m -G wheel -s "$(which "$SHELL_PACKAGE")" "$USER"
+arch-chroot /mnt passwd "$USER"
