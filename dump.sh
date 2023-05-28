@@ -3,26 +3,33 @@
 DIR=$(dirname "$(readlink -f "$0")")
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
+dump_patch() {
+	src="$1"
+	orig="$file"
+	patch="${file%.orig}.patch"
+	diff -ut "$orig" "$src" | sed -E "/^[+-]{3}/d" >"$patch"
+}
+
 dump_arch() {
 	HOSTNAME=$(cat /etc/hostname)
 	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
+
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
+
 	PKGS=$(paru -Qqe)
 	if [ -e "$PROFILE_DIR/pacman.optional.txt" ]; then
 		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman.optional.txt" <<<"$PKGS")
 	fi
 	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
+
 	# TODO: generate -paths from array
 	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -not -path "*.patch" -print0 |
 		while IFS= read -r -d '' file; do
 			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
 			src="/$rel"
 			if [[ "$file" =~ \.orig$ ]]; then
-				src="${src%.orig}"
-				orig="$file"
-				patch="${file%.orig}.patch"
-				diff -ut "$orig" "$src" | sed -E "/^[+-]{3}/d" >"$patch"
+				dump_patch "${src%.orig}"
 			else
 				cp -fvu "$src" "$file"
 			fi
