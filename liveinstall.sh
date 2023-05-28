@@ -154,6 +154,7 @@ EOF
 
 arch-chroot /mnt useradd -m -G wheel -s "/usr/bin/$SHELL_PACKAGE" "$TARGET_USER"
 arch-chroot /mnt passwd "$TARGET_USER"
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /mnt/etc/sudoers
 
 umount -R /mnt
 swapoff "$SWAP_PARTITION"
