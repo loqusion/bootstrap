@@ -84,6 +84,13 @@ mkswap -L swap "$SWAP_PARTITION"
 case "$TARGET_FILESYSTEM" in
 btrfs)
 	mkfs.btrfs -L arch_os "$ROOT_PARTITION"
+	mount "$ROOT_PARTITION" /mnt
+	btrfs subvolume create /mnt/@
+	btrfs subvolume set-default /mnt/@
+	btrfs subvolume create /mnt/@home
+	btrfs subvolume create /mnt/@snapshots
+	btrfs subvolume create /mnt/@var_log
+	umount /mnt
 	;;
 ext4)
 	mkfs.ext4 -L arch_os "$ROOT_PARTITION"
