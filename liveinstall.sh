@@ -152,3 +152,7 @@ EOF
 
 arch-chroot /mnt useradd -m -G wheel -s "$(which "$SHELL_PACKAGE")" "$TARGET_USER"
 arch-chroot /mnt passwd "$TARGET_USER"
+
+umount -R /mnt
+
+echo "Done! You can now reboot into your new Arch Linux installation."
