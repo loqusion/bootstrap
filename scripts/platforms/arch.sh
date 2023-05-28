@@ -13,6 +13,8 @@ DIR=$(dirname "$(readlink -f "$0")")
 HOSTNAME=$(cat /etc/hostname)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 
+cd "$DIR" || exit 1
+
 # Request credentials so that sudo doesn't prompt later
 sudo -v
 
@@ -76,4 +78,4 @@ while read -r service; do
 	systemctl --user enable --now "$service"
 done <"$PROFILE_DIR/systemd.user.txt"
 
-"$DIR/misc.sh"
+./scripts/misc.sh

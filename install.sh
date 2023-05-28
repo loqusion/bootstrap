@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-OS=$(uname -s | tr '[:upper:]' '[:lower:]')
-
 DEST=${DEST:-"$HOME/.local/share/bootstrap"}
 if [ ! -d "$DEST/.git" ]; then
 	[ -e "$DEST" ] && rm -rfiv "$DEST"
@@ -14,18 +12,13 @@ else
 fi
 cd "$DEST"
 
-./dotfiles.sh
+./scripts/dotfiles.sh
 
-if [ "$OS" = "linux" ]; then
-	DISTRO=$("$DEST/scripts/distro.sh")
-	if [ "$DISTRO" = "arch" ]; then
-		./arch.sh
-	else
-		echo "Unsupported distro: $DISTRO" >&2
-		exit 1
-	fi
-elif [ "$OS" = "darwin" ]; then
-	./macos.sh
+PLATFORM=$("$DEST"/scripts/detect-platform.sh)
+if [ "$PLATFORM" = "arch" ]; then
+	./scripts/platforms/arch.sh
+elif [ "$PLATFORM" = "macos" ]; then
+	./scripts/platforms/macos.sh
 fi
 
 if [ -x "$DEST/postinstall.sh" ]; then

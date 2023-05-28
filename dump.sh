@@ -35,15 +35,10 @@ dump_macos() {
 	brew bundle dump -f --file "$PROFILE_DIR/Brewfile"
 }
 
-if [ "$OS" = "linux" ]; then
-	DISTRO=$("$DIR/scripts/distro.sh")
-	if [ "$DISTRO" = "arch" ]; then
-		dump_arch
-	else
-		echo "Unsupported distro: $DISTRO" >&2
-		exit 1
-	fi
-elif [ "$OS" = "darwin" ]; then
+PLATFORM=$("$DEST"/scripts/detect-platform.sh)
+if [ "$PLATFORM" = "arch" ]; then
+	dump_arch
+elif [ "$PLATFORM" = "macos" ]; then
 	dump_macos
 else
 	echo "Unsupported OS: $OS" >&2
