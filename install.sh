@@ -14,12 +14,14 @@ cd "$DEST"
 
 ./scripts/dotfiles.sh
 
-PLATFORM=$("$DEST"/scripts/detect-platform.sh)
+PLATFORM=$(./scripts/detect-platform.sh)
 if [ "$PLATFORM" = "arch" ]; then
 	./scripts/platforms/arch.sh
 elif [ "$PLATFORM" = "macos" ]; then
 	./scripts/platforms/macos.sh
 fi
+
+./scripts/misc.sh
 
 if [ -x "$DEST/postinstall.sh" ]; then
 	"$DEST/postinstall.sh"

@@ -35,7 +35,9 @@ dump_macos() {
 	brew bundle dump -f --file "$PROFILE_DIR/Brewfile"
 }
 
-PLATFORM=$("$DEST"/scripts/detect-platform.sh)
+cd "$DIR" || exit 1
+
+PLATFORM=$(./scripts/detect-platform.sh)
 if [ "$PLATFORM" = "arch" ]; then
 	dump_arch
 elif [ "$PLATFORM" = "macos" ]; then
