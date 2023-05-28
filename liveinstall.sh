@@ -53,10 +53,9 @@ if [ "$FORCE" != true ] && [ "$FORCE" != "1" ]; then
 	fi
 fi
 parted -sf "$TARGET_DISK" mklabel gpt
-parted -sf "$TARGET_DISK" mkpart "'EFI system partition'" fat32 1MiB 513MiB
-parted -sf "$TARGET_DISK" set 1 esp on
-parted -sf "$TARGET_DISK" mkpart "'swap partition'" linux-swap 513MiB 4609MiB
-parted -sf "$TARGET_DISK" mkpart "'root partition'" "$FILESYSTEM" 4609MiB 100%
+sgdisk "$TARGET_DISK" -n=1:0:+512M -t=1:ef00 -c=1:"EFI system partition"
+sgdisk "$TARGET_DISK" -n=2:0:+4096M -t=2:8200 -c=2:"Linux swap"
+sgdisk "$TARGET_DISK" -n=3:0:0 -t=3:830 -c=3:"Linux filesystem"
 
 # FIXME: proper partition name detection
 BOOT_PARTITION="${TARGET_DISK}p1"
