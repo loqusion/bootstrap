@@ -43,7 +43,7 @@ elif ! [ -b "$TARGET_DISK" ]; then
 fi
 
 if [ -z "$TARGET_HOSTNAME" ]; then
-	read -p "Enter a hostname: " -r HOSTNAME
+	read -p "Enter a hostname: " -r TARGET_HOSTNAME
 	[ -z "$TARGET_HOSTNAME" ] && echo "ERROR: Hostname cannot be empty." && exit 1
 fi
 
