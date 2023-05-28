@@ -1,4 +1,3 @@
-acpid.service
 avahi-daemon.service
 bluetooth.service
 chronyd.service
