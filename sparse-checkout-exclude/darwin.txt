@@ -1,3 +1,5 @@
+Mailspring
+MangoHud
 dunst
 fcitx5
 gtk-*
@@ -6,6 +8,9 @@ mako
 mpv
 paru
 rofi
+swayidle
+swaylock
+systemd
 user-tmpfiles.d
 waybar
 wireplumber
