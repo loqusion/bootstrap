@@ -7,33 +7,19 @@ git_add() {
 	git -C "$DIR" add "$@"
 }
 
-dump_patch() {
+_dump_patch() {
 	src="$1"
 	orig="$file"
 	patch="${file%.orig}.patch"
 	diff -ut "$orig" "$src" | sed -E "/^[+-]{3}/d" >"$patch"
 }
 
-dump_arch() {
-	HOSTNAME=$(cat /etc/hostname)
-	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
-
-	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
-	git_add "$PROFILE_DIR/systemd.txt"
-	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
-	git_add "$PROFILE_DIR/systemd.user.txt"
-
-	PKGS=$(paru -Qqe)
-	if [ -e "$PROFILE_DIR/pacman.optional.txt" ]; then
-		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman.optional.txt" <<<"$PKGS")
-	fi
-	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
-	git_add "$PROFILE_DIR/pacman.txt"
-
+_dump_profiles() {
+	DEST_DIR="$DIR/profiles/$1"
 	# TODO: generate -paths from array
-	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -print0 |
+	find "$DEST_DIR" -type f \( -path "$DEST_DIR/boot/*" -o -path "$DEST_DIR/etc/*" -o -path "$DEST_DIR/usr/*" \) -print0 |
 		while IFS= read -r -d '' file; do
-			rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
+			rel=$(realpath --relative-to="$DEST_DIR" "$file")
 			src="/$rel"
 			if [[ "$file" =~ \.patch$ ]]; then
 				if [ ! -e "${file%.patch}.orig" ]; then
@@ -41,7 +27,7 @@ dump_arch() {
 					echo "  cp $src ${file%.patch}.orig"
 				fi
 			elif [[ "$file" =~ \.orig$ ]]; then
-				dump_patch "${src%.orig}"
+				_dump_patch "${src%.orig}"
 			else
 				cp -fvu "$src" "$file"
 			fi
@@ -49,11 +35,31 @@ dump_arch() {
 		done
 }
 
+dump_arch() {
+	HOSTNAME=$(cat /etc/hostname)
+	DEST_DIR="$DIR/profiles/$HOSTNAME"
+
+	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.txt"
+	git_add "$DEST_DIR/systemd.txt"
+	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.user.txt"
+	git_add "$DEST_DIR/systemd.user.txt"
+
+	PKGS=$(paru -Qqe)
+	if [ -e "$DEST_DIR/pacman.optional.txt" ]; then
+		PKGS=$(grep -Fvx -f "$DEST_DIR/pacman.optional.txt" <<<"$PKGS")
+	fi
+	echo "$PKGS" >"$DEST_DIR/pacman.txt"
+	git_add "$DEST_DIR/pacman.txt"
+
+	_dump_profiles "__common__/Arch"
+	_dump_profiles "$HOSTNAME"
+}
+
 dump_macos() {
 	HOSTNAME=$(hostname -s)
-	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
-	brew bundle dump -f --file "$PROFILE_DIR/Brewfile"
-	git_add "$PROFILE_DIR/Brewfile"
+	DEST_DIR="$DIR/profiles/$HOSTNAME"
+	brew bundle dump -f --file "$DEST_DIR/Brewfile"
+	git_add "$DEST_DIR/Brewfile"
 }
 
 cd "$DIR" || exit 1

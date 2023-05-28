@@ -13,6 +13,47 @@ DIR=$(dirname "$(readlink -f "$0")")
 HOSTNAME=$(cat /etc/hostname)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 
+install_system() {
+	SRC_DIR="$DIR/profiles/$1"
+	find "$SRC_DIR" -type f \( -path "$SRC_DIR/boot/*" -o -path "$SRC_DIR/etc/*" -o -path "$SRC_DIR/usr/*" \) -not -path "*.orig" -print0 |
+		while IFS= read -r -d '' file; do
+			rel=$(realpath --relative-to="$SRC_DIR" "$file")
+			dest="/$rel"
+			if [[ "$file" =~ \.patch$ ]]; then
+				dest="${dest%.patch}"
+				orig="${file%.patch}.orig"
+				if [ ! -e "$dest" ]; then
+					sudo mkdir -pv "$(dirname "$dest")"
+					sudo cp -fv "$orig" "$dest"
+				fi
+				# Check if the patch has already been applied, and if not, apply it.
+				if ! sudo patch -R -p0 -f --dry-run "$dest" "$file" &>/dev/null; then
+					sudo patch "$dest" "$file"
+				fi
+			else
+				sudo mkdir -pv "$(dirname "$dest")"
+				sudo cp -fvu "$file" "$dest"
+			fi
+		done
+}
+
+install_xdg() {
+	SRC_DIR="$DIR/profiles/$1"
+	find "$SRC_DIR" -type f -regex ".*\/xdg_.*" -print0 |
+		while IFS= read -r -d '' file; do
+			rel=$(realpath --relative-to="$SRC_DIR" "$file")
+			xdg_name=$(cut -d'/' -f1 <<<"$rel")
+			xdg_var="${XDG_MAP[$xdg_name]}"
+			if [ -z "${!xdg_var:-}" ]; then
+				declare "$xdg_var"="${XDG_DEFAULTS[$xdg_var]}"
+			fi
+			xdg_dir="${!xdg_var%/}"
+			dest="$xdg_dir/${rel#*/}"
+			mkdir -pv "$(dirname "$dest")"
+			ln -sfv "$file" "$dest"
+		done
+}
+
 cd "$DIR" || exit 1
 
 # Request credentials so that sudo doesn't prompt later
@@ -30,42 +71,10 @@ if ! command -v paru &>/dev/null; then
 	(cd "$PARU_DIR" && makepkg -si)
 fi
 
-# Install system config files
-find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -not -path "*.orig" -print0 |
-	while IFS= read -r -d '' file; do
-		rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
-		dest="/$rel"
-		if [[ "$file" =~ \.patch$ ]]; then
-			dest="${dest%.patch}"
-			orig="${file%.patch}.orig"
-			if [ ! -e "$dest" ]; then
-				sudo mkdir -pv "$(dirname "$dest")"
-				sudo cp -fv "$orig" "$dest"
-			fi
-			# Check if the patch has already been applied, and if not, apply it.
-			if ! sudo patch -R -p0 -f --dry-run "$dest" "$file" &>/dev/null; then
-				sudo patch "$dest" "$file"
-			fi
-		else
-			sudo mkdir -pv "$(dirname "$dest")"
-			sudo cp -fvu "$file" "$dest"
-		fi
-	done
+install_system "__common__/Arch"
+install_system "$HOSTNAME"
 
-# Install XDG files
-find "$PROFILE_DIR" -type f -regex ".*\/xdg_.*" -print0 |
-	while IFS= read -r -d '' file; do
-		rel=$(realpath --relative-to="$PROFILE_DIR" "$file")
-		xdg_name=$(cut -d'/' -f1 <<<"$rel")
-		xdg_var="${XDG_MAP[$xdg_name]}"
-		if [ -z "${!xdg_var:-}" ]; then
-			declare "$xdg_var"="${XDG_DEFAULTS[$xdg_var]}"
-		fi
-		xdg_dir="${!xdg_var%/}"
-		dest="$xdg_dir/${rel#*/}"
-		mkdir -pv "$(dirname "$dest")"
-		ln -sfv "$file" "$dest"
-	done
+install_xdg "$HOSTNAME"
 
 # Install packages with paru
 paru -S --needed - <"$PROFILE_DIR/pacman.txt"
