@@ -14,6 +14,7 @@ betterdiscordctl
 blueberry-wayland
 bluez
 bluez-utils
+borg
 brightnessctl
 browsh
 btop
@@ -81,8 +82,10 @@ hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
 icat
+iftop
 imagemagick
 intel-ucode
+iotop
 iptables-nft
 iwd
 jq
@@ -114,10 +117,12 @@ neofetch
 neovim-git
 neovim-symlinks
 nerd-fonts-complete-starship
+nethogs
 networkmanager
 networkmanager-openvpn
 nftables
 nm-connection-editor
+nnn
 notion-app-enhanced
 noto-fonts-emoji
 nvidia-dkms
@@ -157,6 +162,7 @@ ranger
 reflector
 retroarch
 ripgrep
+rkhunter
 rofi-lbonn-wayland-git
 rofimoji
 rtx-bin
