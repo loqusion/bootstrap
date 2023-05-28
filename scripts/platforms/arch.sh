@@ -77,7 +77,7 @@ install_system "$HOSTNAME"
 install_xdg "$HOSTNAME"
 
 # Install packages with paru
-paru -S --needed - <"$PROFILE_DIR/pacman.txt"
+paru -Sy --needed - <"$PROFILE_DIR/pacman.txt"
 
 # Enable systemd services
 while read -r service; do
