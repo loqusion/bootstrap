@@ -3,6 +3,10 @@
 DIR=$(dirname "$(readlink -f "$0")")
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
+git_add() {
+	git -C "$DIR" add "$@"
+}
+
 dump_patch() {
 	src="$1"
 	orig="$file"
@@ -15,13 +19,16 @@ dump_arch() {
 	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.txt"
+	git_add "$PROFILE_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$PROFILE_DIR/systemd.user.txt"
+	git_add "$PROFILE_DIR/systemd.user.txt"
 
 	PKGS=$(paru -Qqe)
 	if [ -e "$PROFILE_DIR/pacman.optional.txt" ]; then
 		PKGS=$(grep -Fvx -f "$PROFILE_DIR/pacman.optional.txt" <<<"$PKGS")
 	fi
 	echo "$PKGS" >"$PROFILE_DIR/pacman.txt"
+	git_add "$PROFILE_DIR/pacman.txt"
 
 	# TODO: generate -paths from array
 	find "$PROFILE_DIR" -type f \( -path "$PROFILE_DIR/boot/*" -o -path "$PROFILE_DIR/etc/*" -o -path "$PROFILE_DIR/usr/*" \) -print0 |
@@ -38,6 +45,7 @@ dump_arch() {
 			else
 				cp -fvu "$src" "$file"
 			fi
+			git_add "$file"
 		done
 }
 
@@ -45,6 +53,7 @@ dump_macos() {
 	HOSTNAME=$(hostname -s)
 	PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 	brew bundle dump -f --file "$PROFILE_DIR/Brewfile"
+	git_add "$PROFILE_DIR/Brewfile"
 }
 
 cd "$DIR" || exit 1
