@@ -8,13 +8,16 @@ git_add() {
 }
 
 _dump_patch() {
-	src="$1"
-	orig="$file"
-	patch="${file%.orig}.patch"
+	local file src orig patch
+	file="$1"
+	src="$2"
+	orig="$file.orig"
+	patch="$file.patch"
 	diff -ut "$orig" "$src" | sed -E "/^[+-]{3}/d" >"$patch"
 }
 
 _dump_profiles() {
+	local rel src
 	DEST_DIR="$DIR/profiles/$1"
 	# TODO: generate -paths from array
 	find "$DEST_DIR" -type f \( -path "$DEST_DIR/boot/*" -o -path "$DEST_DIR/etc/*" -o -path "$DEST_DIR/usr/*" \) -print0 |
@@ -27,7 +30,7 @@ _dump_profiles() {
 					echo "  cp $src ${file%.patch}.orig"
 				fi
 			elif [[ "$file" =~ \.orig$ ]]; then
-				_dump_patch "${src%.orig}"
+				_dump_patch "${file%.orig}" "${src%.orig}"
 			else
 				cp -fvu "$src" "$file"
 			fi
