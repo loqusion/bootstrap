@@ -9,6 +9,8 @@ config() {
 	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
 }
 
+cd "$DIR" || exit 1
+
 mkdir -p "$DOTFILES"
 if [ ! -e "$DOTFILES/HEAD" ]; then
 	[ -e "$DOTFILES" ] && rm -rfIv "$DOTFILES"
@@ -18,7 +20,7 @@ else
 	[[ "$reply" =~ ^[Yy]$ ]] && config pull
 fi
 
-"$DIR/sparse-checkout.sh"
+./sparse-checkout.sh
 
 config submodule update --init --remote
 config checkout --force
