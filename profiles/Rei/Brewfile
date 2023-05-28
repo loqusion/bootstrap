@@ -1,3 +1,4 @@
+tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -57,6 +58,7 @@ brew "lolcat"
 brew "lua"
 brew "luarocks"
 brew "lynx"
+brew "mas"
 brew "mdcat"
 brew "node@16"
 brew "mongosh"
@@ -159,3 +161,17 @@ cask "slack"
 cask "ubersicht"
 cask "utm"
 cask "wezterm"
+mas "AdBlock Pro", id: 1018301773
+mas "Dashlane", id: 517914548
+mas "Fantastical", id: 975937182
+mas "GarageBand", id: 682658836
+mas "Hush", id: 1544743900
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Safarikai", id: 1437951175
+mas "Spark", id: 1176895641
+mas "Tampermonkey", id: 1482490089
+mas "uBlacklist for Safari", id: 1547912640
+mas "Xcode", id: 497799835
