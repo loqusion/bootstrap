@@ -3,14 +3,15 @@
 set -euo pipefail
 
 TARGET_DISK=${TARGET_DISK:-${1:-}}
-HOSTNAME=${HOSTNAME:-}
-USER=${USER:-loqusion}
-KERNEL=${KERNEL:-linux}
-FILESYSTEM=${FILESYSTEM:-btrfs}
+TARGET_HOSTNAME=${TARGET_HOSTNAME:-}
+TARGET_USER=${TARGET_USER:-loqusion}
+TARGET_KERNEL=${TARGET_KERNEL:-linux}
+TARGET_FILESYSTEM=${TARGET_FILESYSTEM:-btrfs}
 FORCE=${FORCE:-false}
 
 EDITOR_PACKAGE=${EDITOR_PACKAGE:-neovim}
 SHELL_PACKAGE=${SHELL_PACKAGE:-fish}
+FS_UTILS_PACKAGE=
 ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES:-}
 
 if ! [ -d /sys/firmware/efi/efivars ]; then
@@ -18,17 +19,18 @@ if ! [ -d /sys/firmware/efi/efivars ]; then
 	exit 1
 fi
 
-case "$KERNEL" in
-linux | linux-lts | linux-zen) KERNEL_HEADERS="$KERNEL-headers" ;;
+case "$TARGET_KERNEL" in
+linux | linux-lts | linux-zen) KERNEL_HEADERS="$TARGET_KERNEL-headers" ;;
 *)
-	echo "ERROR: Unsupported kernel: $KERNEL"
+	echo "ERROR: Unsupported kernel: $TARGET_KERNEL"
 	exit 1
 	;;
 esac
-case "$FILESYSTEM" in
-ext4 | btrfs) ;;
+case "$TARGET_FILESYSTEM" in
+ext4) FS_UTILS_PACKAGE="e2fsprogs" ;;
+btrfs) FS_UTILS_PACKAGE="btrfs-progs" ;;
 *)
-	echo "ERROR: Unsupported filesystem: $FILESYSTEM"
+	echo "ERROR: Unsupported filesystem: $TARGET_FILESYSTEM"
 	exit 1
 	;;
 esac
@@ -40,14 +42,29 @@ elif ! [ -b "$TARGET_DISK" ]; then
 	exit 1
 fi
 
-if [ -z "$HOSTNAME" ]; then
+if [ -z "$TARGET_HOSTNAME" ]; then
 	read -p "Enter a hostname: " -r HOSTNAME
-	[ -z "$HOSTNAME" ] && echo "ERROR: Hostname cannot be empty." && exit 1
+	[ -z "$TARGET_HOSTNAME" ] && echo "ERROR: Hostname cannot be empty." && exit 1
+fi
+
+echo "TARGET_DISK:         $TARGET_DISK"
+echo "TARGET_HOSTNAME:     $TARGET_HOSTNAME"
+echo "TARGET_USER:         $TARGET_USER"
+echo "TARGET_KERNEL:       $TARGET_KERNEL"
+echo "TARGET_FILESYSTEM:   $TARGET_FILESYSTEM"
+echo "---"
+echo "EDITOR_PACKAGE:      $EDITOR_PACKAGE"
+echo "SHELL_PACKAGE:       $SHELL_PACKAGE"
+echo "FS_UTILS_PACKAGE:    $FS_UTILS_PACKAGE"
+echo "ADDITIONAL_PACKAGES: $ADDITIONAL_PACKAGES"
+read -p "Continue? [Y/n] " -r REPLY || exit 1
+if [ -n "$REPLY" ] && ! [[ $REPLY =~ ^[Yy]$ ]]; then
+	exit 1
 fi
 
 if [ "$FORCE" != true ] && [ "$FORCE" != "1" ]; then
 	echo "WARNING: This script will destroy all data on $TARGET_DISK."
-	read -p "Continue? [y/N] " -r REPLY
+	read -p "Continue? [y/N] " -r REPLY || exit 1
 	if ! [[ $REPLY =~ ^[Yy]$ ]]; then
 		exit 1
 	fi
@@ -64,7 +81,7 @@ SWAP_PARTITION="${TARGET_DISK}p2"
 ROOT_PARTITION="${TARGET_DISK}p3"
 mkfs.fat -F 32 -n EFI "$BOOT_PARTITION"
 mkswap -L swap "$SWAP_PARTITION"
-case "$FILESYSTEM" in
+case "$TARGET_FILESYSTEM" in
 btrfs)
 	mkfs.btrfs -L arch_os "$ROOT_PARTITION"
 	;;
@@ -72,7 +89,7 @@ ext4)
 	mkfs.ext4 -L arch_os "$ROOT_PARTITION"
 	;;
 *)
-	echo "ERROR: Unsupported filesystem: $FILESYSTEM"
+	echo "ERROR: Unsupported filesystem: $TARGET_FILESYSTEM"
 	exit 1
 	;;
 esac
@@ -85,7 +102,7 @@ mount --mkdir "BOOT_PARTITION" /mnt/boot
 swapon "$SWAP_PARTITION"
 
 # shellcheck disable=SC2086
-pacstrap -K /mnt base base-devel alsa-utils "$KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode iwd dhcpcd man-db man-pages texinfo "$SHELL_PACKAGE" "$EDITOR_PACKAGE" $ADDITIONAL_PACKAGES
+pacstrap -K /mnt base base-devel alsa-utils "$TARGET_KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode iwd dhcpcd man-db man-pages texinfo "$SHELL_PACKAGE" "$EDITOR_PACKAGE" "$FS_UTILS_PACKAGE" $ADDITIONAL_PACKAGES
 
 genfstab -U /mnt >>/mnt/etc/fstab
 
@@ -96,7 +113,7 @@ sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /mnt/etc/locale.gen
 arch-chroot /mnt locale-gen
 echo "LANG=en_US.UTF-8" >/mnt/etc/locale.conf
 
-echo "$HOSTNAME" >/mnt/etc/hostname
+echo "$TARGET_HOSTNAME" >/mnt/etc/hostname
 
 arch-chroot /mnt mkinitcpio -P
 
@@ -109,18 +126,18 @@ editor    yes
 EOF
 cat >/mnt/boot/loader/entries/arch.conf <<EOF
 title   Arch Linux
-linux   /vmlinuz-$KERNEL
+linux   /vmlinuz-$TARGET_KERNEL
 initrd  /intel-ucode.img
-initrd  /initramfs-$KERNEL.img
+initrd  /initramfs-$TARGET_KERNEL.img
 options root=LABEL=arch_os rw
 EOF
 cat >/mnt/boot/loader/entries/arch-fallback.conf <<EOF
 title   Arch Linux (fallback initramfs)
-linux   /vmlinuz-$KERNEL
+linux   /vmlinuz-$TARGET_KERNEL
 initrd  /intel-ucode.img
-initrd  /initramfs-$KERNEL-fallback.img
+initrd  /initramfs-$TARGET_KERNEL-fallback.img
 options root=LABEL=arch_os rw
 EOF
 
-arch-chroot /mnt useradd -m -G wheel -s "$(which "$SHELL_PACKAGE")" "$USER"
-arch-chroot /mnt passwd "$USER"
+arch-chroot /mnt useradd -m -G wheel -s "$(which "$SHELL_PACKAGE")" "$TARGET_USER"
+arch-chroot /mnt passwd "$TARGET_USER"
