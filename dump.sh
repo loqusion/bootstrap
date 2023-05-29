@@ -31,10 +31,11 @@ _dump_profiles() {
 				fi
 			elif [[ "$file" =~ \.orig$ ]]; then
 				_dump_patch "${file%.orig}" "${src%.orig}"
+				git_add "$file" "${file%.orig}.patch"
 			else
 				cp -fvu "$src" "$file"
+				git_add "$file"
 			fi
-			git_add "$file"
 		done
 }
 
