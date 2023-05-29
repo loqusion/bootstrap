@@ -1,0 +1,10 @@
+adobe-source-han-sans-cn-fonts
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+ttf-google-fonts-typewolf
+ttf-intel-one-mono
+ttf-iosevka-nerd
+ttf-ms-win11-auto
+ttf-nerd-fonts-symbols-mono
+ttf-tamzen-font-git
+wqy-zenhei

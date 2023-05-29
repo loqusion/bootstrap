@@ -1,0 +1,10 @@
+base
+dev
+fonts
+media
+nvidia
+qemu
+themes
+ui.nvidia
+ui
+utils

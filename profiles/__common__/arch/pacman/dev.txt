@@ -1,0 +1,16 @@
+ccache
+clang
+deno
+texinfo
+hyperfine
+lazygit
+lua-sec
+zellij
+xxd-standalone
+luarocks
+just
+neovim-git
+dura-git
+gnu-netcat
+neovim-symlinks
+zeal

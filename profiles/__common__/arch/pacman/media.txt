@@ -1,0 +1,13 @@
+gamemode
+mpv
+betterdiscordctl
+element-desktop
+discord_arch_electron
+lib32-mangohud
+mangohud
+obs-studio
+retroarch
+spotify-launcher
+steam
+vkbasalt-git
+vlc

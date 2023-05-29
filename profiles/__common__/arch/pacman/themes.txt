@@ -1,0 +1,6 @@
+catppuccin-cursors-frappe
+catppuccin-cursors-latte
+catppuccin-cursors-macchiato
+catppuccin-gtk-theme-frappe
+catppuccin-gtk-theme-latte
+catppuccin-gtk-theme-macchiato
