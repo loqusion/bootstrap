@@ -2,6 +2,7 @@ acpid
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
+alsa-utils
 ansible
 atool
 autotrash
@@ -14,10 +15,11 @@ betterdiscordctl
 bind
 blueberry-wayland
 bluez
-bluez-utils
+bluez-utils-compat
 brightnessctl
 browsh
 btop
+btrfs-progs
 catppuccin-cursors-frappe
 catppuccin-cursors-latte
 catppuccin-cursors-macchiato
@@ -35,10 +37,12 @@ cpupower
 deno
 dhcpcd
 dictd
+direnv
 discord_arch_electron
 dmidecode
 dos2unix
 dotbare
+ds4drv
 dunst
 dura-git
 element-desktop
@@ -68,6 +72,7 @@ git
 git-delta
 github-cli
 glow
+gnome-calculator
 gnome-keyring
 gnu-netcat
 gobject-introspection
@@ -101,9 +106,7 @@ libva
 libva-nvidia-driver
 libva-utils
 light-git
-linux
 linux-firmware
-linux-headers
 linux-zen
 linux-zen-headers
 lua-sec
@@ -143,6 +146,7 @@ pamixer
 papirus-icon-theme
 parted
 paru
+pavucontrol
 pcloud-drive
 pcloudcc-git
 pipewire-alsa
@@ -170,11 +174,13 @@ python-sniffio
 python-trio
 qbittorrent
 qgnomeplatform-qt5
+qgnomeplatform-qt6
 qpwgraph
 qt5-styleplugins
 qt5-wayland
 qt5ct
 qt6-wayland
+qt6ct
 ranger
 reflector
 retroarch
@@ -186,6 +192,7 @@ rustup
 samba
 sassc
 slurp
+snapper
 socat
 spotify-launcher
 starship
@@ -194,7 +201,8 @@ swappy
 sway-audio-idle-inhibit-git
 sway-git
 swayidle
-swaylock-effects
+swaylock
+swaync
 sxhkd
 systemd-boot-pacman-hook
 tealdeer
@@ -203,7 +211,7 @@ thermald
 tmux
 tmux-plugin-manager
 tokei
-topgrade
+topgrade-bin
 transmission-cli
 trashman
 tree
@@ -221,13 +229,15 @@ unzip
 via-bin
 vkbasalt-git
 vlc
+vulkan-tools
 waybar-hyprland-git
 webapp-manager
-wezterm-git
+wezterm
 wf-recorder
 wget
 wl-clip-persist-git
 wl-clipboard
+wlogout
 wlr-randr
 wlsunset-git
 wofi
@@ -236,6 +246,7 @@ wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
+xdotool
 xkeysnail
 xorg-xhost
 xorg-xlsclients
