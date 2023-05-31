@@ -201,7 +201,7 @@ swappy
 sway-audio-idle-inhibit-git
 sway-git
 swayidle
-swaylock
+swaylock-effects-git
 swaync
 sxhkd
 systemd-boot-pacman-hook
