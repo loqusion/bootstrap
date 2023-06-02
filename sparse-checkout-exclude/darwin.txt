@@ -1,12 +1,18 @@
 Mailspring
 MangoHud
+anyrun
+coolercontrol
 dunst
+electron-flags.conf
 fcitx5
 gtk-*
 hypr
 mako
+mimeapps.list
 mpv
 paru
+qt5ct
+qt6ct
 rofi
 swayidle
 swaylock
@@ -14,5 +20,6 @@ systemd
 user-tmpfiles.d
 waybar
 wireplumber
+wlogout
 wofi
 xsettingsd
