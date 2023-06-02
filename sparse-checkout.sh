@@ -12,5 +12,9 @@ config() {
 }
 
 if [ -e "$SPARSE_CHECKOUT_EXCLUDE" ]; then
-	sed -e 's/^/!.config\//' -e $'1i\\\n/*' -e $'1i\\\n!README.md' "$SPARSE_CHECKOUT_EXCLUDE" | config sparse-checkout set --stdin --no-cone
+	files=$(cat "$SPARSE_CHECKOUT_EXCLUDE")
+	for file in $files; do
+		rm -rfv "$HOME/.config/${file:?}"
+	done
+	echo "$files" | sed -e 's/^/!.config\//' -e $'1i\\\n/*' -e $'1i\\\n!README.md' | config sparse-checkout set --stdin --no-cone
 fi

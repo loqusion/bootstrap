@@ -18,10 +18,10 @@ else
 	[[ "$reply" =~ ^[Yy]$ ]] && config pull
 fi
 
-"$DIR"/sparse-checkout.sh
-
 config submodule update --init --remote
-config checkout --force
+config checkout --force &>/dev/null
 config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
+
+"$DIR"/sparse-checkout.sh
