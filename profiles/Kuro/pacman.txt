@@ -4,7 +4,9 @@ adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 alsa-utils
 ansible
+anyrun-git
 atool
+authy
 autotrash
 avizo
 base
@@ -48,6 +50,7 @@ dura-git
 element-desktop
 eww-wayland
 exa
+expect
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -56,6 +59,7 @@ fcitx5-qt
 fd
 feh
 firefox
+firefox-developer-edition
 firewalld
 fish
 fisher-git
@@ -149,6 +153,7 @@ paru
 pavucontrol
 pcloud-drive
 pcloudcc-git
+picom
 pipewire-alsa
 pipewire-pulse
 pkgfile
@@ -194,6 +199,7 @@ sassc
 slurp
 snapper
 socat
+spicetify-cli
 spotify-launcher
 starship
 steam
@@ -243,6 +249,7 @@ wlsunset-git
 wofi
 wqy-zenhei
 wtype
+xcompmgr
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
