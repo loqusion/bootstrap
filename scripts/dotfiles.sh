@@ -18,7 +18,7 @@ else
 	[[ "$reply" =~ ^[Yy]$ ]] && config pull
 fi
 
-config submodule update --init --remote
+config submodule update --init
 config checkout --force &>/dev/null
 config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
