@@ -1,7 +1,4 @@
 acpid
-adobe-source-han-sans-cn-fonts
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
 alsa-utils
 ansible
 anyrun-git
@@ -134,6 +131,7 @@ networkmanager-openvpn
 nftables
 nm-connection-editor
 notion-app-enhanced
+noto-fonts-cjk
 noto-fonts-emoji
 nvidia-dkms
 nvidia-settings
