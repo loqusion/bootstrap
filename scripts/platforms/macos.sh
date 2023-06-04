@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-DIR=$(dirname "$(readlink -f "$0")")/../..
+set -euo pipefail
+
+DIR=$(realpath "$(dirname "$(readlink -f "$0")")/../..")
 HOSTNAME=$(hostname -s)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
 

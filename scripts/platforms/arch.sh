@@ -9,9 +9,11 @@ declare -A XDG_MAP=(
 	[xdg_config]="XDG_CONFIG_HOME"
 )
 
-DIR=$(dirname "$(readlink -f "$0")")/../..
+DIR=$(realpath "$(dirname "$(readlink -f "$0")")/../..")
 HOSTNAME=$(cat /etc/hostname)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
+
+cd "$DIR" || exit 1
 
 install_system() {
 	SRC_DIR="$DIR/profiles/$1"
@@ -53,8 +55,6 @@ install_xdg() {
 			ln -sfv "$file" "$dest"
 		done
 }
-
-cd "$DIR" || exit 1
 
 # Request credentials so that sudo doesn't prompt later
 sudo -v

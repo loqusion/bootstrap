@@ -2,8 +2,10 @@
 
 set -euo pipefail
 
-DIR=$(dirname "$(readlink -f "$0")")/..
+DIR=$(realpath "$(dirname "$(readlink -f "$0")")/..")
 DOTFILES=${DOTFILES:-"$HOME/.local/share/dotfiles/"}
+
+cd "$DIR"
 
 config() {
 	/usr/bin/git --git-dir="$DOTFILES" --work-tree="$HOME" "$@"
@@ -24,4 +26,4 @@ config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
 
-"$DIR"/scripts/sparse-checkout.sh
+./scripts/sparse-checkout.sh

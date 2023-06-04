@@ -3,6 +3,8 @@
 DIR=$(dirname "$(readlink -f "$0")")
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
+cd "$DIR" || exit 1
+
 git_add() {
 	git -C "$DIR" add "$@"
 }
@@ -65,8 +67,6 @@ dump_macos() {
 	brew bundle dump -f --file "$DEST_DIR/Brewfile"
 	git_add "$DEST_DIR/Brewfile"
 }
-
-cd "$DIR" || exit 1
 
 PLATFORM=$(./scripts/detect-platform.sh)
 if [ "$PLATFORM" = "arch" ]; then
