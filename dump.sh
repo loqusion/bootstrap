@@ -55,7 +55,7 @@ dump_arch() {
 	echo "$PKGS" >"$DEST_DIR/pacman.txt"
 	git_add "$DEST_DIR/pacman.txt"
 
-	_dump_profiles "__common__/Arch"
+	_dump_profiles "__common__/arch"
 	_dump_profiles "$HOSTNAME"
 }
 

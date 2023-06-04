@@ -71,7 +71,7 @@ if ! command -v paru &>/dev/null; then
 	(cd "$PARU_DIR" && makepkg -si)
 fi
 
-install_system "__common__/Arch"
+install_system "__common__/arch"
 install_system "$HOSTNAME"
 
 install_xdg "$HOSTNAME"

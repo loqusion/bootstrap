@@ -24,4 +24,4 @@ config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
 
-"$DIR"/sparse-checkout.sh
+"$DIR"/scripts/sparse-checkout.sh
