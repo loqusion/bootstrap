@@ -133,6 +133,7 @@ nm-connection-editor
 notion-app-enhanced
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 nvidia-dkms
 nvidia-settings
 nwg-look
