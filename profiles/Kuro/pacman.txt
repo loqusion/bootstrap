@@ -123,7 +123,6 @@ mesa-utils
 mpv
 nautilus
 neofetch
-neovide
 neovim-git
 neovim-symlinks
 nerd-fonts-complete-starship
@@ -219,7 +218,7 @@ tmux-plugin-manager
 tokei
 topgrade-bin
 transmission-cli
-trashman
+trash-cli
 tree
 ttf-google-fonts-typewolf
 ttf-intel-one-mono
