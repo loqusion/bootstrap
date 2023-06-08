@@ -212,6 +212,7 @@ sxhkd
 systemd-boot-pacman-hook
 tealdeer
 texinfo
+tgpt-bin
 thermald
 tmux
 tmux-plugin-manager
