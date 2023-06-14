@@ -1,0 +1,30 @@
+requires:
+  bundles:
+    - base
+    - dev
+    - linux.zen
+    - nvidia
+    - performance
+    - system
+    - tools
+    - ui.common
+    - ui.nvidia
+  packages: []
+wants:
+  bundles:
+    - base
+    - dev
+    - fonts
+    - ime
+    - linux.zen
+    - media
+    - nvidia
+    - performance
+    - qemu
+    - system
+    - themes
+    - tools
+    - ui.common
+    - ui.extra
+    - ui.nvidia
+  packages: []

@@ -1,0 +1,7 @@
+atool
+dos2unix
+nmap
+parted
+plocate
+socat
+via-bin

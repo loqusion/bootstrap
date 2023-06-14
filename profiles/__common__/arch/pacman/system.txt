@@ -1,0 +1,12 @@
+acpid
+autotrash
+coolercontrol
+dmidecode
+fwupd
+inetutils
+inxi
+iptables-nft
+nftables
+openrgb
+systemd-boot-pacman-hook
+trash-cli

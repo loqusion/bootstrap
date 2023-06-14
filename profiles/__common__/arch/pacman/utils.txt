@@ -1,6 +1,0 @@
-systemd-boot-pacman-hook
-neofetch
-atool
-autotrash
-coolercontrol
-cpupower

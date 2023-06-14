@@ -1,0 +1,4 @@
+cpupower
+irqbalance
+preload
+thermald

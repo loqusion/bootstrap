@@ -1,0 +1,8 @@
+gammastep
+goverlay-bin
+mailspring
+neofetch
+notion-app
+opera
+opera-ffmpeg-codecs
+poppler
