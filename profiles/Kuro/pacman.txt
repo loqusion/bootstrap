@@ -3,6 +3,7 @@ alacritty
 alsa-utils
 ansible
 anyrun-git
+asciinema
 atool
 authy
 autotrash
@@ -20,6 +21,7 @@ brightnessctl
 browsh
 btop
 btrfs-progs
+cargo-watch
 catppuccin-cursors-frappe
 catppuccin-cursors-latte
 catppuccin-cursors-macchiato
@@ -70,6 +72,7 @@ fragments
 fwupd
 gamemode
 gammastep
+gimp
 git
 git-delta
 github-cli
@@ -82,6 +85,10 @@ goverlay-bin
 grc
 greetd
 grim
+grimblast-git
+gst-libav
+gst-plugins-bad
+gum
 helvum
 htop
 hunspell
@@ -111,6 +118,7 @@ light-git
 linux-firmware
 linux-zen
 linux-zen-headers
+lldb
 lua-sec
 luarocks
 lynx
@@ -130,7 +138,8 @@ networkmanager
 networkmanager-openvpn
 nftables
 nm-connection-editor
-notion-app-enhanced
+nmap
+notion-app
 noto-fonts-cjk
 noto-fonts-emoji
 npm
@@ -204,7 +213,6 @@ starship
 steam
 swappy
 sway-audio-idle-inhibit-git
-sway-git
 swayidle
 swaylock-effects-git
 swaync
@@ -222,7 +230,6 @@ transmission-cli
 trash-cli
 tree
 ttf-google-fonts-typewolf
-ttf-intel-one-mono
 ttf-iosevka-nerd
 ttf-jetbrains-mono
 ttf-ms-win11-auto
@@ -237,8 +244,7 @@ vkbasalt-git
 vlc
 vulkan-tools
 waybar-hyprland-git
-webapp-manager
-wezterm
+wezterm-git
 wf-recorder
 wget
 wl-clip-persist-git
@@ -255,6 +261,8 @@ xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xdotool
 xkeysnail
+xorg-fonts-100dpi
+xorg-fonts-75dpi
 xorg-xhost
 xorg-xlsclients
 xxd-standalone
