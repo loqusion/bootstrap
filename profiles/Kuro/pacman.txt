@@ -4,6 +4,7 @@ alsa-utils
 ansible
 anyrun-git
 asciinema
+atomicparsley
 atool
 authy
 autotrash
@@ -58,12 +59,12 @@ fcitx5-mozc-ut
 fcitx5-qt
 fd
 feh
+ffmpegthumbnailer
 firefox
 firefox-developer-edition
 firewalld
 fish
 fisher-git
-floorp
 fluent-gtk-theme-git
 fluent-icon-theme-git
 fm-bin
@@ -88,6 +89,7 @@ grim
 grimblast-git
 gst-libav
 gst-plugins-bad
+gst-plugins-ugly
 gum
 helvum
 htop
@@ -129,6 +131,7 @@ mangohud
 mdcat
 mesa-utils
 mpv
+namcap
 nautilus
 neofetch
 neovim-git
@@ -171,6 +174,7 @@ plocate
 polkit-gnome
 poppler
 preload
+prettier
 python
 python-argcomplete
 python-brotli
@@ -178,8 +182,11 @@ python-certifi
 python-curio
 python-dnspython
 python-idna
+python-mutagen
 python-pillow
 python-pip
+python-pycryptodome
+python-pycryptodomex
 python-pyopenssl
 python-pysocks
 python-pyxdg
@@ -213,6 +220,7 @@ spotify-launcher
 starship
 steam
 swappy
+sway
 sway-audio-idle-inhibit-git
 swayidle
 swaylock-effects-git
@@ -267,6 +275,7 @@ xorg-fonts-75dpi
 xorg-xhost
 xorg-xlsclients
 xxd-standalone
+yt-dlp
 zeal
 zellij
 zip
