@@ -1,0 +1,9 @@
+@@ -8,7 +8,7 @@
+ 
+ publickey: files
+ 
+-hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns
++hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns
+ networks: files
+ 
+ protocols: files
