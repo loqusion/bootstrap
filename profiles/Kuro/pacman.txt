@@ -143,6 +143,7 @@ notion-app
 noto-fonts-cjk
 noto-fonts-emoji
 npm
+nss-mdns
 nvidia-dkms
 nvidia-settings
 nwg-look
