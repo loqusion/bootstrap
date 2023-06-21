@@ -22,6 +22,7 @@ brightnessctl
 browsh
 btop
 btrfs-progs
+cargo-nextest
 cargo-watch
 catppuccin-cursors-frappe
 catppuccin-cursors-latte
