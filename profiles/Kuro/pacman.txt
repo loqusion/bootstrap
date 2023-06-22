@@ -210,7 +210,9 @@ ripgrep
 rofi-lbonn-wayland-git
 rofimoji
 rtx
+rust-docs
 rustup
+rusty-man
 samba
 sassc
 slurp
