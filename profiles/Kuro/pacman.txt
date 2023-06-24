@@ -109,7 +109,11 @@ irqbalance
 iwd
 jq
 just
+kimageformats
 kitty
+krita
+krita-plugin-gmic
+kseexpr
 lazydocker-bin
 lazygit
 lib32-mangohud
@@ -125,7 +129,6 @@ lldb
 lua-sec
 luarocks
 lynx
-mailspring
 man-db
 man-pages
 mangohud
@@ -189,6 +192,7 @@ python-pip
 python-pycryptodome
 python-pycryptodomex
 python-pyopenssl
+python-pyqt5
 python-pysocks
 python-pyxdg
 python-requests-toolbelt
@@ -234,6 +238,7 @@ tealdeer
 texinfo
 tgpt-bin
 thermald
+thunderbird
 tmux
 tmux-plugin-manager
 tokei
@@ -279,6 +284,7 @@ xorg-xhost
 xorg-xlsclients
 xxd-standalone
 yt-dlp
+zathura
 zeal
 zellij
 zip
