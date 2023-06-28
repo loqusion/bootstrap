@@ -24,6 +24,7 @@ TARGET_KERNEL=${TARGET_KERNEL:-}
 TARGET_FILESYSTEM=${TARGET_FILESYSTEM:-}
 FORCE=${FORCE:-0}
 DRY_RUN=${DRY_RUN:-0}
+DEBUG=${DEBUG:-0}
 
 EDITOR_PACKAGE=${EDITOR_PACKAGE:-neovim}
 SHELL_PACKAGE=${SHELL_PACKAGE:-fish}
@@ -35,7 +36,23 @@ feedback() {
 	var="COLOR_${level^^}"
 	color=${!var:-}
 	echo "$(gum style --foreground="$color" "$level:")" "$@"
-}
+} >&2
+
+die() {
+	feedback ERROR "$@"
+	if [ "$DEBUG" = true ] || [ "$DEBUG" = "1" ]; then
+		echo
+		echo "Debug information:"
+		echo "=================="
+		echo
+		echo "FUNCNAME: ${FUNCNAME[*]}"
+		echo "BASH_LINENO: ${BASH_LINENO[*]}"
+	else
+		echo
+		echo "Run with DEBUG=1 for more information."
+	fi
+	exit 1
+} >&2
 
 contains() {
 	declare word
@@ -44,6 +61,16 @@ contains() {
 		[ "$word" = "$2" ] && return 0
 	done
 	return 1
+}
+
+invariant_one() {
+	declare result=
+	while read -r line; do
+		[ -n "$result" ] && die "Invariant violated: multiple results found."
+		result=$line
+	done
+	[ -z "$result" ] && die "Invariant violated: no results found."
+	echo "$result"
 }
 
 confirm() {
