@@ -183,10 +183,9 @@ sgdisk "$TARGET_DISK" -n=2:0:+4096M -t=2:8200 -c=2:"Linux swap"
 sgdisk "$TARGET_DISK" -n=3:0:0 -t=3:830 -c=3:"Linux filesystem"
 sgdisk "$TARGET_DISK" -p
 
-# FIXME: proper partition name detection
-BOOT_PARTITION="${TARGET_DISK}p1"
-SWAP_PARTITION="${TARGET_DISK}p2"
-ROOT_PARTITION="${TARGET_DISK}p3"
+BOOT_PARTITION=$(blkid -t PARTLABEL="EFI system partition" -o device | grep -F "$TARGET_DISK" | invariant_one)
+SWAP_PARTITION=$(blkid -t PARTLABEL="Linux swap" -o device | grep -F "$TARGET_DISK" | invariant_one)
+ROOT_PARTITION=$(blkid -t PARTLABEL="Linux filesystem" -o device | grep -F "$TARGET_DISK" | invariant_one)
 mkfs.fat -F 32 -n EFI "$BOOT_PARTITION"
 mkswap -L swap "$SWAP_PARTITION"
 case "$TARGET_FILESYSTEM" in
