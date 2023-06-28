@@ -2,73 +2,154 @@
 
 set -euo pipefail
 
+SCRIPT_DEPENDENCIES=(gum reflector)
+SUPPORTED_KERNELS=(linux linux-lts linux-zen)
+SUPPORTED_FILESYSTEMS=(ext4 btrfs)
+declare -A FS_UTILS_PACKAGES=(
+	[ext4]="e2fsprogs"
+	[btrfs]="btrfs-progs"
+)
+
+# shellcheck disable=SC2034
+COLOR_INFO="#89dceb"
+# shellcheck disable=SC2034
+COLOR_WARNING="#f9e2af"
+# shellcheck disable=SC2034
+COLOR_ERROR="#f38ba8"
+
 TARGET_DISK=${TARGET_DISK:-${1:-}}
 TARGET_HOSTNAME=${TARGET_HOSTNAME:-}
-TARGET_USER=${TARGET_USER:-loqusion}
-TARGET_KERNEL=${TARGET_KERNEL:-linux}
-TARGET_FILESYSTEM=${TARGET_FILESYSTEM:-btrfs}
-FORCE=${FORCE:-false}
+TARGET_USER=${TARGET_USER:-}
+TARGET_KERNEL=${TARGET_KERNEL:-}
+TARGET_FILESYSTEM=${TARGET_FILESYSTEM:-}
+FORCE=${FORCE:-0}
+DRY_RUN=${DRY_RUN:-0}
 
 EDITOR_PACKAGE=${EDITOR_PACKAGE:-neovim}
 SHELL_PACKAGE=${SHELL_PACKAGE:-fish}
 FS_UTILS_PACKAGE=
 ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES:-}
 
-if ! [ -d /sys/firmware/efi/efivars ]; then
-	echo "ERROR: UEFI is not enabled. This script is only for UEFI systems."
+feedback() {
+	level=$1 && shift
+	var="COLOR_${level^^}"
+	color=${!var:-}
+	echo "$(gum style --foreground="$color" "$level:")" "$@"
+}
+
+contains() {
+	declare word
+	declare -n array="$1"
+	for word in "${array[@]}"; do
+		[ "$word" = "$2" ] && return 0
+	done
+	return 1
+}
+
+confirm() {
+	gum confirm "$@"
+}
+
+input() {
+	prompt=$1 && shift
+	gum input --prompt="$prompt" "$@"
+}
+
+input_password() {
+	gum input --prompt="$prompt" --password "$@"
+}
+
+choose() {
+	header=$1 && shift
+	gum choose --header="$header" "$@"
+}
+
+spin() {
+	title=$1 && shift
+
+	if command -v gum &>/dev/null; then
+		gum spin --title="$title" -- "$@"
+		return
+	fi
+
+	echo -n "$title"
+	"$@" &>/dev/null && echo
+}
+
+if [ "$DRY_RUN" = true ] || [ "$DRY_RUN" = "1" ]; then
+	feedback INFO "Dry run mode enabled."
+fi
+if [ "$(id -u)" -ne 0 ]; then
+	feedback ERROR "This script must be run as root."
 	exit 1
 fi
-
-case "$TARGET_KERNEL" in
-linux | linux-lts | linux-zen) KERNEL_HEADERS="$TARGET_KERNEL-headers" ;;
-*)
-	echo "ERROR: Unsupported kernel: $TARGET_KERNEL"
+if ! [ -d /sys/firmware/efi/efivars ]; then
+	feedback ERROR "UEFI is not enabled. This script is only for UEFI systems."
 	exit 1
-	;;
-esac
-case "$TARGET_FILESYSTEM" in
-ext4) FS_UTILS_PACKAGE="e2fsprogs" ;;
-btrfs) FS_UTILS_PACKAGE="btrfs-progs" ;;
-*)
-	echo "ERROR: Unsupported filesystem: $TARGET_FILESYSTEM"
-	exit 1
-	;;
-esac
+fi
 if [ -z "$TARGET_DISK" ]; then
-	echo -e "ERROR: No target disk specified.\nSpecify a block device with TARGET_DISK or as an argument to this script."
+	feedback ERROR "No target disk specified. Specify a block device as an argument to this script (or with TARGET_DISK)."
 	exit 1
 elif ! [ -b "$TARGET_DISK" ]; then
-	echo "ERROR: $TARGET_DISK is not a block device."
+	feedback ERROR "'$TARGET_DISK' is not a block device. Try listing block devices with \`lsblk\`."
 	exit 1
 fi
+
+spin "Installing dependencies..." pacman -Sy --noconfirm --needed "${SCRIPT_DEPENDENCIES[@]}"
+
+if ! contains SUPPORTED_KERNELS "$TARGET_KERNEL"; then
+	TARGET_KERNEL=$(choose "Choose kernel" "${SUPPORTED_KERNELS[@]}")
+fi
+KERNEL_HEADERS="$TARGET_KERNEL-headers"
+echo "Using kernel: $TARGET_KERNEL"
+
+if ! contains SUPPORTED_FILESYSTEMS "$TARGET_FILESYSTEM"; then
+	TARGET_FILESYSTEM=$(choose "Choose filesystem" "${SUPPORTED_FILESYSTEMS[@]}")
+fi
+FS_UTILS_PACKAGE="${FS_UTILS_PACKAGES[$TARGET_FILESYSTEM]}"
+echo "Using filesystem: $TARGET_FILESYSTEM"
 
 if [ -z "$TARGET_HOSTNAME" ]; then
-	read -p "Enter a hostname: " -r TARGET_HOSTNAME
-	[ -z "$TARGET_HOSTNAME" ] && echo "ERROR: Hostname cannot be empty." && exit 1
+	TARGET_HOSTNAME=$(input "Hostname: ")
+	[ -z "$TARGET_HOSTNAME" ] && {
+		feedback ERROR "Hostname cannot be empty."
+		exit 1
+	}
 fi
+echo "Using hostname: $TARGET_HOSTNAME"
 
-echo "TARGET_DISK:         $TARGET_DISK"
-echo "TARGET_HOSTNAME:     $TARGET_HOSTNAME"
-echo "TARGET_USER:         $TARGET_USER"
-echo "TARGET_KERNEL:       $TARGET_KERNEL"
-echo "TARGET_FILESYSTEM:   $TARGET_FILESYSTEM"
-echo "---"
-echo "EDITOR_PACKAGE:      $EDITOR_PACKAGE"
-echo "SHELL_PACKAGE:       $SHELL_PACKAGE"
-echo "FS_UTILS_PACKAGE:    $FS_UTILS_PACKAGE"
-echo "ADDITIONAL_PACKAGES: $ADDITIONAL_PACKAGES"
-read -p "Continue? [Y/n] " -r REPLY || exit 1
-if [ -n "$REPLY" ] && ! [[ $REPLY =~ ^[Yy]$ ]]; then
-	exit 1
+if [ -z "$TARGET_USER" ]; then
+	TARGET_USER=$(input "Username: " --value=loqusion)
+	[ -z "$TARGET_USER" ] && {
+		feedback ERROR "Username cannot be empty."
+		exit 1
+	}
+fi
+echo "Using username: $TARGET_USER"
+
+if [ "$DRY_RUN" = true ] || [ "$DRY_RUN" = "1" ]; then
+	echo
+	echo "TARGET_DISK:         $TARGET_DISK"
+	echo "TARGET_HOSTNAME:     $TARGET_HOSTNAME"
+	echo "TARGET_USER:         $TARGET_USER"
+	echo "TARGET_KERNEL:       $TARGET_KERNEL"
+	echo "TARGET_FILESYSTEM:   $TARGET_FILESYSTEM"
+	echo "---"
+	echo "EDITOR_PACKAGE:      $EDITOR_PACKAGE"
+	echo "SHELL_PACKAGE:       $SHELL_PACKAGE"
+	echo "FS_UTILS_PACKAGE:    $FS_UTILS_PACKAGE"
+	echo "ADDITIONAL_PACKAGES: $ADDITIONAL_PACKAGES"
+	echo
+	echo "Dry run mode enabled. Exiting."
+	exit 0
 fi
 
 if [ "$FORCE" != true ] && [ "$FORCE" != "1" ]; then
-	echo "WARNING: This script will destroy all data on $TARGET_DISK."
-	read -p "Continue? [y/N] " -r REPLY || exit 1
-	if ! [[ $REPLY =~ ^[Yy]$ ]]; then
-		exit 1
-	fi
+	confirm "WARNING: This script will destroy all data on $TARGET_DISK. Continue?" || exit 1
 fi
+
+echo
+
 sgdisk "$TARGET_DISK" -og
 sgdisk "$TARGET_DISK" -n=1:0:+512M -t=1:ef00 -c=1:"EFI system partition"
 sgdisk "$TARGET_DISK" -n=2:0:+4096M -t=2:8200 -c=2:"Linux swap"
