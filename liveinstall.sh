@@ -222,7 +222,16 @@ esac
 systemctl restart reflector.service
 
 # shellcheck disable=SC2086
-pacstrap -K /mnt base base-devel alsa-utils "$TARGET_KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode iwd dhcpcd openssh man-db man-pages texinfo git github-cli "$SHELL_PACKAGE" "$EDITOR_PACKAGE" "$FS_UTILS_PACKAGE" $ADDITIONAL_PACKAGES
+pacstrap -K /mnt \
+	base base-devel alsa-utils \
+	"$TARGET_KERNEL" "$KERNEL_HEADERS" linux-firmware intel-ucode \
+	iwd dhcpcd openssh \
+	man-db man-pages texinfo \
+	git github-cli \
+	"$SHELL_PACKAGE" \
+	"$EDITOR_PACKAGE" \
+	"$FS_UTILS_PACKAGE" \
+	$ADDITIONAL_PACKAGES
 
 genfstab -U /mnt >>/mnt/etc/fstab
 
