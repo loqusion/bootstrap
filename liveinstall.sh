@@ -195,13 +195,11 @@ btrfs)
 	btrfs subvolume create /mnt/@
 	btrfs subvolume set-default /mnt/@
 	btrfs subvolume create /mnt/@home
-	btrfs subvolume create /mnt/@snapshots
 	btrfs subvolume create /mnt/@var_log
 	umount /mnt
 
 	mount -o subvol=@ "$ROOT_PARTITION" /mnt
 	mount -m -o subvol=@home "$ROOT_PARTITION" /mnt/home
-	mount -m -o subvol=@snapshots "$ROOT_PARTITION" /mnt/.snapshots
 	mount -m -o subvol=@var_log "$ROOT_PARTITION" /mnt/var/log
 	mount -m "$BOOT_PARTITION" /mnt/boot
 	swapon "$SWAP_PARTITION"
