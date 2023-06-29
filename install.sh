@@ -22,7 +22,3 @@ elif [ "$PLATFORM" = "macos" ]; then
 fi
 
 ./scripts/misc.sh || true
-
-if [ -x "$DEST/postinstall.sh" ]; then
-	"$DEST/postinstall.sh"
-fi

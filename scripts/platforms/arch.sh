@@ -56,6 +56,11 @@ install_xdg() {
 		done
 }
 
+postinstall() {
+	SRC_DIR="$DIR/profiles/$1"
+	[ -x "$SRC_DIR/postinstall.sh" ] && "$SRC_DIR/postinstall.sh"
+}
+
 # Request credentials so that sudo doesn't prompt later
 sudo -v
 
@@ -86,3 +91,6 @@ done <"$PROFILE_DIR/systemd.txt"
 while read -r service; do
 	systemctl --user enable --now "$service"
 done <"$PROFILE_DIR/systemd.user.txt"
+
+postinstall "__common/arch"
+postinstall "$HOSTNAME"
