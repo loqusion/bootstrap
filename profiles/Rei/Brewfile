@@ -1,4 +1,5 @@
 tap "buo/cask-upgrade"
+tap "cormacrelf/tap"
 tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -72,7 +73,7 @@ brew "neofetch"
 brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "nmap"
-brew "openssl@3"
+brew "openssl@3", link: false
 brew "nushell"
 brew "php"
 brew "pngpaste"
@@ -100,6 +101,7 @@ brew "yj"
 brew "youtube-dl"
 brew "zoxide"
 brew "zsh-syntax-highlighting"
+brew "cormacrelf/tap/dark-notify"
 brew "d12frosted/emacs-plus/emacs-plus@28", args: ["with-modern-icon", "with-no-titlebar"]
 brew "jesseduffield/lazygit/lazygit"
 brew "koekeishiya/formulae/skhd"
@@ -172,7 +174,7 @@ cask "raycast"
 cask "slack"
 cask "ubersicht"
 cask "utm"
-cask "wezterm"
+cask "wezterm-nightly"
 cask "zoom"
 mas "AdBlock Pro", id: 1018301773
 mas "Dashlane", id: 517914548
