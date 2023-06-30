@@ -213,6 +213,7 @@ ext4)
 	;;
 *)
 	echo "ERROR: Unsupported filesystem: $TARGET_FILESYSTEM"
+	echo "Supported filesystems: ${SUPPORTED_FILESYSTEMS[*]}"
 	exit 1
 	;;
 esac
