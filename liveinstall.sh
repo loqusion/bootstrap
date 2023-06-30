@@ -33,6 +33,12 @@ ADDITIONAL_PACKAGES=${ADDITIONAL_PACKAGES:-}
 
 feedback() {
 	level=$1 && shift
+
+	if ! command -v gum &>/dev/null; then
+		echo "$level: " "$@"
+		return
+	fi
+
 	var="COLOR_${level^^}"
 	color=${!var:-}
 	echo "$(gum style --foreground="$color" "$level:")" "$@"
@@ -94,18 +100,19 @@ choose() {
 spin() {
 	title=$1 && shift
 
-	if command -v gum &>/dev/null; then
-		gum spin --title="$title" -- "$@"
+	if ! command -v gum &>/dev/null; then
+		echo -n "$title"
+		"$@" &>/dev/null && echo
 		return
 	fi
 
-	echo -n "$title"
-	"$@" &>/dev/null && echo
+	gum spin --title="$title" -- "$@"
 }
 
 if [ "$DRY_RUN" = true ] || [ "$DRY_RUN" = "1" ]; then
 	feedback INFO "Dry run mode enabled."
 fi
+
 if [ "$(id -u)" -ne 0 ]; then
 	feedback ERROR "This script must be run as root."
 	exit 1
