@@ -219,7 +219,9 @@ rustup
 rusty-man
 samba
 sassc
+sccache
 slurp
+snap-pac
 snapper
 socat
 spicetify-cli
