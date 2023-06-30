@@ -3,3 +3,4 @@ gamemoded.service
 wireplumber.service
 xdg-user-dirs-update.service
 autotrash.timer
+gamma.timer

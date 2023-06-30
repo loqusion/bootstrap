@@ -118,6 +118,7 @@ lazydocker-bin
 lazygit
 lib32-mangohud
 lib32-nvidia-utils
+libfaketime
 libva
 libva-nvidia-driver
 libva-utils
@@ -270,7 +271,6 @@ wl-clip-persist-git
 wl-clipboard
 wlogout
 wlr-randr
-wlsunset-git
 wofi
 wqy-zenhei
 wtype
