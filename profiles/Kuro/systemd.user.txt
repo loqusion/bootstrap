@@ -1,3 +1,4 @@
+blackd.service
 dura.service
 gamemoded.service
 wireplumber.service
