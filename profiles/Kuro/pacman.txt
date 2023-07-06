@@ -3,6 +3,7 @@ alacritty
 alsa-utils
 ansible
 anyrun-git
+arandr
 asciinema
 atomicparsley
 atool
@@ -227,6 +228,7 @@ rusty-man
 samba
 sassc
 sccache
+sd
 slurp
 snap-pac
 snapper
