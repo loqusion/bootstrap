@@ -20,7 +20,6 @@ bluez
 bluez-utils
 borg
 brightnessctl
-browsh
 btop
 btrfs-progs
 cargo-nextest
@@ -141,7 +140,6 @@ nautilus
 neofetch
 neovim-git
 neovim-symlinks
-nerd-fonts-complete-starship
 nethogs
 networkmanager
 networkmanager-openvpn
