@@ -72,6 +72,7 @@ fluent-icon-theme-git
 fm-bin
 font-manager
 fragments
+fuzzel
 fwupd
 gamemode
 gammastep
@@ -106,6 +107,7 @@ inetutils
 intel-ucode
 inxi
 iptables-nft
+ipython
 irqbalance
 iwd
 jq
