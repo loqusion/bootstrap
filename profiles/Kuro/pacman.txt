@@ -18,7 +18,8 @@ betterdiscordctl
 bind
 blueberry-wayland
 bluez
-bluez-utils-compat
+bluez-utils
+borg
 brightnessctl
 browsh
 btop
@@ -102,6 +103,7 @@ hyperfine
 hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
+iftop
 imagemagick
 inetutils
 intel-ucode
@@ -129,6 +131,7 @@ light-git
 linux-firmware
 linux-zen
 linux-zen-headers
+lshw
 lldb
 lua-sec
 luarocks
@@ -145,6 +148,7 @@ neofetch
 neovim-git
 neovim-symlinks
 nerd-fonts-complete-starship
+nethogs
 networkmanager
 networkmanager-openvpn
 nftables
@@ -181,6 +185,8 @@ playerctl
 plocate
 polkit-gnome
 poppler
+powertop
+pv
 preload
 prettier
 python
@@ -221,6 +227,7 @@ ranger
 reflector
 retroarch
 ripgrep
+rkhunter
 rofi-lbonn-wayland-git
 rofimoji
 rtx
@@ -277,6 +284,7 @@ waybar-hyprland-git
 wezterm-git
 wf-recorder
 wget
+wireplumber
 wl-clip-persist-git
 wl-clipboard
 wlogout
