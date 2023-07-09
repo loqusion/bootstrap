@@ -141,6 +141,7 @@ man-pages
 mangohud
 mdcat
 mesa-utils
+morgen-bin
 mpv
 namcap
 nautilus
