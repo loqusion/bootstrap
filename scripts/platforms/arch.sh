@@ -76,7 +76,7 @@ if ! command -v paru &>/dev/null; then
 	(cd "$PARU_DIR" && makepkg -si)
 fi
 
-install_system "__common__/arch"
+install_system "_common/arch"
 install_system "$HOSTNAME"
 
 install_xdg "$HOSTNAME"
@@ -92,5 +92,5 @@ while read -r service; do
 	systemctl --user enable --now "$service"
 done <"$PROFILE_DIR/systemd.user.txt"
 
-postinstall "__common/arch"
+postinstall "_common/arch"
 postinstall "$HOSTNAME"

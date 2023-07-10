@@ -34,7 +34,7 @@ sparse_checkout() {
 }
 
 PLATFORM=$(./scripts/detect-platform.sh)
-files=$(_cat "$DIR/profiles/__common__/$PLATFORM/dotignore.txt" "$DIR/profiles/$HOSTNAME/dotignore.txt")
+files=$(_cat "$DIR/profiles/_common/$PLATFORM/dotignore.txt" "$DIR/profiles/$HOSTNAME/dotignore.txt")
 if [ -n "$files" ]; then
 	sparse_checkout "$files"
 fi
