@@ -1,7 +1,0 @@
-@@ -114,3 +114,6 @@
- #       AllowTcpForwarding no
- #       PermitTTY no
- #       ForceCommand cvs server
-+
-+Match User loqusion
-+  AcceptEnv TERM_PROGRAM WEZTERM_*
