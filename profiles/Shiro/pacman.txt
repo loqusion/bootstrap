@@ -154,7 +154,7 @@ npm
 nss-mdns
 nvidia-dkms
 nvidia-settings
-nwg-look
+nwg-look-bin
 obs-studio
 obsidian
 openssh
@@ -231,7 +231,7 @@ ripgrep
 rkhunter
 rofi-lbonn-wayland-git
 rofimoji
-rtx
+rtx-bin
 rust-docs
 rustup
 rusty-man
@@ -246,7 +246,6 @@ starship
 steam
 swappy
 sway-audio-idle-inhibit-git
-sway-git
 swayidle
 swaylock-effects
 swaync
@@ -319,7 +318,7 @@ unzip
 vlc
 vulkan-tools
 waybar-hyprland-git
-wezterm-git
+wezterm
 wf-recorder
 wget
 wireplumber
