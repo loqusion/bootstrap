@@ -18,8 +18,7 @@ betterdiscordctl
 bind
 blueberry-wayland
 bluez
-bluez-utils
-borg
+bluez-utils-compat
 brightnessctl
 browsh
 btop
@@ -41,13 +40,15 @@ cliphist
 coolercontrol
 cpupower
 deno
+devtools
 dhcpcd
 dictd
 direnv
-discord_arch_electron
+discord
 dmidecode
 dos2unix
 dotbare
+downgrade
 ds4drv
 dunst
 dura-git
@@ -103,7 +104,7 @@ hyperfine
 hyprland-nvidia-hidpi-git
 hyprpaper
 hyprpicker-git
-iftop
+hyprshade-git
 imagemagick
 inetutils
 intel-ucode
@@ -131,7 +132,6 @@ light-git
 linux-firmware
 linux-zen
 linux-zen-headers
-lshw
 lldb
 lua-sec
 luarocks
@@ -193,8 +193,6 @@ playerctl
 plocate
 polkit-gnome
 poppler
-powertop
-pv
 preload
 prettier
 python
@@ -212,6 +210,8 @@ python-idna
 python-mutagen
 python-pillow
 python-pip
+python-pipenv
+python-pipx
 python-poetry
 python-pycryptodome
 python-pycryptodomex
@@ -222,6 +222,7 @@ python-pyxdg
 python-requests-toolbelt
 python-sniffio
 python-trio
+python-typer
 qbittorrent
 qgnomeplatform-qt5
 qgnomeplatform-qt6
@@ -235,7 +236,6 @@ ranger
 reflector
 retroarch
 ripgrep
-rkhunter
 rofi-lbonn-wayland-git
 rofimoji
 rtx
@@ -334,7 +334,6 @@ waybar-hyprland-git
 wezterm-git
 wf-recorder
 wget
-wireplumber
 wl-clip-persist-git
 wl-clipboard
 wlogout
