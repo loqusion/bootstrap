@@ -44,7 +44,7 @@ devtools
 dhcpcd
 dictd
 direnv
-discord
+discord_arch_electron
 dmidecode
 dos2unix
 dotbare
@@ -53,6 +53,7 @@ ds4drv
 dunst
 dura-git
 element-desktop
+evcxr_repl
 eww-wayland
 exa
 expect
@@ -102,7 +103,6 @@ hunspell
 hunspell-en_us
 hyperfine
 hyprland-nvidia-hidpi-git
-hyprpaper
 hyprpicker-git
 hyprshade-git
 imagemagick
@@ -140,6 +140,7 @@ man-db
 man-pages
 mangohud
 mdcat
+melody
 mesa-utils
 morgen-bin
 mpv
