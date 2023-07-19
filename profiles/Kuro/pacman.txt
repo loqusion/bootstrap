@@ -247,6 +247,7 @@ samba
 sassc
 sccache
 sd
+showmethekey
 slurp
 snap-pac
 snapper
