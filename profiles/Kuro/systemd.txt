@@ -4,6 +4,7 @@ coolercontrol-liqctld.service
 coolercontrold.service
 cpupower.service
 dhcpcd.service
+docker.service
 firewalld.service
 greetd.service
 irqbalance.service
