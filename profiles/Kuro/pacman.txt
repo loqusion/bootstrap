@@ -110,6 +110,7 @@ hyprpicker-git
 hyprshade-git
 imagemagick
 inetutils
+informant
 intel-ucode
 inxi
 iptables-nft
@@ -185,6 +186,7 @@ otf-hasklig-nerd
 otf-hermit-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+overdue
 pacman-contrib
 pamixer
 papirus-icon-theme
@@ -244,6 +246,7 @@ qt6ct
 ranger
 reapack
 reaper
+rebuild-detector
 reflector
 retroarch
 ripgrep
