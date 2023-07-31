@@ -106,6 +106,7 @@ hunspell
 hunspell-en_us
 hyperfine
 hyprland-nvidia-hidpi-git
+hyprpaper-git
 hyprpicker-git
 hyprshade-git
 imagemagick
