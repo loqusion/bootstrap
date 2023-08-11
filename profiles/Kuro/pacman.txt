@@ -84,6 +84,7 @@ gammastep
 gimp
 git
 git-delta
+git-lfs
 github-cli
 glow
 gnome-calculator
@@ -100,7 +101,9 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 gum
+helix
 helvum
+hex
 htop
 hunspell
 hunspell-en_us
@@ -151,6 +154,7 @@ melody
 mesa-utils
 morgen-bin
 mpv
+mpv-mpris
 mtr
 namcap
 nautilus
@@ -165,7 +169,6 @@ nm-connection-editor
 nmap
 notion-app
 noto-fonts-cjk
-noto-fonts-emoji
 npm
 nss-mdns
 nvidia-dkms
@@ -218,6 +221,7 @@ python-certifi
 python-colorama
 python-curio
 python-dnspython
+python-huggingface-hub
 python-idna
 python-mutagen
 python-pillow
@@ -297,6 +301,7 @@ tree
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
+ttf-apple-emoji
 ttf-arimo-nerd
 ttf-bigblueterminal-nerd
 ttf-bitstream-vera-mono-nerd
@@ -322,6 +327,7 @@ ttf-jetbrains-mono-nerd
 ttf-lekton-nerd
 ttf-liberation-mono-nerd
 ttf-lilex-nerd
+ttf-mac-fonts
 ttf-meslo-nerd
 ttf-monofur-nerd
 ttf-monoid-nerd
@@ -340,6 +346,7 @@ ttf-space-mono-nerd
 ttf-tamzen-font-git
 ttf-terminus-nerd
 ttf-tinos-nerd
+ttf-twemoji
 ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono
@@ -347,12 +354,14 @@ ttf-victor-mono-nerd
 udiskie
 udisks2
 unzip
+vdhcoapp-bin
 via-bin
 vkbasalt-git
 vlc
 vulkan-tools
 waybar-hyprland-git
 wdiff
+wev
 wezterm-git
 wf-recorder
 wget
