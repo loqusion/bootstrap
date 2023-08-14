@@ -134,6 +134,7 @@ lf
 lib32-mangohud
 lib32-nvidia-utils
 libfaketime
+libnotify
 libva
 libva-nvidia-driver
 libva-utils
