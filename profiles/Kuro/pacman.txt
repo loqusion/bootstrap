@@ -1,8 +1,8 @@
 acpid
-alacritty
+alacritty-git
+alacritty-themes
 alsa-utils
 ansible
-anyrun-git
 arandr
 asciinema
 atomicparsley
