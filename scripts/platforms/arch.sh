@@ -84,6 +84,11 @@ install_xdg "$HOSTNAME"
 # Install packages with paru
 paru -Sy --needed - <"$PROFILE_DIR/pacman.txt" || true
 
+# Install pipx packages
+if [ -f "$PROFILE_DIR/pipx.txt" ]; then
+	cut -d' ' -f1 "$PROFILE_DIR/pipx.txt" | xargs -I{} pipx install --force {} || true
+fi
+
 # Enable systemd services
 while read -r service; do
 	sudo systemctl enable --now "$service"

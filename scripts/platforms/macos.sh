@@ -18,3 +18,8 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 # Install Homebrew packages
 brew bundle --no-lock --file="$PROFILE_DIR/Brewfile"
+
+# Install pipx packages
+if [ -f "$PROFILE_DIR/pipx.txt" ]; then
+	cut -d' ' -f1 "$PROFILE_DIR/pipx.txt" | xargs -I{} pipx install --force {} || true
+fi
