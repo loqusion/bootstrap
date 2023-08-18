@@ -20,7 +20,7 @@ _dump_patch() {
 
 _dump_profiles() {
 	local rel src
-	DEST_DIR="$DIR/profiles/$1"
+	local DEST_DIR="$DIR/profiles/$1"
 	# TODO: generate -paths from array
 	find "$DEST_DIR" -type f \( -path "$DEST_DIR/boot/*" -o -path "$DEST_DIR/etc/*" -o -path "$DEST_DIR/usr/*" \) -print0 |
 		while IFS= read -r -d '' file; do
@@ -41,31 +41,45 @@ _dump_profiles() {
 		done
 }
 
+_dump_pacman() {
+	local DEST_DIR="$1"
+	local pkgs
+
+	pkgs=$(paru -Qqe)
+	if [ -e "$DEST_DIR/pacman.optional.txt" ]; then
+		pkgs=$(grep -Fvx -f "$DEST_DIR/pacman.optional.txt" <<<"$pkgs")
+	fi
+	echo "$pkgs" >"$DEST_DIR/pacman.txt"
+	git_add "$DEST_DIR/pacman.txt"
+}
+
 dump_arch() {
+	local HOSTNAME
 	HOSTNAME=$(cat /etc/hostname)
-	DEST_DIR="$DIR/profiles/$HOSTNAME"
+	local DEST_DIR="$DIR/profiles/$HOSTNAME"
 
 	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.txt"
 	git_add "$DEST_DIR/systemd.txt"
 	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.user.txt"
 	git_add "$DEST_DIR/systemd.user.txt"
 
-	PKGS=$(paru -Qqe)
-	if [ -e "$DEST_DIR/pacman.optional.txt" ]; then
-		PKGS=$(grep -Fvx -f "$DEST_DIR/pacman.optional.txt" <<<"$PKGS")
-	fi
-	echo "$PKGS" >"$DEST_DIR/pacman.txt"
-	git_add "$DEST_DIR/pacman.txt"
+	_dump_pacman "$DEST_DIR"
 
 	_dump_profiles "_common/arch"
 	_dump_profiles "$HOSTNAME"
 }
 
-dump_macos() {
-	HOSTNAME=$(hostname -s)
-	DEST_DIR="$DIR/profiles/$HOSTNAME"
+_dump_brew() {
+	local DEST_DIR="$1"
 	brew bundle dump -f --file "$DEST_DIR/Brewfile"
 	git_add "$DEST_DIR/Brewfile"
+}
+
+dump_macos() {
+	local HOSTNAME
+	HOSTNAME=$(hostname -s)
+	local DEST_DIR="$DIR/profiles/$HOSTNAME"
+	_dump_brew "$DEST_DIR"
 }
 
 PLATFORM=$(./scripts/detect-platform.sh)
