@@ -160,6 +160,7 @@ mtr
 namcap
 nautilus
 neofetch
+neovide
 neovim-git
 neovim-symlinks
 net-tools
@@ -267,12 +268,14 @@ sassc
 sccache
 sd
 showmethekey
+skim
 slides-bin
 slurp
 snap-pac
 snapper
 socat
 sockstat
+spdlog-git
 spicetify-cli
 spotify-launcher
 starship
