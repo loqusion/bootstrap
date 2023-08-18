@@ -9,6 +9,12 @@ git_add() {
 	git -C "$DIR" add "$@"
 }
 
+_dump_pipx() {
+	local DEST_DIR="$1"
+	pipx list --short >"$DEST_DIR/pipx.txt"
+	gid_add "$DEST_DIR/pipx.txt"
+}
+
 _dump_patch() {
 	local file src orig patch
 	file="$1"
@@ -64,6 +70,7 @@ dump_arch() {
 	git_add "$DEST_DIR/systemd.user.txt"
 
 	_dump_pacman "$DEST_DIR"
+	_dump_pipx "$DEST_DIR"
 
 	_dump_profiles "_common/arch"
 	_dump_profiles "$HOSTNAME"
@@ -80,6 +87,7 @@ dump_macos() {
 	HOSTNAME=$(hostname -s)
 	local DEST_DIR="$DIR/profiles/$HOSTNAME"
 	_dump_brew "$DEST_DIR"
+	_dump_pipx "$DEST_DIR"
 }
 
 PLATFORM=$(./scripts/detect-platform.sh)
