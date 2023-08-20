@@ -3,7 +3,7 @@
 set -euo pipefail
 
 DIR=$(realpath "$(dirname "$(readlink -f "$0")")/..")
-HOSTNAME=$(cat /etc/hostname)
+HOSTNAME=$(cat /etc/hostname 2>/dev/null || hostname -s)
 DOTFILES=${DOTFILES:-"$HOME/.local/share/dotfiles/"}
 FORCE=${FORCE:-false}
 confirmed=false
