@@ -1,8 +1,8 @@
 acpid
-alacritty
+alacritty-git
+alacritty-themes
 alsa-utils
 ansible
-anyrun-git
 arandr
 asciinema
 atomicparsley
@@ -59,6 +59,7 @@ fcitx5-qt
 fd
 feh
 ffmpegthumbnailer
+figlet
 firefox
 firefox-developer-edition
 firewalld
@@ -89,17 +90,21 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 gum
+helix
 helvum
+hex
 htop
 hunspell
 hunspell-en_us
 hyperfine
 hyprland-nvidia-hidpi-git
-hyprpaper
+hyprpaper-git
 hyprpicker-git
+hyprshade-git
 icat
 iftop
 imagemagick
+informant
 intel-ucode
 inxi
 iptables-nft
@@ -116,8 +121,10 @@ krita-plugin-gmic
 kseexpr
 lazydocker-bin
 lazygit
+lf
 lib32-nvidia-utils
 libfaketime
+libnotify
 libva
 libva-nvidia-driver
 libva-utils
@@ -133,9 +140,13 @@ lynx
 man-db
 man-pages
 mdcat
+megasync-bin
+melody
 mesa-utils
 morgen-bin
 mpv
+mpv-mpris
+mtr
 namcap
 nautilus
 neofetch
@@ -170,6 +181,7 @@ otf-hasklig-nerd
 otf-hermit-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+overdue
 pacman-contrib
 pamixer
 papirus-icon-theme
@@ -206,6 +218,7 @@ python-idna
 python-mutagen
 python-pillow
 python-pip
+python-pipx
 python-poetry
 python-pycryptodome
 python-pycryptodomex
@@ -225,6 +238,7 @@ qt5ct
 qt6-wayland
 qt6ct
 ranger
+rebuild-detector
 reflector
 retroarch
 ripgrep
@@ -238,8 +252,12 @@ rusty-man
 sassc
 sccache
 sd
+showmethekey
+skim
+slides-bin
 slurp
 socat
+spdlog-git
 spicetify-cli
 spotify-launcher
 starship
@@ -266,6 +284,7 @@ tree
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
+ttf-apple-emoji
 ttf-arimo-nerd
 ttf-bigblueterminal-nerd
 ttf-bitstream-vera-mono-nerd
@@ -291,6 +310,7 @@ ttf-jetbrains-mono-nerd
 ttf-lekton-nerd
 ttf-liberation-mono-nerd
 ttf-lilex-nerd
+ttf-mac-fonts
 ttf-meslo-nerd
 ttf-monofur-nerd
 ttf-monoid-nerd
@@ -313,6 +333,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono
 ttf-victor-mono-nerd
+udiskie
 udisks2
 unzip
 vlc
@@ -341,6 +362,8 @@ xorg-xhost
 xorg-xlsclients
 xxd-standalone
 yt-dlp
+zathura
+zathura-pdf-mupdf
 zellij
 zip
 zoxide
