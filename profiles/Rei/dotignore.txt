@@ -4,12 +4,17 @@ anyrun
 coolercontrol
 dunst
 electron-flags.conf
+eww
 fcitx5
+fontconfig
+fuzzel
+gammastep
 gtk-*
 hypr
 mako
 mimeapps.list
 mpv
+nwg-look
 paru
 qt5ct
 qt6ct
