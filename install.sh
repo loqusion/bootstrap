@@ -7,8 +7,6 @@ if [ ! -d "$DEST/.git" ]; then
 	[ -e "$DEST" ] && rm -rfiv "$DEST"
 	mkdir -p "$DEST"
 	git clone "https://github.com/loqusion/bootstrap.git" "$DEST"
-else
-	git -C "$DEST" fetch && git -C "$DEST" reset FETCH_HEAD
 fi
 cd "$DEST"
 
