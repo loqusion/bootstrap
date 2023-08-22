@@ -34,7 +34,7 @@ install_system() {
 				fi
 			else
 				sudo mkdir -pv "$(dirname "$dest")"
-				sudo cp -fvu "$file" "$dest"
+				sudo cp -fvuP "$file" "$dest"
 			fi
 		done
 }

@@ -41,7 +41,7 @@ _dump_profiles() {
 				_dump_patch "${file%.orig}" "${src%.orig}"
 				git_add "$file" "${file%.orig}.patch"
 			else
-				cp -fvu "$src" "$file"
+				cp -fvuP "$src" "$file"
 				git_add "$file"
 			fi
 		done
