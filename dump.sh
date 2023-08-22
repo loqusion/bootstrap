@@ -12,7 +12,7 @@ git_add() {
 _dump_pipx() {
 	local DEST_DIR="$1"
 	pipx list --short >"$DEST_DIR/pipx.txt"
-	gid_add "$DEST_DIR/pipx.txt"
+	git_add "$DEST_DIR/pipx.txt"
 }
 
 _dump_patch() {
