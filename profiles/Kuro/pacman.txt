@@ -41,6 +41,7 @@ cpupower
 deno
 devtools
 dhcpcd
+dhcping
 dictd
 direnv
 discord_arch_electron
@@ -111,7 +112,7 @@ hyperfine
 hyprland-nvidia-hidpi-git
 hyprpaper-git
 hyprpicker-git
-hyprshade
+hyprshade-git
 imagemagick
 inetutils
 informant
@@ -158,6 +159,7 @@ mpv
 mpv-mpris
 mtr
 namcap
+nasm
 nautilus
 neofetch
 neovide
@@ -219,7 +221,6 @@ python-argcomplete
 python-black
 python-boltons
 python-brotli
-python-cchardet
 python-certifi
 python-colorama
 python-curio
