@@ -59,15 +59,25 @@ _dump_pacman() {
 	git_add "$DEST_DIR/pacman.txt"
 }
 
+_list_services() {
+	systemctl "$@" list-unit-files -q --type=service,timer --state=enabled | cut -d' ' -f 1 | grep -v '@'
+}
+
+_dump_services() {
+	local DEST_DIR="$1"
+	_list_services >"$DEST_DIR/systemd.txt"
+	git_add "$DEST_DIR/systemd.txt"
+	_list_services --user >"$DEST_DIR/systemd.user.txt"
+	git_add "$DEST_DIR/systemd.user.txt"
+
+}
+
 dump_arch() {
 	local HOSTNAME
 	HOSTNAME=$(cat /etc/hostname)
 	local DEST_DIR="$DIR/profiles/$HOSTNAME"
 
-	systemctl list-unit-files -q --state=enabled | rg 'disabled$' | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.txt"
-	git_add "$DEST_DIR/systemd.txt"
-	systemctl --user list-unit-files -q --state=enabled | rg -v '^[^\s]+\.socket' | cut -d' ' -f 1 >"$DEST_DIR/systemd.user.txt"
-	git_add "$DEST_DIR/systemd.user.txt"
+	_dump_services "$DEST_DIR"
 
 	_dump_pacman "$DEST_DIR"
 	_dump_pipx "$DEST_DIR"
