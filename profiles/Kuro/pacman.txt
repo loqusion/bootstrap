@@ -53,6 +53,7 @@ downgrade
 ds4drv
 dunst
 dura-git
+easy-rsa
 element-desktop
 evcxr_repl
 eww-wayland-git
@@ -113,6 +114,10 @@ hyprland-nvidia-hidpi-git
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
+i3-wm
+i3blocks
+i3lock
+i3status
 imagemagick
 inetutils
 informant
@@ -201,8 +206,6 @@ papirus-icon-theme
 parted
 paru
 pavucontrol
-pcloud-drive
-pcloudcc-git
 picom
 pigz
 pipewire-alsa
@@ -374,6 +377,7 @@ wev
 wezterm-git
 wf-recorder
 wget
+wireguard-tools
 wireless_tools
 wl-clip-persist-git
 wl-clipboard
@@ -396,6 +400,6 @@ xxd-standalone
 yt-dlp
 zathura
 zathura-pdf-mupdf
-zellij
+zellij-git
 zip
 zoxide

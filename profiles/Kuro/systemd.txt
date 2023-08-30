@@ -14,8 +14,8 @@ nvidia-hibernate.service
 nvidia-resume.service
 nvidia-suspend.service
 preload.service
-smb.service
 sshd.service
+systemd-timesyncd.service
 thermald.service
 fstrim.timer
 fwupd-refresh.timer
