@@ -205,6 +205,7 @@ pamixer
 papirus-icon-theme
 parted
 paru
+pass
 pavucontrol
 picom
 pigz
@@ -283,6 +284,8 @@ sockstat
 spdlog-git
 spicetify-cli
 spotify-launcher
+spotify-tui
+spotifyd
 starship
 steam
 swappy
@@ -307,6 +310,7 @@ topgrade-bin
 transmission-cli
 trash-cli
 tree
+tree-sitter-cli
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
