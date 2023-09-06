@@ -1,12 +1,14 @@
-avahi-daemon.service
 bluetooth.service
 chronyd.service
-dhcpcd.service
-firewalld.service
 greetd.service
 iwd.service
 laptop-mode.service
 nvidia-persistenced.service
+sshd.service
+systemd-network-generator.service
+systemd-networkd-wait-online.service
+systemd-networkd.service
+systemd-resolved.service
 thermald.service
 fstrim.timer
 man-db.timer
