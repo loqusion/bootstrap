@@ -68,13 +68,12 @@ fd
 feh
 ffmpegthumbnailer
 figlet
+file-roller
 firefox
 firefox-developer-edition
 firewalld
 fish
 fisher-git
-fluent-gtk-theme-git
-fluent-icon-theme-git
 fm-bin
 fnlfmt
 font-manager
@@ -149,6 +148,7 @@ linux-firmware
 linux-zen
 linux-zen-headers
 lldb
+lrzip
 lua-sec
 luarocks
 lynx
@@ -180,6 +180,7 @@ notion-app
 noto-fonts-cjk
 npm
 nss-mdns
+nushell
 nvidia-dkms
 nvidia-settings
 nwg-look
@@ -203,6 +204,7 @@ overdue
 pacman-contrib
 pamixer
 papirus-icon-theme
+parallel
 parted
 paru
 pass
@@ -229,6 +231,7 @@ python-certifi
 python-colorama
 python-curio
 python-dnspython
+python-hatch
 python-huggingface-hub
 python-idna
 python-mutagen
@@ -269,6 +272,7 @@ rtx
 rust-docs
 rustup
 rusty-man
+rye-git
 samba
 sassc
 sccache
@@ -297,6 +301,7 @@ swaync
 sxhkd
 sysstat
 systemd-boot-pacman-hook
+systemd-resolvconf
 tcpdump
 tealdeer
 texinfo
@@ -367,6 +372,8 @@ ttf-victor-mono
 ttf-victor-mono-nerd
 udiskie
 udisks2
+unace
+unrar
 unzip
 vdhcoapp-bin
 via-bin
@@ -374,7 +381,7 @@ vkbasalt-git
 vlc
 vulkan-tools
 w3m
-waybar-hyprland-git
+waybar
 wdiff
 webp-pixbuf-loader
 wev
