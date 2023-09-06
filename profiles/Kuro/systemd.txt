@@ -1,9 +1,7 @@
-avahi-daemon.service
 bluetooth.service
 coolercontrol-liqctld.service
 coolercontrold.service
 cpupower.service
-dhcpcd.service
 docker.service
 firewalld.service
 greetd.service
@@ -15,6 +13,10 @@ nvidia-resume.service
 nvidia-suspend.service
 preload.service
 sshd.service
+systemd-network-generator.service
+systemd-networkd-wait-online.service
+systemd-networkd.service
+systemd-resolved.service
 systemd-timesyncd.service
 thermald.service
 fstrim.timer
