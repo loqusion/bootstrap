@@ -55,8 +55,8 @@ dunst
 dura-git
 element-desktop
 eww-wayland
-exa
 expect
+eza
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -75,6 +75,7 @@ fluent-gtk-theme-git
 fluent-icon-theme-git
 fm-bin
 font-manager
+fprintd
 fragments
 fuzzel
 fwupd
@@ -132,6 +133,7 @@ lazygit
 lf
 lib32-nvidia-utils
 libfaketime
+libfprint-2-tod1-xps9300-bin
 libnotify
 libva-nvidia-driver
 libva-utils
@@ -218,6 +220,7 @@ python-brotli
 python-cchardet
 python-certifi
 python-colorama
+python-croniter
 python-curio
 python-dnspython
 python-idna
@@ -257,6 +260,7 @@ rust-docs
 rustup
 rusty-man
 rye-git
+safeeyes
 sassc
 sccache
 sd
@@ -358,6 +362,7 @@ wl-clip-persist-git
 wl-clipboard
 wlogout
 wlr-randr
+wlrctl
 wofi
 wqy-zenhei
 wtype
