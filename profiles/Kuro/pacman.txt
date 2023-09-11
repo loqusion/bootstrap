@@ -1,4 +1,5 @@
 acpid
+ahoviewer-git
 alacritty-git
 alacritty-themes
 alsa-utils
@@ -8,6 +9,7 @@ asciinema
 atomicparsley
 atool
 authy
+automedia-git
 autotrash
 avizo
 base
@@ -23,6 +25,7 @@ brightnessctl
 btop
 btrfs-progs
 cargo-nextest
+cargo-update
 cargo-watch
 catppuccin-cursors-frappe
 catppuccin-cursors-latte
@@ -57,8 +60,8 @@ easy-rsa
 element-desktop
 evcxr_repl
 eww-wayland-git
-exa
 expect
+eza
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -130,6 +133,7 @@ jq
 just
 kimageformats
 kitty
+komikku
 krita
 krita-plugin-gmic
 kseexpr
@@ -176,6 +180,7 @@ networkmanager-openvpn
 nftables
 nm-connection-editor
 nmap
+nnn-nerd
 notion-app
 noto-fonts-cjk
 npm
@@ -229,6 +234,7 @@ python-boltons
 python-brotli
 python-certifi
 python-colorama
+python-croniter
 python-curio
 python-dnspython
 python-hatch
@@ -259,7 +265,9 @@ qt5-wayland
 qt5ct
 qt6-wayland
 qt6ct
+quickmedia-git
 ranger
+rclone
 reapack
 reaper
 rebuild-detector
@@ -273,6 +281,7 @@ rust-docs
 rustup
 rusty-man
 rye-git
+safeeyes
 samba
 sassc
 sccache
@@ -290,6 +299,7 @@ spicetify-cli
 spotify-launcher
 spotify-tui
 spotifyd
+sshfs
 starship
 steam
 swappy
@@ -373,6 +383,7 @@ ttf-victor-mono-nerd
 udiskie
 udisks2
 unace
+unarchiver
 unrar
 unzip
 vdhcoapp-bin
@@ -381,6 +392,7 @@ vkbasalt-git
 vlc
 vulkan-tools
 w3m
+waifu2x-ncnn-vulkan
 waybar
 wdiff
 webp-pixbuf-loader
@@ -394,12 +406,13 @@ wl-clip-persist-git
 wl-clipboard
 wlogout
 wlr-randr
+wlrctl
 wofi
 wqy-zenhei
 wtype
 xcompmgr
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdotool
 xkeysnail
@@ -407,7 +420,9 @@ xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-xhost
 xorg-xlsclients
+xplr
 xxd-standalone
+yazi-bin
 yt-dlp
 zathura
 zathura-pdf-mupdf
