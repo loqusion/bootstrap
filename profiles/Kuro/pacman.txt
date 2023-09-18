@@ -58,7 +58,6 @@ dotbare
 downgrade
 ds4drv
 dunst
-dura-git
 easy-rsa
 element-desktop
 evcxr_repl
@@ -117,7 +116,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland-nvidia-hidpi-git
+hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
@@ -187,7 +186,7 @@ libretro-shaders-slang
 libretro-snes9x
 libretro-yabause
 libva
-libva-nvidia-driver
+libva-nvidia-driver-git
 libva-utils
 light-git
 linux-firmware
