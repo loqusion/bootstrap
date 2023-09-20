@@ -52,7 +52,6 @@ dmidecode
 dos2unix
 dotbare
 dunst
-dura-git
 element-desktop
 eww-wayland
 expect
@@ -71,8 +70,6 @@ firefox-developer-edition
 firewalld
 fish
 fisher-git
-fluent-gtk-theme-git
-fluent-icon-theme-git
 fm-bin
 font-manager
 fprintd
@@ -104,7 +101,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland-nvidia-hidpi-git
+hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
@@ -148,6 +145,7 @@ luarocks
 lynx
 man-db
 man-pages
+mangohud
 mdcat
 megasync-bin
 melody
@@ -174,6 +172,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 nvidia-dkms
+nvidia-prime
 nvidia-settings
 nwg-look-bin
 obs-studio
@@ -197,8 +196,6 @@ pamixer
 papirus-icon-theme
 paru
 pavucontrol
-pcloud-drive
-pcloudcc-git
 picom
 pipewire
 pipewire-alsa
@@ -264,11 +261,12 @@ safeeyes
 sassc
 sccache
 sd
+sddm
 showmethekey
 skim
 slurp
 socat
-spdlog-git
+spdlog
 spicetify-cli
 spotify-launcher
 starship
@@ -368,7 +366,7 @@ wqy-zenhei
 wtype
 xcompmgr
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xkeysnail
 xorg-fonts-100dpi
