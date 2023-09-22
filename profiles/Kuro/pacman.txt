@@ -1,4 +1,5 @@
 acpid
+act-bin
 ahoviewer-git
 alacritty-git
 alacritty-themes
@@ -266,6 +267,7 @@ polkit-gnome
 poppler
 preload
 prettier
+proton-ge-custom-bin
 python
 python-aiodns
 python-aiohttp
@@ -444,6 +446,8 @@ wev
 wezterm-git
 wf-recorder
 wget
+wine
+winetricks
 wireguard-tools
 wireless_tools
 wl-clip-persist-git
