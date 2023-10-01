@@ -84,6 +84,7 @@ github-cli
 glow
 gnome-calculator
 gnome-keyring
+gnome-logs
 gnu-netcat
 gobject-introspection
 grc
@@ -147,6 +148,7 @@ man-db
 man-pages
 mangohud
 mdcat
+mdns-scan
 megasync-bin
 melody
 mesa-utils
@@ -205,6 +207,7 @@ playerctl
 plocate
 polkit-gnome
 poppler
+power-profiles-daemon
 powertop
 preload
 prettier
@@ -262,6 +265,8 @@ sassc
 sccache
 sd
 sddm
+sddm-conf-git
+sddm-theme-catppuccin-git
 showmethekey
 skim
 slurp
@@ -279,6 +284,7 @@ swaync
 sxhkd
 systemd-boot-pacman-hook
 systemd-resolvconf
+systemd-ui
 tealdeer
 texinfo
 tgpt-bin
