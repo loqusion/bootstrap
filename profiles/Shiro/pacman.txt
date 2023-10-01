@@ -120,7 +120,7 @@ irqbalance
 iwd
 jq
 just
-kimageformats
+kimageformats5
 kitty
 krita
 krita-plugin-gmic

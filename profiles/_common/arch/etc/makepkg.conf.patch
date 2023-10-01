@@ -1,3 +1,12 @@
+@@ -23,7 +23,7 @@
+ 
+ #-- The package required by makepkg to download VCS sources
+ #  Format: 'protocol::package'
+-VCSCLIENTS=('bzr::bzr'
++VCSCLIENTS=('bzr::breezy'
+             'fossil::fossil'
+             'git::git'
+             'hg::mercurial'
 @@ -38,19 +38,19 @@
  
  #-- Compiler and Linker Flags
