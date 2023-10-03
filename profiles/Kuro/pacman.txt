@@ -67,7 +67,7 @@ dunst
 easy-rsa
 element-desktop
 evcxr_repl
-eww-wayland-git
+eww-wayland
 expect
 eza
 fcitx5
