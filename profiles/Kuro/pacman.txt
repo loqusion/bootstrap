@@ -6,6 +6,7 @@ alacritty-themes
 alsa-utils
 ansible
 arandr
+archlinux-themes-sddm
 asciinema
 atomicparsley
 atool
@@ -40,11 +41,13 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 ccache
+citra-qt-git
 clang
 cliphist
 coolercontrol
 cpupower
 cuda
+cython
 deno
 devtools
 dhcpcd
@@ -53,7 +56,9 @@ dictd
 direnv
 discord_arch_electron
 dmidecode
+dnsmasq
 docker
+dolphin-emu-git
 dos2unix
 dotbare
 downgrade
@@ -88,6 +93,8 @@ fuzzel
 fwupd
 gamemode
 gammastep
+gedit
+gedit-plugins
 gimp
 git
 git-delta
@@ -95,6 +102,7 @@ git-lfs
 github-cli
 glow
 gnome-calculator
+gnome-disk-utility
 gnome-keyring
 gnu-netcat
 gobject-introspection
@@ -108,6 +116,7 @@ grimblast-git
 gst-libav
 gst-plugins-bad
 gst-plugins-ugly
+gucharmap
 gum
 hadolint-bin
 helix
@@ -128,6 +137,7 @@ i3status
 imagemagick
 inetutils
 informant
+innoextract
 intel-ucode
 inxi
 iptables-nft
@@ -136,7 +146,7 @@ irqbalance
 iwd
 jq
 just
-kimageformats
+kimageformats5
 kitty
 komikku
 krita
@@ -145,9 +155,11 @@ kseexpr
 lazydocker-bin
 lazygit
 lf
+lib32-gamemode
 lib32-mangohud
 lib32-nvidia-utils
 libfaketime
+libgit2-glib
 libnotify
 libretro-beetle-pce
 libretro-beetle-pce-fast
@@ -158,10 +170,10 @@ libretro-blastem
 libretro-bsnes
 libretro-bsnes-hd
 libretro-bsnes2014
-libretro-citra
+libretro-citra-git
 libretro-core-info
 libretro-desmume
-libretro-dolphin
+libretro-dolphin-git
 libretro-duckstation
 libretro-flycast
 libretro-gambatte
@@ -177,6 +189,7 @@ libretro-mupen64plus-next
 libretro-nestopia
 libretro-overlays
 libretro-parallel-n64
+libretro-pcsx2
 libretro-picodrive
 libretro-play
 libretro-ppsspp
@@ -189,6 +202,7 @@ libretro-yabause
 libva
 libva-nvidia-driver-git
 libva-utils
+libvirt
 light-git
 linux-firmware
 linux-zen
@@ -197,6 +211,7 @@ lldb
 lrzip
 lua-sec
 luarocks
+lutris
 lynx
 man-db
 man-pages
@@ -233,6 +248,7 @@ nvidia-settings
 nwg-look
 obs-studio
 obsidian
+opengl-man-pages
 openrgb
 openssh
 openvpn-update-systemd-resolved
@@ -256,6 +272,7 @@ parted
 paru
 pass
 pavucontrol
+pcsx2
 picom
 pigz
 pipewire-alsa
@@ -265,6 +282,7 @@ playerctl
 plocate
 polkit-gnome
 poppler
+power-profiles-daemon
 preload
 prettier
 proton-ge-custom-bin
@@ -280,9 +298,11 @@ python-colorama
 python-croniter
 python-curio
 python-dnspython
+python-gevent
 python-hatch
 python-huggingface-hub
 python-idna
+python-internetarchive
 python-mutagen
 python-pdm
 python-pillow
@@ -290,6 +310,7 @@ python-pip
 python-pipenv
 python-pipx
 python-poetry
+python-protobuf
 python-pycryptodome
 python-pycryptodomex
 python-pyopenssl
@@ -299,6 +320,7 @@ python-pyxdg
 python-requests-toolbelt
 python-sniffio
 python-trio
+python-ujson
 qbittorrent
 qgnomeplatform-qt5
 qgnomeplatform-qt6
@@ -332,6 +354,9 @@ samba
 sassc
 sccache
 sd
+sddm
+sddm-conf-git
+sddm-theme-catppuccin-git
 showmethekey
 skim
 slides-bin
@@ -434,7 +459,14 @@ unrar
 unzip
 vdhcoapp-bin
 via-bin
+virt-manager
+virtualbox
+virtualbox-ext-oracle
+virtualbox-guest-iso
+virtualbox-host-dkms
+virtualbox-unattended-templates
 vkbasalt-git
+vkd3d
 vlc
 vulkan-tools
 w3m
@@ -466,6 +498,8 @@ xdotool
 xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
+xorg-server-devel
+xorg-xgamma
 xorg-xhost
 xorg-xlsclients
 xplr
