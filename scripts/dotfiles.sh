@@ -15,9 +15,6 @@ mkdir -p "$DOTFILES"
 if [ ! -e "$DOTFILES/HEAD" ]; then
 	[ -e "$DOTFILES" ] && rm -rfIv "$DOTFILES"
 	git clone --bare https://github.com/loqusion/dotfiles.git "$DOTFILES"
-else
-	read -r -p "Pull newest changes from loqusion/dotfiles? [y/N] " reply
-	[[ "$reply" =~ ^[Yy]$ ]] && config pull
 fi
 
 config submodule update --init
