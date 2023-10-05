@@ -41,7 +41,7 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 ccache
-citra-qt-git
+citra-appimage
 clang
 cliphist
 coolercontrol
@@ -248,7 +248,6 @@ nvidia-settings
 nwg-look
 obs-studio
 obsidian
-opengl-man-pages
 openrgb
 openssh
 openvpn-update-systemd-resolved
@@ -322,8 +321,6 @@ python-sniffio
 python-trio
 python-ujson
 qbittorrent
-qgnomeplatform-qt5
-qgnomeplatform-qt6
 qpwgraph
 qt5-styleplugins
 qt5-wayland
