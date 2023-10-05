@@ -4,9 +4,7 @@ Keeps track of installed packages, enabled systemd services, _selected_ `/etc`
 configuration files (mostly diffs), bootloader entries, and `~/.config` files on
 a per-machine basis. Currently supports Arch Linux and macOS.
 
-> Note: this is mostly for personal use, but feel free to use the scripts for
-> your own purposes. While some parts of the scripts are opinionated, most of
-> the configuration specific to my own systems is kept in `profiles/`.
+THIS CODE IS BRITTLE AND UNSTABLE! USE AT YOUR OWN RISK!
 
 ## Installation
 
