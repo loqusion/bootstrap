@@ -53,7 +53,6 @@ dos2unix
 dotbare
 dunst
 element-desktop
-eww-wayland
 expect
 eza
 fcitx5
@@ -327,6 +326,7 @@ ttf-jetbrains-mono-nerd
 ttf-lekton-nerd
 ttf-liberation-mono-nerd
 ttf-lilex-nerd
+ttf-maple
 ttf-meslo-nerd
 ttf-monofur-nerd
 ttf-monoid-nerd
