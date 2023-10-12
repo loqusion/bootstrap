@@ -425,6 +425,7 @@ ttf-lekton-nerd
 ttf-liberation-mono-nerd
 ttf-lilex-nerd
 ttf-mac-fonts
+ttf-maple
 ttf-meslo-nerd
 ttf-monofur-nerd
 ttf-monoid-nerd
