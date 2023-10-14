@@ -88,7 +88,6 @@ fisher-git
 fm-bin
 fnlfmt
 font-manager
-fragments
 fuzzel
 fwupd
 gamemode
@@ -125,6 +124,7 @@ hex
 htop
 hunspell
 hunspell-en_us
+hydrus
 hyperfine
 hyprland-nvidia-git
 hyprpaper-git
@@ -292,6 +292,7 @@ python-argcomplete
 python-black
 python-boltons
 python-brotli
+python-cbor2
 python-certifi
 python-colorama
 python-croniter
@@ -310,6 +311,7 @@ python-pipenv
 python-pipx
 python-poetry
 python-protobuf
+python-psd-tools
 python-pycryptodome
 python-pycryptodomex
 python-pyopenssl
@@ -326,6 +328,7 @@ qt5-styleplugins
 qt5-wayland
 qt5ct
 qt6-wayland
+qt6-webengine
 qt6ct
 quickmedia-git
 ranger
@@ -376,6 +379,7 @@ sway-audio-idle-inhibit-git
 swayidle
 swaylock-effects
 swaync
+swftools
 sxhkd
 sysstat
 systemd-boot-pacman-hook
