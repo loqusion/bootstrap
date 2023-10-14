@@ -84,6 +84,7 @@ glow
 gnome-calculator
 gnome-keyring
 gnome-logs
+gnome-tweaks
 gnu-netcat
 gobject-introspection
 grc
