@@ -65,6 +65,8 @@ downgrade
 ds4drv
 dunst
 easy-rsa
+electron22
+electron24
 element-desktop
 evcxr_repl
 eww-wayland
@@ -463,7 +465,6 @@ vdhcoapp-bin
 via-bin
 virt-manager
 virtualbox
-virtualbox-ext-oracle
 virtualbox-guest-iso
 virtualbox-host-dkms
 virtualbox-unattended-templates
