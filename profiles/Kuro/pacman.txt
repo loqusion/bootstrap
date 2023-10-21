@@ -10,6 +10,8 @@ archlinux-themes-sddm
 asciinema
 atomicparsley
 atool
+audacity
+audacity-docs
 authy
 automedia-git
 autotrash
@@ -41,6 +43,7 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 ccache
+cinny-desktop-bin
 citra-appimage
 clang
 cliphist
@@ -54,7 +57,7 @@ dhcpcd
 dhcping
 dictd
 direnv
-discord_arch_electron
+discord
 dmidecode
 dnsmasq
 docker
@@ -229,6 +232,7 @@ mtr
 namcap
 nasm
 nautilus
+ncdu
 neofetch
 neovide
 neovim-git
