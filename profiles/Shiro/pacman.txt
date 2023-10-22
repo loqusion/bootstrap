@@ -47,7 +47,7 @@ deno
 dhcpcd
 dictd
 direnv
-discord_arch_electron
+discord
 dmidecode
 dos2unix
 dotbare
@@ -384,6 +384,6 @@ xxd-standalone
 yt-dlp
 zathura
 zathura-pdf-mupdf
-zellij
+zellij-git
 zip
 zoxide
