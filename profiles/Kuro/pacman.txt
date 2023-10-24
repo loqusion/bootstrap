@@ -459,6 +459,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono
 ttf-victor-mono-nerd
+typst
 udiskie
 udisks2
 unace
