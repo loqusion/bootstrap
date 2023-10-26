@@ -320,6 +320,7 @@ python-protobuf
 python-psd-tools
 python-pycryptodome
 python-pycryptodomex
+python-pynvim
 python-pyopenssl
 python-pyqt5
 python-pysocks
