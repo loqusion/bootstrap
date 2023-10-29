@@ -215,7 +215,7 @@ ext4)
 	mkfs.ext4 -L arch_os "$ROOT_PARTITION"
 
 	mount "$ROOT_PARTITION" /mnt
-	mount -m "BOOT_PARTITION" /mnt/boot
+	mount -m "$BOOT_PARTITION" /mnt/boot
 	swapon "$SWAP_PARTITION"
 	;;
 *)
