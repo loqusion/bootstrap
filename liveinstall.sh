@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-SCRIPT_DEPENDENCIES=(gum reflector)
+SCRIPT_DEPENDENCIES=(gum)
 SUPPORTED_KERNELS=(linux linux-lts linux-zen)
 SUPPORTED_FILESYSTEMS=(ext4 btrfs)
 declare -A FS_UTILS_PACKAGES=(
