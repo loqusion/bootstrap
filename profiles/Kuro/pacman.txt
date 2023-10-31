@@ -245,6 +245,7 @@ nm-connection-editor
 nmap
 nnn-nerd
 notion-app
+noto-fonts
 noto-fonts-cjk
 npm
 nss-mdns
