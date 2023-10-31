@@ -282,6 +282,7 @@ pcsx2
 picom
 pigz
 pipewire-alsa
+pipewire-jack
 pipewire-pulse
 pkgfile
 playerctl
