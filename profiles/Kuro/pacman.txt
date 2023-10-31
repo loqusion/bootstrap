@@ -72,7 +72,6 @@ electron22
 electron24
 element-desktop
 evcxr_repl
-eww-wayland
 expect
 eza
 fcitx5
