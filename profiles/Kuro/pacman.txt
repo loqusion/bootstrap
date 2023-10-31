@@ -111,7 +111,7 @@ gnome-keyring
 gnu-netcat
 gobject-introspection
 godot
-goverlay-bin
+goverlay
 gparted
 grc
 greetd
