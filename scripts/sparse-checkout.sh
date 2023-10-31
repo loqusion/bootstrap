@@ -23,10 +23,11 @@ sparse_checkout() {
 
 	for file in $files; do
 		{ [ -z "$file" ] || [ ! -e "$HOME/.config/$file" ]; } && continue
-		if [ "$FORCE" != true ] && [ "$confirmed" != true ]; then
+		if [ "${SPARSE_CHECKOUT_CONSENT:-}" != true ] && [ "$FORCE" != true ] && [ "$confirmed" != true ]; then
 			read -p "WARNING: This is a potentially destructive operation. Continue? [y/N] " -r REPLY
 			[[ "$REPLY" =~ ^[Yy]$ ]] || exit 1
 			confirmed=true
+			echo 'export SPARSE_CHECKOUT_CONSENT=true' >>.consent
 		fi
 		rm -rfv "$HOME/.config/${file:?}"
 	done

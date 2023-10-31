@@ -10,6 +10,7 @@ if [ ! -d "$DEST/.git" ]; then
 fi
 cd "$DEST"
 
+[ -e .consent ] && . .consent
 ./scripts/dotfiles.sh
 
 PLATFORM=$(./scripts/detect-platform.sh)
