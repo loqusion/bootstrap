@@ -356,7 +356,6 @@ rofimoji
 rtx
 rust-docs
 rustup
-rusty-man
 rye-git
 safeeyes
 samba
