@@ -511,7 +511,7 @@ xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-server-devel
-xorg-wayland-git
+xorg-xwayland-git
 xorg-xgamma
 xorg-xhost
 xorg-xlsclients
