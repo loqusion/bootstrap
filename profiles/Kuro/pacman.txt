@@ -251,7 +251,6 @@ nss-mdns
 nushell
 nvidia-beta-dkms
 nvidia-settings
-nvidia-utils-beta
 nwg-look
 obs-studio
 obsidian
