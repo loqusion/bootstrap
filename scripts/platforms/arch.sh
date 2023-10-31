@@ -82,7 +82,7 @@ install_system "$HOSTNAME"
 install_xdg "$HOSTNAME"
 
 # Install packages with paru
-paru -Sy --needed - <"$PROFILE_DIR/pacman.txt" || true
+paru -Sy --needed - <"$PROFILE_DIR/pacman.txt"
 
 # Install pipx packages
 if [ -f "$PROFILE_DIR/pipx.txt" ]; then
