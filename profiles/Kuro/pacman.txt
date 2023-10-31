@@ -492,6 +492,7 @@ wine
 winetricks
 wireguard-tools
 wireless_tools
+wireplumber
 wl-clip-persist-git
 wl-clipboard
 wlogout
