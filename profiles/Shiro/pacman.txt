@@ -7,6 +7,7 @@ alacritty-themes
 alsa-utils
 ansible
 arandr
+archiso
 asciinema
 atomicparsley
 atool
@@ -72,7 +73,6 @@ fisher-git
 fm-bin
 font-manager
 fprintd
-fragments
 fuzzel
 fwupd
 fzf
