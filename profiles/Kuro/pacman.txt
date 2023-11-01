@@ -353,7 +353,6 @@ ripgrep
 rofimoji
 rtx
 rust-docs
-rustup
 rye-git
 safeeyes
 samba
