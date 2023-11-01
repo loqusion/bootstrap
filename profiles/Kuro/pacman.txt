@@ -363,8 +363,6 @@ showmethekey
 skim
 slides-bin
 slurp
-snap-pac
-snapper
 socat
 sockstat
 spdlog
