@@ -1,8 +1,2 @@
-blackd.service
-dura.service
-gamemoded.service
-spotifyd.service
 wireplumber.service
 xdg-user-dirs-update.service
-autotrash.timer
-hyprshade.timer

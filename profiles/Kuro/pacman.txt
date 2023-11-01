@@ -65,6 +65,7 @@ dotbare
 downgrade
 ds4drv
 dunst
+e2fsprogs
 easy-rsa
 electron22
 electron24
@@ -88,10 +89,12 @@ firewalld
 fish
 fisher-git
 fm-bin
+fmt-git
 fnlfmt
 font-manager
 fuzzel
 fwupd
+fzf
 gamemode
 gammastep
 gedit
@@ -175,7 +178,6 @@ libretro-bsnes2014
 libretro-citra-git
 libretro-core-info
 libretro-desmume
-libretro-dolphin-git
 libretro-duckstation
 libretro-flycast
 libretro-gambatte
@@ -201,7 +203,6 @@ libretro-scummvm
 libretro-shaders-slang
 libretro-snes9x
 libretro-yabause
-libva
 libva-nvidia-driver-git
 libva-utils
 libvirt
@@ -290,7 +291,6 @@ power-profiles-daemon
 preload
 prettier
 proton-ge-custom-bin
-python
 python-aiodns
 python-aiohttp
 python-argcomplete
@@ -403,7 +403,6 @@ tree-sitter-cli
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
-ttf-apple-emoji
 ttf-arimo-nerd
 ttf-bigblueterminal-nerd
 ttf-bitstream-vera-mono-nerd
@@ -437,7 +436,6 @@ ttf-monofur-nerd
 ttf-monoid-nerd
 ttf-mononoki-nerd
 ttf-mplus-nerd
-ttf-ms-win11-auto
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
@@ -504,7 +502,6 @@ xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-server-devel
-xorg-xwayland-git
 xorg-xgamma
 xorg-xhost
 xorg-xlsclients
