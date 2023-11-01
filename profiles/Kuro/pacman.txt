@@ -49,7 +49,6 @@ clang
 cliphist
 coolercontrol
 cpupower
-cuda
 cython
 deno
 devtools
