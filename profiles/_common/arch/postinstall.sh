@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 # Create snapper configs
-sudo snapper -c root create-config /
+if lsblk -f -o FSTYPE | sed -e '/FSTYPE/d' -e '/^$/d' | grep btrfs &>/dev/null; then
+	sudo snapper -c root create-config /
+fi
