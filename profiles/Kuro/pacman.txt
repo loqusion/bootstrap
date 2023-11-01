@@ -61,7 +61,6 @@ discord
 dmidecode
 dnsmasq
 docker
-dolphin-emu-git
 dos2unix
 dotbare
 downgrade
@@ -352,7 +351,6 @@ retroarch-assets-xmb
 ripgrep
 rofimoji
 rtx
-rust-docs
 rye-git
 safeeyes
 samba
