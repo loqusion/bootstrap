@@ -4,11 +4,11 @@ coolercontrold.service
 cpupower.service
 docker.service
 firewalld.service
-greetd.service
 irqbalance.service
 iwd.service
 lm_sensors.service
 preload.service
+sddm.service
 sshd.service
 systemd-network-generator.service
 systemd-networkd-wait-online.service

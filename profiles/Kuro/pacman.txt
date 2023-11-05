@@ -16,6 +16,7 @@ authy
 automedia-git
 autotrash
 avizo
+awesome
 base
 base-devel
 bash-completion
@@ -96,9 +97,11 @@ fuzzel
 fwupd
 fzf
 gamemode
+gamescope
 gammastep
 gedit
 gedit-plugins
+gifcurry
 gimp
 git
 git-delta
@@ -118,8 +121,10 @@ greetd
 grim
 grimblast-git
 gst-libav
+gst-plugin-gtk
 gst-plugins-bad
 gst-plugins-ugly
+gstreamer-vaapi
 gucharmap
 gum
 hadolint-bin
@@ -134,7 +139,7 @@ hyperfine
 hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
-hyprshade-git
+hyprshade
 i3-wm
 i3blocks
 i3lock
@@ -224,7 +229,6 @@ mdcat
 megasync-bin
 melody
 mesa-utils
-morgen-bin
 mpv
 mpv-mpris
 mtr
@@ -331,6 +335,8 @@ python-trio
 python-ujson
 qbittorrent
 qpwgraph
+qt5-graphicaleffects
+qt5-quickcontrols2
 qt5-styleplugins
 qt5-wayland
 qt5ct
@@ -349,6 +355,7 @@ retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
+rofi
 rofimoji
 rtx
 rye-git
@@ -374,6 +381,7 @@ spotifyd
 sshfs
 starship
 steam
+steamtinkerlaunch
 swappy
 sway
 sway-audio-idle-inhibit-git
@@ -435,11 +443,20 @@ ttf-monofur-nerd
 ttf-monoid-nerd
 ttf-mononoki-nerd
 ttf-mplus-nerd
+ttf-ms-win11-auto
+ttf-ms-win11-auto-japanese
+ttf-ms-win11-auto-korean
+ttf-ms-win11-auto-other
+ttf-ms-win11-auto-sea
+ttf-ms-win11-auto-thai
+ttf-ms-win11-auto-zh_cn
+ttf-ms-win11-auto-zh_tw
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
 ttf-profont-nerd
 ttf-proggyclean-nerd
+ttf-roboto-mono
 ttf-roboto-mono-nerd
 ttf-sharetech-mono-nerd
 ttf-sourcecodepro-nerd
@@ -497,12 +514,14 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdotool
+xinit-xsession
 xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-server-devel
 xorg-xgamma
 xorg-xhost
+xorg-xinit
 xorg-xlsclients
 xorg-xwayland-git
 xplr
@@ -510,7 +529,7 @@ xxd-standalone
 yazi-bin
 yt-dlp
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 zellij-git
 zip
 zoxide
