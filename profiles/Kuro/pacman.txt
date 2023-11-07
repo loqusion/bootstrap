@@ -91,7 +91,7 @@ firewalld
 fish
 fisher-git
 fm-bin
-fmt-git
+fmt
 fnlfmt
 font-manager
 fuzzel
@@ -274,6 +274,7 @@ otf-hermit-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
 overdue
+paccat
 pacman-contrib
 pamixer
 papirus-icon-theme
@@ -472,6 +473,7 @@ ttf-victor-mono-nerd
 typst
 udiskie
 udisks2
+ueberzugpp
 unace
 unarchiver
 unrar
