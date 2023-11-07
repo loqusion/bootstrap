@@ -31,6 +31,7 @@ bluez-utils-compat
 brightnessctl
 btop
 btrfs-progs
+bun-bin
 cargo-nextest
 cargo-update
 cargo-watch
@@ -226,7 +227,7 @@ man-db
 man-pages
 mangohud
 mdcat
-megasync-bin
+megasync-headless
 melody
 mesa-utils
 mpv
@@ -381,7 +382,6 @@ spotifyd
 sshfs
 starship
 steam
-steamtinkerlaunch
 swappy
 sway
 sway-audio-idle-inhibit-git
