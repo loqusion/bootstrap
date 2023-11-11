@@ -106,6 +106,7 @@ hyprland-nvidia-git
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
+i3-wm
 icat
 iftop
 imagemagick
@@ -152,7 +153,6 @@ mdns-scan
 megasync-bin
 melody
 mesa-utils
-morgen-bin
 mpv
 mpv-mpris
 mtr
@@ -193,6 +193,7 @@ otf-hermit-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
 overdue
+paccat
 pacman-contrib
 pamixer
 papirus-icon-theme
@@ -379,6 +380,7 @@ xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-xhost
+xorg-xinit
 xorg-xlsclients
 xxd-standalone
 yt-dlp
@@ -387,3 +389,4 @@ zathura-pdf-mupdf
 zellij-git
 zip
 zoxide
+zsh
