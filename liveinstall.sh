@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-SCRIPT_DEPENDENCIES=(gum)
 SUPPORTED_KERNELS=(linux linux-lts linux-zen)
 SUPPORTED_FILESYSTEMS=(ext4 btrfs)
 declare -A FS_UTILS_PACKAGES=(
@@ -109,6 +108,10 @@ spin() {
 	gum spin --title="$title" -- "$@"
 }
 
+ensure_gum_installed() {
+	command -v gum &>/dev/null || pacman -Sy --noconfirm --needed gum
+}
+
 if [ "$DRY_RUN" = true ] || [ "$DRY_RUN" = "1" ]; then
 	feedback INFO "Dry run mode enabled."
 fi
@@ -129,7 +132,7 @@ elif ! [ -b "$TARGET_DISK" ]; then
 	exit 1
 fi
 
-spin "Installing dependencies..." pacman -Sy --noconfirm --needed "${SCRIPT_DEPENDENCIES[@]}"
+ensure_gum_installed
 
 if ! contains SUPPORTED_KERNELS "$TARGET_KERNEL"; then
 	TARGET_KERNEL=$(choose "Choose kernel" "${SUPPORTED_KERNELS[@]}")
@@ -143,22 +146,20 @@ fi
 FS_UTILS_PACKAGE="${FS_UTILS_PACKAGES[$TARGET_FILESYSTEM]}"
 echo "Using filesystem: $TARGET_FILESYSTEM"
 
-if [ -z "$TARGET_HOSTNAME" ]; then
+while [ -z "$TARGET_HOSTNAME" ]; do
 	TARGET_HOSTNAME=$(input "Hostname: ")
 	[ -z "$TARGET_HOSTNAME" ] && {
 		feedback ERROR "Hostname cannot be empty."
-		exit 1
 	}
-fi
+done
 echo "Using hostname: $TARGET_HOSTNAME"
 
-if [ -z "$TARGET_USER" ]; then
+while [ -z "$TARGET_USER" ]; do
 	TARGET_USER=$(input "Username: " --value=loqusion)
 	[ -z "$TARGET_USER" ] && {
 		feedback ERROR "Username cannot be empty."
-		exit 1
 	}
-fi
+done
 echo "Using username: $TARGET_USER"
 
 if [ "$DRY_RUN" = true ] || [ "$DRY_RUN" = "1" ]; then
