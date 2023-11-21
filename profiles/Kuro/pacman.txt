@@ -498,6 +498,7 @@ wev
 wezterm-git
 wf-recorder
 wget
+whois
 wine
 winetricks
 wireguard-tools
