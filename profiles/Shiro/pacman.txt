@@ -102,7 +102,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland-nvidia-git
+hyprland-git
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
