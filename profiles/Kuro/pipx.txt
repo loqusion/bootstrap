@@ -1,1 +1,1 @@
-open-interpreter 0.1.15
+open-interpreter 0.1.16

@@ -137,7 +137,7 @@ hunspell
 hunspell-en_us
 hydrus
 hyperfine
-hyprland-nvidia-git
+hyprland-git
 hyprpaper-git
 hyprpicker-git
 hyprshade
