@@ -225,6 +225,7 @@ lutris
 lynx
 man-db
 man-pages
+mangal-bin
 mangohud
 mdcat
 megasync-headless
@@ -387,7 +388,7 @@ swappy
 sway
 sway-audio-idle-inhibit-git
 swayidle
-swaylock-effects
+swaylock-effects-improved-git
 swaync
 swftools
 sxhkd
