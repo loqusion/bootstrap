@@ -45,6 +45,7 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 ccache
+chromium
 cinny-desktop-bin
 citra-appimage
 clang
