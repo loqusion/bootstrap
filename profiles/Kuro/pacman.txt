@@ -70,6 +70,7 @@ ds4drv
 dunst
 e2fsprogs
 easy-rsa
+electron-fiddle-bin
 electron22
 electron24
 element-desktop
