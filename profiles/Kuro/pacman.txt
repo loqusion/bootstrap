@@ -3,6 +3,7 @@ act-bin
 ahoviewer-git
 alacritty-git
 alacritty-themes
+allsorts-tools
 alsa-utils
 ansible
 arandr
@@ -319,6 +320,7 @@ python-huggingface-hub
 python-idna
 python-internetarchive
 python-mutagen
+python-opentype-sanitizer
 python-pdm
 python-pillow
 python-pip
@@ -363,6 +365,7 @@ ripgrep
 rofi
 rofimoji
 rtx
+rustup
 rye-git
 safeeyes
 samba
