@@ -2,6 +2,7 @@ blackd.service
 dura.service
 gamemoded.service
 spotifyd.service
+syncthing.service
 wireplumber.service
 xdg-user-dirs-update.service
 autotrash.timer
