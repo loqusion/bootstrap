@@ -94,6 +94,7 @@ firefox-developer-edition
 firewalld
 fish
 fisher-git
+flyctl-bin
 fm-bin
 fmt
 fnlfmt
@@ -250,6 +251,8 @@ net-tools
 networkmanager
 networkmanager-openvpn
 nftables
+nix
+nixfmt
 nm-connection-editor
 nmap
 nnn-nerd
