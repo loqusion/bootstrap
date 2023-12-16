@@ -93,7 +93,7 @@ firefox
 firefox-developer-edition
 firewalld
 fish
-fisher-git
+fisher
 flyctl-bin
 fm-bin
 fmt
@@ -397,7 +397,7 @@ swappy
 sway
 sway-audio-idle-inhibit-git
 swayidle
-swaylock-effects-git
+swaylock
 swaync
 swftools
 sxhkd
