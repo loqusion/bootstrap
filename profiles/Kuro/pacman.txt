@@ -61,7 +61,6 @@ dhcpcd
 dhcping
 dictd
 direnv
-discord
 dmidecode
 dnsmasq
 docker
@@ -134,9 +133,7 @@ gstreamer-vaapi
 gucharmap
 gum
 hadolint-bin
-helix
 helvum
-hex
 htop
 hunspell
 hunspell-en_us
@@ -266,7 +263,6 @@ nvidia-dkms
 nvidia-settings
 nwg-look
 obs-studio
-obsidian
 openrgb
 openssh
 openvpn-update-systemd-resolved
@@ -397,7 +393,7 @@ swappy
 sway
 sway-audio-idle-inhibit-git
 swayidle
-swaylock
+swaylock-effects
 swaync
 swftools
 sxhkd
@@ -508,7 +504,7 @@ waybar-git
 wdiff
 webp-pixbuf-loader
 wev
-wezterm-git
+wezterm
 wf-recorder
 wget
 whois
