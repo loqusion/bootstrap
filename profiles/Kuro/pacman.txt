@@ -393,7 +393,7 @@ swappy
 sway
 sway-audio-idle-inhibit-git
 swayidle
-swaylock-effects
+swaylock
 swaync
 swftools
 sxhkd
