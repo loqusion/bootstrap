@@ -2,7 +2,7 @@ bluetooth.service
 chronyd.service
 iwd.service
 laptop-mode.service
-nvidia-persistenced.service
+nix-daemon.service
 sddm.service
 sshd.service
 systemd-network-generator.service

@@ -27,6 +27,7 @@ bluez-utils
 borg
 brightnessctl
 btop
+bun-bin
 cargo-nextest
 cargo-update
 cargo-watch
@@ -95,9 +96,7 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 gum
-helix
 helvum
-hex
 htop
 hunspell
 hunspell-en_us
@@ -166,6 +165,7 @@ networkd-notify-git
 networkmanager
 networkmanager-openvpn
 nftables
+nix
 nmap
 nnn
 notion-app
@@ -256,7 +256,6 @@ ripgrep
 rkhunter
 rofi-lbonn-wayland-git
 rofimoji
-rtx-bin
 rust-docs
 rustup
 rusty-man
