@@ -1,9 +1,9 @@
 bluetooth.service
 chronyd.service
-greetd.service
 iwd.service
 laptop-mode.service
 nix-daemon.service
+sddm.service
 sshd.service
 systemd-network-generator.service
 systemd-networkd-wait-online.service
