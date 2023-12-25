@@ -101,7 +101,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hyprland-git
+hyprland
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
