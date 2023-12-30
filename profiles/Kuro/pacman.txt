@@ -364,7 +364,6 @@ retroarch-assets-xmb
 ripgrep
 rofi
 rofimoji
-rtx
 rustup
 rye-git
 safeeyes
