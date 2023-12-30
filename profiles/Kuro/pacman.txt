@@ -366,6 +366,7 @@ rofi
 rofimoji
 rustup
 rye-git
+sad
 safeeyes
 samba
 sassc
