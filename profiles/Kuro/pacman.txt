@@ -23,6 +23,7 @@ base-devel
 bash-completion
 bat
 bc
+bemoji
 betterdiscordctl
 bind
 blender
