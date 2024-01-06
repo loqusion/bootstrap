@@ -1,0 +1,8 @@
+@@ -5,5 +5,7 @@
+ # Unix group containing the Nix build user accounts
+ build-users-group = nixbld
+ 
++trusted-users = loqusion root
++
+ # Disable sandbox
+ # sandbox = false
