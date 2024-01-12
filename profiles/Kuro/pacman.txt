@@ -174,7 +174,7 @@ lib32-mangohud
 lib32-nvidia-utils
 libfaketime
 libgit2-glib
-libnotify
+libnotify-git
 libretro-beetle-pce
 libretro-beetle-pce-fast
 libretro-beetle-psx
@@ -212,6 +212,7 @@ libretro-sameboy
 libretro-scummvm
 libretro-shaders-slang
 libretro-snes9x
+libretro-swanstation-git
 libretro-yabause
 libva-nvidia-driver-git
 libva-utils
@@ -307,7 +308,6 @@ python-aiodns
 python-aiohttp
 python-argcomplete
 python-black
-python-boltons
 python-brotli
 python-cbor2
 python-certifi
@@ -376,6 +376,7 @@ sd
 sddm
 sddm-conf-git
 sddm-theme-catppuccin-git
+seahorse
 showmethekey
 skim
 slides-bin
@@ -417,6 +418,7 @@ transmission-cli
 trash-cli
 tree
 tree-sitter-cli
+ts-node
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
@@ -501,6 +503,7 @@ vlc
 vulkan-tools
 w3m
 waifu2x-ncnn-vulkan
+watson
 waybar-git
 wdiff
 webp-pixbuf-loader
