@@ -159,6 +159,7 @@ mtr
 namcap
 nautilus
 neofetch
+neovide
 neovim-git
 neovim-symlinks
 nethogs
@@ -357,6 +358,7 @@ udiskie
 udisks2
 unzip
 vlc
+vulkan-intel
 vulkan-tools
 waifu2x-ncnn-vulkan
 waybar
