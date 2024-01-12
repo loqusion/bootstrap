@@ -80,6 +80,7 @@ fzf
 gammastep
 git
 git-delta
+git-lfs
 github-cli
 glow
 gnome-calculator
