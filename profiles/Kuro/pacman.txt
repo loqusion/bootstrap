@@ -135,6 +135,7 @@ gucharmap
 gum
 hadolint-bin
 helvum
+hexyl
 htop
 hunspell
 hunspell-en_us
