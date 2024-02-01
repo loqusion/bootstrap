@@ -261,7 +261,7 @@ rofimoji
 rust-docs
 rustup
 rusty-man
-rye-git
+rye
 safeeyes
 sassc
 sccache
