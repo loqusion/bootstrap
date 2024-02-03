@@ -176,6 +176,7 @@ lib32-nvidia-utils
 libfaketime
 libgit2-glib
 libnotify-git
+libray
 libretro-beetle-pce
 libretro-beetle-pce-fast
 libretro-beetle-psx
@@ -366,6 +367,7 @@ retroarch-assets-xmb
 ripgrep
 rofi
 rofimoji
+rpcs3-bin
 rustup
 rye-git
 sad
@@ -423,6 +425,7 @@ ts-node
 ttf-3270-nerd
 ttf-agave-nerd
 ttf-anonymouspro-nerd
+ttf-apple-emoji
 ttf-arimo-nerd
 ttf-bigblueterminal-nerd
 ttf-bitstream-vera-mono-nerd
@@ -505,7 +508,7 @@ vulkan-tools
 w3m
 waifu2x-ncnn-vulkan
 watson
-waybar-git
+waybar
 wdiff
 webp-pixbuf-loader
 wev
