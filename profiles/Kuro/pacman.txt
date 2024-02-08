@@ -74,7 +74,6 @@ e2fsprogs
 easy-rsa
 electron-fiddle-bin
 electron22
-electron24
 element-desktop
 evcxr_repl
 expect
@@ -141,7 +140,7 @@ hunspell
 hunspell-en_us
 hydrus
 hyperfine
-hyprland-git
+hyprland
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
@@ -152,6 +151,7 @@ i3status
 imagemagick
 inetutils
 informant
+inkscape
 innoextract
 intel-ucode
 inxi
@@ -369,7 +369,7 @@ rofi
 rofimoji
 rpcs3-bin
 rustup
-rye-git
+rye
 sad
 safeeyes
 samba
@@ -398,7 +398,7 @@ swappy
 sway
 sway-audio-idle-inhibit-git
 swayidle
-swaylock
+swaylock-effects-git
 swaync
 swftools
 sxhkd
@@ -543,7 +543,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
-xorg-xwayland-git
+xorg-xwayland
 xplr
 xxd-standalone
 yazi-bin

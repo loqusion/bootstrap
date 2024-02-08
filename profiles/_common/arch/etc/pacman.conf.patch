@@ -3,7 +3,7 @@
  
  # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
 -#IgnorePkg   =
-+IgnorePkg   = hyprland hyprland-nvidia hyprland-git hyprland-nvidia-git
++IgnorePkg   = yarn
  #IgnoreGroup =
  
  #NoUpgrade   =
