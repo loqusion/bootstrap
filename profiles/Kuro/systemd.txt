@@ -8,9 +8,6 @@ irqbalance.service
 iwd.service
 lm_sensors.service
 nix-daemon.service
-nvidia-hibernate.service
-nvidia-resume.service
-nvidia-suspend.service
 preload.service
 sddm.service
 sshd.service

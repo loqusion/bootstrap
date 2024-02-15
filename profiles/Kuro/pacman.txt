@@ -80,7 +80,6 @@ eza
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
-fcitx5-mozc-ut
 fcitx5-qt
 fd
 feh
@@ -139,8 +138,8 @@ hunspell
 hunspell-en_us
 hydrus
 hyperfine
-hyprland
-hyprpaper-git
+hyprland-git
+hyprpaper
 hyprpicker-git
 hyprshade-git
 i3-wm
@@ -375,7 +374,8 @@ sccache
 sd
 sddm
 sddm-conf-git
-sddm-theme-catppuccin-git
+sddm-theme-clairvoyance
+sddm-theme-tokyo-night
 seahorse
 showmethekey
 skim
@@ -540,7 +540,6 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
-xorg-xwayland
 xplr
 xxd-standalone
 yazi-bin
