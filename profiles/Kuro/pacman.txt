@@ -540,6 +540,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
+xorg-xwayland
 xplr
 xxd-standalone
 yazi-bin
