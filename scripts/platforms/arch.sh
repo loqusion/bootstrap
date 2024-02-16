@@ -81,11 +81,17 @@ install_system "$HOSTNAME"
 
 install_xdg "$HOSTNAME"
 
+SKIP_PACKAGES=${SKIP_PACKAGES:-}
+
 # Install packages with paru
-paru -Sy --needed - <"$PROFILE_DIR/pacman.txt"
+SKIP_PARU=${SKIP_PARU:-${SKIP_PACMAN:-${SKIP_PACKAGES}}}
+if [ "$SKIP_PARU" != "1" ]; then
+	paru -Sy --needed - <"$PROFILE_DIR/pacman.txt"
+fi
 
 # Install pipx packages
-if [ -f "$PROFILE_DIR/pipx.txt" ]; then
+SKIP_PIPX=${SKIP_PIPX:-${SKIP_PACKAGES}}
+if [ "$SKIP_PIPX" != "1" ] && [ -f "$PROFILE_DIR/pipx.txt" ]; then
 	cut -d' ' -f1 "$PROFILE_DIR/pipx.txt" | xargs -I{} pipx install --force {} || true
 fi
 
