@@ -243,7 +243,7 @@ nautilus
 ncdu
 neofetch
 neovide
-neovim-git
+neovim-nightly-bin
 neovim-symlinks
 net-tools
 networkmanager
@@ -374,7 +374,6 @@ sccache
 sd
 sddm
 sddm-conf-git
-sddm-theme-clairvoyance
 sddm-theme-tokyo-night
 seahorse
 showmethekey
@@ -542,7 +541,6 @@ xorg-xinit
 xorg-xlsclients
 xorg-xwayland
 xplr
-xxd-standalone
 yazi-bin
 yt-dlp
 zathura
