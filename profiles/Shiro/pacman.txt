@@ -269,6 +269,7 @@ sd
 sddm
 sddm-conf-git
 sddm-theme-catppuccin-git
+sddm-theme-tokyo-night
 showmethekey
 skim
 slurp
@@ -389,7 +390,7 @@ xxd-standalone
 yt-dlp
 zathura
 zathura-pdf-mupdf
-zellij-git
+zellij
 zip
 zoxide
 zsh
