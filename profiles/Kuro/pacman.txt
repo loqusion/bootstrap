@@ -80,6 +80,7 @@ eza
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
+fcitx5-mozc-ut
 fcitx5-qt
 fd
 feh
@@ -234,6 +235,7 @@ mdcat
 megasync-headless
 melody
 mesa-utils
+mozc-ut
 mpv
 mpv-mpris
 mtr
@@ -541,7 +543,7 @@ xorg-xinit
 xorg-xlsclients
 xorg-xwayland
 xplr
-yazi-bin
+yazi
 yt-dlp
 zathura
 zathura-pdf-poppler
