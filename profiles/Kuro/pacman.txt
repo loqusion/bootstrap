@@ -298,6 +298,7 @@ pipewire-pulse
 pkgfile
 playerctl
 plocate
+pnpm
 polkit-gnome
 poppler
 power-profiles-daemon
@@ -543,6 +544,7 @@ xorg-xinit
 xorg-xlsclients
 xorg-xwayland
 xplr
+yarn
 yazi
 yt-dlp
 zathura

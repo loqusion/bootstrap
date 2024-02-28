@@ -3,7 +3,7 @@
  
  # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
 -#IgnorePkg   =
-+IgnorePkg   = yarn
++IgnorePkg   =
  #IgnoreGroup =
  
  #NoUpgrade   =
