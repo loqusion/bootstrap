@@ -264,6 +264,7 @@ nushell
 nvidia-dkms
 nvidia-settings
 nwg-look
+nyaa
 obs-studio
 openrgb
 openssh
