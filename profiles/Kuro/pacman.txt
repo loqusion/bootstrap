@@ -235,6 +235,7 @@ mdcat
 megasync-headless
 melody
 mesa-utils
+mkinitcpio-firmware
 mozc-ut
 mpv
 mpv-mpris
