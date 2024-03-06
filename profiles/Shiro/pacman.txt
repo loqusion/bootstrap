@@ -137,9 +137,9 @@ libnotify
 libva-nvidia-driver
 libva-utils
 light-git
-linux
 linux-firmware
-linux-headers
+linux-zen
+linux-zen-headers
 lldb
 lshw
 lua-sec
@@ -153,6 +153,7 @@ mdns-scan
 megasync-bin
 melody
 mesa-utils
+mkinitcpio-firmware
 mpv
 mpv-mpris
 mtr
