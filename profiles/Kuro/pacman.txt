@@ -75,6 +75,7 @@ electron-fiddle-bin
 electron22
 element-desktop
 evcxr_repl
+eww
 expect
 eza
 fcitx5
