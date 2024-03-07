@@ -141,6 +141,7 @@ hunspell-en_us
 hydrus
 hyperfine
 hyprland
+hyprlock
 hyprpaper
 hyprpicker-git
 hyprshade-git
