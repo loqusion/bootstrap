@@ -103,6 +103,7 @@ hunspell
 hunspell-en_us
 hyperfine
 hyprland
+hyprlock
 hyprpaper-git
 hyprpicker-git
 hyprshade-git
@@ -219,6 +220,7 @@ pv
 python-aiodns
 python-aiohttp
 python-argcomplete
+python-beautifulsoup4
 python-black
 python-brotli
 python-cchardet
