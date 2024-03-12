@@ -29,7 +29,6 @@ bind
 blender
 blueberry-wayland
 bluez
-bluez-utils-compat
 bore
 brightnessctl
 btop
