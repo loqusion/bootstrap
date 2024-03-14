@@ -185,7 +185,7 @@ libretro-blastem
 libretro-bsnes
 libretro-bsnes-hd
 libretro-bsnes2014
-libretro-citra-git
+libretro-citra
 libretro-core-info
 libretro-desmume
 libretro-dolphin
