@@ -139,6 +139,7 @@ hunspell
 hunspell-en_us
 hydrus
 hyperfine
+hypridle
 hyprland
 hyprlock
 hyprpaper
