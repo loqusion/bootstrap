@@ -1,0 +1,10 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+
+# WARNING: Make sure to run `xrandr | grep -w connected` in an X window manager to get the correct display names.
+# Running it in Wayland may give you incorrect names.
+primary="DP-2"
+secondary="DP-0"
+
+xrandr --output "$primary" --primary --mode 3840x2160 --rotate normal --rate 144 --scale 0.75
+xrandr --output "$secondary" --off # --noprimary --left-of "$primary" --mode 2560x1440 --rotate left --rate 144
