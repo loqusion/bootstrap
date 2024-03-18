@@ -143,7 +143,7 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
-hyprpicker-git
+hyprpicker
 hyprshade-git
 i3-wm
 i3blocks
@@ -316,6 +316,7 @@ python-black
 python-brotli
 python-cbor2
 python-certifi
+python-chevron
 python-colorama
 python-croniter
 python-curio
