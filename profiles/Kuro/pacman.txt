@@ -316,7 +316,6 @@ python-black
 python-brotli
 python-cbor2
 python-certifi
-python-chevron
 python-colorama
 python-croniter
 python-curio
