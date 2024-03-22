@@ -5,11 +5,14 @@ set -euo pipefail
 DIR=$(realpath "$(dirname "$(readlink -f "$0")")/../..")
 HOSTNAME=$(hostname -s)
 PROFILE_DIR="$DIR/profiles/$HOSTNAME"
+DOTBARE_INSTALLATION_DIR="$HOME/.dotbare"
 
 cd "$DIR" || exit 1
 
 # Install Homebrew
-command -v brew &>/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew &>/dev/null; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 # Install Xcode Command Line Tools
 touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
@@ -22,4 +25,9 @@ brew bundle --no-lock --file="$PROFILE_DIR/Brewfile"
 # Install pipx packages
 if [ -f "$PROFILE_DIR/pipx.txt" ]; then
 	cut -d' ' -f1 "$PROFILE_DIR/pipx.txt" | xargs -I{} pipx install --force {} || true
+fi
+
+# Install dotbare
+if [ ! -d "$DOTBARE_INSTALLATION_DIR" ]; then
+	git clone https://github.com/kazhala/dotbare.git "$DOTBARE_INSTALLATION_DIR"
 fi
