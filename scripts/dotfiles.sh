@@ -17,8 +17,8 @@ if [ ! -e "$DOTFILES/HEAD" ]; then
 	git clone --bare https://github.com/loqusion/dotfiles.git "$DOTFILES"
 fi
 
-config submodule update --init
 config checkout --force &>/dev/null
+config submodule update --init
 config config --local status.showUntrackedFiles no
 config config --local branch.main.remote origin
 config config --local branch.main.merge refs/heads/main
