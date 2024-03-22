@@ -321,7 +321,6 @@ python-croniter
 python-curio
 python-dnspython
 python-gevent
-python-hatch
 python-huggingface-hub
 python-idna
 python-internetarchive
