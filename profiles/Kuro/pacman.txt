@@ -129,6 +129,7 @@ gst-plugin-gtk
 gst-plugins-bad
 gst-plugins-ugly
 gstreamer-vaapi
+gtk4-layer-shell
 gucharmap
 gum
 hadolint-bin
@@ -145,6 +146,7 @@ hyprlock
 hyprpaper
 hyprpicker
 hyprshade-git
+hyprswitch
 i3-wm
 i3blocks
 i3lock
@@ -309,6 +311,7 @@ power-profiles-daemon
 preload
 prettier
 proton-ge-custom-bin
+protonvpn-cli
 python-aiodns
 python-aiohttp
 python-argcomplete
