@@ -104,7 +104,7 @@ hunspell-en_us
 hyperfine
 hyprland
 hyprlock
-hyprpaper-git
+hyprpaper
 hyprpicker-git
 hyprshade-git
 i3-wm
