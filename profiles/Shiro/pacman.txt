@@ -169,7 +169,6 @@ networkd-notify-git
 networkmanager
 networkmanager-openvpn
 nftables
-nix
 nmap
 nnn
 notion-app

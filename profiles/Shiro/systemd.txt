@@ -3,7 +3,6 @@ chronyd.service
 firewalld.service
 iwd.service
 laptop-mode.service
-nix-daemon.service
 sddm.service
 sshd.service
 systemd-network-generator.service
