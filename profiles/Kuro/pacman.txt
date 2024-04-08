@@ -256,7 +256,6 @@ net-tools
 networkmanager
 networkmanager-openvpn
 nftables
-nix
 nm-connection-editor
 nmap
 nnn-nerd

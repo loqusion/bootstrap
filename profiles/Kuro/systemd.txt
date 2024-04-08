@@ -7,7 +7,6 @@ firewalld.service
 irqbalance.service
 iwd.service
 lm_sensors.service
-nix-daemon.service
 nvidia-hibernate.service
 nvidia-resume.service
 nvidia-suspend.service
