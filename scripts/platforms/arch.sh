@@ -89,6 +89,12 @@ if [ "$SKIP_PARU" != "1" ]; then
 	paru -Sy --needed - <"$PROFILE_DIR/pacman.txt"
 fi
 
+# Install nix (Determinate Nix Installer)
+SKIP_NIX=${SKIP_NIX:-${SKIP_PACKAGES}}
+if [ "$SKIP_NIX" != "1" ] && ! nix-env --version &>/dev/null; then
+	curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+fi
+
 # Install pipx packages
 SKIP_PIPX=${SKIP_PIPX:-${SKIP_PACKAGES}}
 if [ "$SKIP_PIPX" != "1" ] && [ -f "$PROFILE_DIR/pipx.txt" ]; then
