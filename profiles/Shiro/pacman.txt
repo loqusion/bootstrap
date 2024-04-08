@@ -18,6 +18,7 @@ avizo
 base
 base-devel
 bat
+bazel
 bc
 betterdiscordctl
 bind
