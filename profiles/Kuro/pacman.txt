@@ -343,6 +343,7 @@ python-pynvim
 python-pyopenssl
 python-pyqt5
 python-pysocks
+python-pystache
 python-pyxdg
 python-requests-toolbelt
 python-sniffio
