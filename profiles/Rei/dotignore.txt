@@ -1,9 +1,10 @@
 Mailspring
 MangoHud
+_vpn.toml
 anyrun
 coolercontrol
 dunst
-electron-flags.conf
+electron*-flags.conf
 eww
 fcitx5
 fontconfig
@@ -11,6 +12,7 @@ fuzzel
 gammastep
 gtk-*
 hypr
+i3
 mako
 mimeapps.list
 mpv
@@ -22,6 +24,7 @@ rofi
 swayidle
 swaylock
 systemd
+user-dirs.locale
 user-tmpfiles.d
 waybar
 wireplumber
