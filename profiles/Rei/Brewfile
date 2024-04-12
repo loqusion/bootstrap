@@ -27,6 +27,7 @@ brew "just"
 brew "lazygit"
 brew "luarocks"
 brew "mas"
+brew "nap"
 brew "neofetch"
 brew "neovim", args: ["HEAD"]
 brew "nmap"
