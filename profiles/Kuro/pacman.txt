@@ -549,7 +549,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
-xorg-xwayland
+xorg-xwayland-explicit-sync-git
 xplr
 yarn
 yazi
