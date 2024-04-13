@@ -63,7 +63,9 @@ cask "visual-studio-code"
 cask "wezterm"
 cask "zoom"
 mas "AdGuard for Safari", id: 1440147259
+mas "Amphetamine", id: 937984704
 mas "Dashlane", id: 517914548
+mas "Prime Video", id: 545519333
 mas "Refined GitHub", id: 1519867270
 mas "Spark", id: 1176895641
 mas "uBlacklist for Safari", id: 1547912640
