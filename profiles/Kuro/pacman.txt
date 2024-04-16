@@ -344,6 +344,7 @@ python-pyopenssl
 python-pyqt5
 python-pysocks
 python-pystache
+python-pywayland
 python-pyxdg
 python-requests-toolbelt
 python-sniffio
