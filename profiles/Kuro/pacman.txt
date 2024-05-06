@@ -72,7 +72,6 @@ dunst
 e2fsprogs
 easy-rsa
 electron-fiddle-bin
-electron22
 element-desktop
 evcxr_repl
 eww
