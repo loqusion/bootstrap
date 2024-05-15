@@ -106,6 +106,7 @@ gammastep
 gedit
 gedit-plugins
 gifcurry
+gifsicle
 gimp
 git
 git-delta
@@ -557,5 +558,6 @@ yt-dlp
 zathura
 zathura-pdf-poppler
 zellij-git
+zig
 zip
 zoxide
