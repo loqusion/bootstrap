@@ -33,7 +33,7 @@ brew "luarocks"
 brew "mas"
 brew "nap"
 brew "neofetch"
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 brew "nmap"
 brew "nushell"
 brew "pipx"
