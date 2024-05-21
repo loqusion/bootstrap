@@ -12,7 +12,6 @@ asciinema
 atomicparsley
 atool
 aurvote
-automedia-git
 autotrash
 avizo
 base
@@ -278,7 +277,6 @@ skim
 slurp
 socat
 spdlog
-spicetify-cli
 spotify-launcher
 starship
 steam
@@ -340,6 +338,7 @@ ttf-monofur-nerd
 ttf-monoid-nerd
 ttf-mononoki-nerd
 ttf-mplus-nerd
+ttf-ms-win11-auto
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
