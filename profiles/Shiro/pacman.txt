@@ -113,7 +113,6 @@ icat
 iftop
 imagemagick
 inetutils
-informant
 intel-ucode
 inxi
 iotop
@@ -156,6 +155,7 @@ megasync-bin
 melody
 mesa-utils
 mkinitcpio-firmware
+mozc-ut
 mpv
 mpv-mpris
 mtr
@@ -163,7 +163,7 @@ namcap
 nautilus
 neofetch
 neovide
-neovim-git
+neovim
 neovim-symlinks
 nethogs
 networkd-notify-git
@@ -340,7 +340,6 @@ ttf-monofur-nerd
 ttf-monoid-nerd
 ttf-mononoki-nerd
 ttf-mplus-nerd
-ttf-ms-win11-auto
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
