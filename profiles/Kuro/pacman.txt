@@ -5,7 +5,6 @@ alacritty-git
 alacritty-themes
 allsorts-tools
 alsa-utils
-ansible
 arandr
 archlinux-themes-sddm
 asciinema
@@ -141,9 +140,9 @@ hunspell
 hunspell-en_us
 hydrus
 hyperfine
-hypridle
+hypridle-git
 hyprland
-hyprlock
+hyprlock-git
 hyprpaper
 hyprpicker
 hyprshade-git
@@ -251,7 +250,7 @@ nautilus
 ncdu
 neofetch
 neovide
-neovim-nightly-bin
+neovim
 neovim-symlinks
 net-tools
 networkmanager
@@ -550,7 +549,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
-xorg-xwayland-explicit-sync-git
+xorg-xwayland-git
 xplr
 yarn
 yazi
