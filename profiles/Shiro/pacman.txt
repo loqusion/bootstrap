@@ -17,7 +17,6 @@ avizo
 base
 base-devel
 bat
-bazel
 bc
 betterdiscordctl
 bind
@@ -102,8 +101,9 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
+hypridle-git
 hyprland
-hyprlock
+hyprlock-git
 hyprpaper
 hyprpicker-git
 hyprshade-git
@@ -184,8 +184,6 @@ obs-studio
 obsidian
 openssh
 openvpn-update-systemd-resolved
-opera
-opera-ffmpeg-codecs
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -293,7 +291,6 @@ tealdeer
 texinfo
 tgpt-bin
 thermald
-thunderbird
 tmux
 tmux-plugin-manager
 tokei
