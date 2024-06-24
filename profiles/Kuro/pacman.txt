@@ -60,6 +60,7 @@ dhcpcd
 dhcping
 dictd
 direnv
+discord
 dmidecode
 dnsmasq
 docker
@@ -117,7 +118,7 @@ gnome-disk-utility
 gnome-keyring
 gnu-netcat
 gobject-introspection
-godot
+godot-git
 goverlay
 gparted
 grc
