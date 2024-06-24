@@ -20,6 +20,7 @@ bat
 bc
 betterdiscordctl
 bind
+blender
 blueberry-wayland
 bluez
 bluez-utils
@@ -88,6 +89,7 @@ gnome-logs
 gnome-tweaks
 gnu-netcat
 gobject-introspection
+godot-git
 grc
 greetd
 grim
