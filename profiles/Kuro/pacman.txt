@@ -116,7 +116,6 @@ glow
 gnome-calculator
 gnome-disk-utility
 gnome-keyring
-gnu-netcat
 gobject-introspection
 godot-git
 goverlay
@@ -148,7 +147,7 @@ hyprpaper
 hyprpicker
 hyprshade-git
 hyprswitch
-hyprutils-git
+hyprutils
 i3-wm
 i3blocks
 i3lock
@@ -271,6 +270,7 @@ nvidia-settings
 nwg-look
 nyaa
 obs-studio
+openbsd-netcat
 openrgb
 openssh
 openvpn-update-systemd-resolved
@@ -394,7 +394,6 @@ slurp
 socat
 sockstat
 spdlog
-spicetify-cli
 spotify-launcher
 spotify-tui
 spotifyd
@@ -505,6 +504,7 @@ vdhcoapp-bin
 via-bin
 virt-manager
 virtualbox
+virtualbox-ext-oracle
 virtualbox-guest-iso
 virtualbox-host-dkms
 virtualbox-unattended-templates
@@ -550,7 +550,7 @@ xorg-xgamma
 xorg-xhost
 xorg-xinit
 xorg-xlsclients
-xorg-xwayland-git
+xorg-xwayland
 xplr
 xss-lock
 yarn
