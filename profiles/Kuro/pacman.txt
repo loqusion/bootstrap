@@ -396,6 +396,7 @@ spdlog
 spotify-launcher
 spotify-tui
 spotifyd
+ssh-audit
 sshfs
 starship
 steam
