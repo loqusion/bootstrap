@@ -221,7 +221,6 @@ libretro-swanstation-git
 libretro-yabause
 libva-nvidia-driver-git
 libva-utils
-libvirt
 light-git
 linux-firmware
 linux-zen
@@ -502,7 +501,6 @@ unrar
 unzip
 vdhcoapp-bin
 via-bin
-virt-manager
 virtualbox
 virtualbox-ext-oracle
 virtualbox-guest-iso
