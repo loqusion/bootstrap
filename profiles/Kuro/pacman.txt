@@ -221,12 +221,14 @@ libretro-swanstation-git
 libretro-yabause
 libva-nvidia-driver-git
 libva-utils
+libvirt
 light-git
 linux-firmware
 linux-zen
 linux-zen-headers
 lldb
 lrzip
+lshw
 lua-sec
 luarocks
 lutris
@@ -269,6 +271,7 @@ nvidia-settings
 nwg-look
 nyaa
 obs-studio
+obsidian
 openbsd-netcat
 openrgb
 openssh
@@ -502,6 +505,7 @@ unrar
 unzip
 vdhcoapp-bin
 via-bin
+virt-manager
 virtualbox
 virtualbox-ext-oracle
 virtualbox-guest-iso

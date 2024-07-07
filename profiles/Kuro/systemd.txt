@@ -6,6 +6,7 @@ docker.service
 firewalld.service
 irqbalance.service
 iwd.service
+libvirtd.service
 lm_sensors.service
 nvidia-hibernate.service
 nvidia-resume.service
