@@ -60,7 +60,7 @@ dhcpcd
 dhcping
 dictd
 direnv
-discord
+discord_arch_electron
 dmidecode
 dnsmasq
 docker
@@ -319,6 +319,7 @@ python-aiohttp
 python-argcomplete
 python-black
 python-brotli
+python-capstone
 python-cbor2
 python-certifi
 python-colorama
