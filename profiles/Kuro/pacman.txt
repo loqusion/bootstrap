@@ -30,6 +30,7 @@ blender
 blueberry-wayland
 bluez
 bore
+bpython
 brightnessctl
 btop
 btrfs-progs
