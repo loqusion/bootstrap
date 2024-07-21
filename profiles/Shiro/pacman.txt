@@ -107,7 +107,7 @@ hypridle-git
 hyprland
 hyprlock-git
 hyprpaper
-hyprpicker-git
+hyprpicker
 hyprshade-git
 i3-wm
 icat
@@ -156,7 +156,6 @@ megasync-bin
 melody
 mesa-utils
 mkinitcpio-firmware
-mozc-ut
 mpv
 mpv-mpris
 mtr
@@ -224,6 +223,7 @@ python-black
 python-brotli
 python-cchardet
 python-certifi
+python-chevron
 python-colorama
 python-croniter
 python-curio
