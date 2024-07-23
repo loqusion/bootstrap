@@ -428,6 +428,7 @@ tmux
 tmux-plugin-manager
 tokei
 topgrade-bin
+torbrowser-launcher
 transmission-cli
 trash-cli
 tree
@@ -509,10 +510,8 @@ vdhcoapp-bin
 via-bin
 virt-manager
 virtualbox
-virtualbox-ext-oracle
 virtualbox-guest-iso
 virtualbox-host-dkms
-virtualbox-unattended-templates
 vkbasalt-git
 vkd3d
 vlc
