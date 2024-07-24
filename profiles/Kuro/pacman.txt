@@ -61,7 +61,6 @@ dhcpcd
 dhcping
 dictd
 direnv
-discord_arch_electron
 dmidecode
 dnsmasq
 docker
@@ -146,7 +145,7 @@ hyprland
 hyprlock-git
 hyprpaper
 hyprpicker
-hyprshade-git
+hyprshade-rewrite-git
 hyprswitch
 hyprutils
 i3-wm
@@ -272,7 +271,6 @@ nvidia-settings
 nwg-look
 nyaa
 obs-studio
-obsidian
 openbsd-netcat
 openrgb
 openssh
