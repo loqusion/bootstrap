@@ -117,6 +117,7 @@ glow
 gnome-calculator
 gnome-disk-utility
 gnome-keyring
+gnuplot
 gobject-introspection
 godot-git
 goverlay
