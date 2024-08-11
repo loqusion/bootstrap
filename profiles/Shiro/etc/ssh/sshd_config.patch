@@ -1,0 +1,7 @@
+@@ -115,3 +115,6 @@
+ #       AllowTcpForwarding no
+ #       PermitTTY no
+ #       ForceCommand cvs server
++
++Match User loqusion
++    ForceCommand systemd-inhibit --who="SSH session" --why="Active user" --what="idle" --mode=block $SHELL
