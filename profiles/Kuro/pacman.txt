@@ -147,7 +147,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
-hyprshade-git
+hyprshade-rewrite-git
 hyprswitch
 hyprutils
 i3-wm
