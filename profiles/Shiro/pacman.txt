@@ -107,7 +107,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpicker
-hyprshade-git
+hyprshade-rewrite-git
 i3-wm
 icat
 iftop
