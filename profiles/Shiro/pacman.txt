@@ -102,7 +102,7 @@ htop
 hunspell
 hunspell-en_us
 hyperfine
-hypridle-git
+hypridle
 hyprland
 hyprlock
 hyprpaper
