@@ -72,7 +72,6 @@ ds4drv
 dunst
 e2fsprogs
 easy-rsa
-electron-fiddle-bin
 evcxr_repl
 eww
 expect
@@ -149,6 +148,7 @@ hyprpicker
 hyprshade-rewrite-git
 hyprswitch
 hyprutils
+hyprwayland-scanner
 i3-wm
 i3blocks
 i3lock
@@ -232,7 +232,6 @@ lrzip
 lshw
 lua-sec
 luarocks
-lutris
 lynx
 man-db
 man-pages
@@ -290,6 +289,7 @@ overdue
 paccat
 pacman-contrib
 pamixer
+pandoc-bin
 papirus-icon-theme
 parallel
 parted
@@ -331,7 +331,6 @@ python-idna
 python-internetarchive
 python-mutagen
 python-opentype-sanitizer
-python-pdm
 python-pillow
 python-pip
 python-pipenv
