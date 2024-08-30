@@ -12,7 +12,6 @@ atomicparsley
 atool
 audacity
 audacity-docs
-authy
 automedia-git
 autotrash
 avizo
