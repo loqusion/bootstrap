@@ -64,6 +64,8 @@ fcitx5-mozc-ut
 fcitx5-qt
 fd
 feh
+festival-english
+festival-us
 ffmpegthumbnailer
 figlet
 firefox
@@ -197,6 +199,7 @@ overdue
 paccat
 pacman-contrib
 pamixer
+pandoc-bin
 papirus-icon-theme
 paru
 pavucontrol
@@ -275,6 +278,7 @@ skim
 slurp
 socat
 spdlog
+speech-dispatcher
 spotify-launcher
 starship
 steam
