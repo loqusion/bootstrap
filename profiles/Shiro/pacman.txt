@@ -54,7 +54,6 @@ dmidecode
 dos2unix
 dotbare
 dunst
-element-desktop
 expect
 eza
 fcitx5
@@ -75,7 +74,6 @@ fish
 fisher-git
 fm-bin
 font-manager
-fprintd
 fuzzel
 fwupd
 fzf
@@ -135,7 +133,6 @@ lazygit
 lf
 lib32-nvidia-utils
 libfaketime
-libfprint-2-tod1-xps9300-bin
 libnotify
 libva-nvidia-driver
 libva-utils
