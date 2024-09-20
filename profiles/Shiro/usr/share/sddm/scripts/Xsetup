@@ -1,0 +1,4 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+
+xinput set-prop 'DELL097D:00 04F3:311C Touchpad' 'libinput Natural Scrolling Enabled' 1
