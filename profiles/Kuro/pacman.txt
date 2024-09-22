@@ -13,6 +13,7 @@ atool
 audacity
 audacity-docs
 automedia-git
+autotiling
 autotrash
 avizo
 awesome
@@ -53,6 +54,8 @@ clang
 cliphist
 coolercontrol
 cpupower
+cuda
+cuda-tools
 cython
 deno
 devtools
@@ -60,6 +63,7 @@ dhcpcd
 dhcping
 dictd
 direnv
+discord
 dmidecode
 dnsmasq
 docker
@@ -71,6 +75,7 @@ ds4drv
 dunst
 e2fsprogs
 easy-rsa
+emacs
 evcxr_repl
 eww
 expect
@@ -103,6 +108,7 @@ gamescope
 gammastep
 gedit
 gedit-plugins
+ghcup-hs-bin
 gifcurry
 gifsicle
 gimp
@@ -269,6 +275,7 @@ nvidia-settings
 nwg-look
 nyaa
 obs-studio
+obsidian
 openbsd-netcat
 openrgb
 openssh
@@ -537,6 +544,7 @@ wlrctl
 wofi
 wqy-zenhei
 wtype
+xclip
 xcompmgr
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -547,6 +555,7 @@ xkeysnail
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-server-devel
+xorg-xev
 xorg-xgamma
 xorg-xhost
 xorg-xinit
@@ -562,4 +571,5 @@ zathura-pdf-poppler
 zellij
 zig
 zip
+zoom
 zoxide
