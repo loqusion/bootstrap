@@ -3,7 +3,7 @@
  
  # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
 -#IgnorePkg   =
-+IgnorePkg   = hyprland hyprlang hyprutils hyprcursor hyprpaper hypridle hyprlock hyprpicker
++IgnorePkg   = hyprland hyprlang hyprutils hyprcursor hyprpaper hypridle hyprlock hyprpicker xdg-desktop-portal-hyprland
  #IgnoreGroup =
  
  #NoUpgrade   =
