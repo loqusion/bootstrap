@@ -1,5 +1,4 @@
 bluetooth.service
-coolercontrol-liqctld.service
 coolercontrold.service
 cpupower.service
 docker.service

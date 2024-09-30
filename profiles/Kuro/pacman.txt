@@ -52,7 +52,7 @@ cinny-desktop-bin
 citra-appimage
 clang
 cliphist
-coolercontrol
+coolercontrol-bin
 cpupower
 cuda
 cuda-tools
@@ -153,7 +153,6 @@ hyprpicker
 hyprshade-rewrite-git
 hyprswitch
 hyprutils
-hyprwayland-scanner
 i3-wm
 i3blocks
 i3lock
@@ -172,7 +171,6 @@ jq
 just
 kimageformats5
 kitty
-komikku
 krita
 krita-plugin-gmic
 kseexpr
@@ -280,8 +278,6 @@ openbsd-netcat
 openrgb
 openssh
 openvpn-update-systemd-resolved
-opera
-opera-ffmpeg-codecs
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
