@@ -244,6 +244,7 @@ mdcat
 megasync-headless
 melody
 mesa-utils
+minecraft-launcher
 mkinitcpio-firmware
 mpv
 mpv-mpris
@@ -274,6 +275,7 @@ nwg-look
 nyaa
 obs-studio
 obsidian
+oha
 openbsd-netcat
 openrgb
 openssh
@@ -429,6 +431,7 @@ tmux-plugin-manager
 tokei
 topgrade-bin
 torbrowser-launcher
+traceroute
 transmission-cli
 trash-cli
 tree
