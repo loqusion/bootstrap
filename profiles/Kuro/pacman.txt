@@ -486,6 +486,7 @@ ttf-ms-win11-auto-zh_tw
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
+ttf-pretendard
 ttf-profont-nerd
 ttf-proggyclean-nerd
 ttf-roboto-mono
