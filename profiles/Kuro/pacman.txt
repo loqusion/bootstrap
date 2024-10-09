@@ -5,6 +5,7 @@ alacritty-git
 alacritty-themes
 allsorts-tools
 alsa-utils
+apple-fonts
 arandr
 archlinux-themes-sddm
 asciinema
