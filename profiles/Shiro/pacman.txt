@@ -12,6 +12,7 @@ asciinema
 atomicparsley
 atool
 aurvote
+autotiling
 autotrash
 avizo
 base
@@ -41,6 +42,7 @@ catppuccin-gtk-theme-macchiato
 catppuccin-gtk-theme-mocha
 cava
 ccache
+chromium
 chrony
 clang
 cliphist
@@ -300,6 +302,7 @@ traceroute
 transmission-cli
 trash-cli
 tree
+tree-sitter
 tree-sitter-cli
 ttf-3270-nerd
 ttf-agave-nerd
