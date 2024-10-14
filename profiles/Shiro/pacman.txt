@@ -53,6 +53,7 @@ dictd
 direnv
 discord
 dmidecode
+doctl
 dos2unix
 dotbare
 dunst
@@ -196,6 +197,7 @@ otf-opendyslexic-nerd
 otf-overpass-nerd
 overdue
 paccat
+packer
 pacman-contrib
 pamixer
 pandoc-bin
@@ -291,8 +293,8 @@ systemd-boot-pacman-hook
 systemd-resolvconf
 systemd-ui
 tealdeer
+terraform
 texinfo
-tgpt-bin
 thermald
 tmux
 tmux-plugin-manager
