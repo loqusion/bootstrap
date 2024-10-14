@@ -18,6 +18,7 @@ autotiling
 autotrash
 avizo
 awesome
+aws-cli-v2
 base
 base-devel
 bash-completion
@@ -54,6 +55,7 @@ citra-appimage
 clang
 cliphist
 coolercontrol-bin
+coturn
 cpupower
 cuda
 cuda-tools
@@ -68,6 +70,7 @@ discord
 dmidecode
 dnsmasq
 docker
+doctl
 dolphin-emu
 dos2unix
 dotbare
@@ -423,6 +426,7 @@ systemd-boot-pacman-hook
 systemd-resolvconf
 tcpdump
 tealdeer
+terraform
 texinfo
 tgpt-bin
 thermald
