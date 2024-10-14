@@ -53,6 +53,7 @@ dictd
 direnv
 discord
 dmidecode
+docker
 doctl
 dos2unix
 dotbare
@@ -205,6 +206,7 @@ papirus-icon-theme
 paru
 pavucontrol
 picom
+pigz
 pipewire
 pipewire-alsa
 pipewire-pulse
