@@ -1,6 +1,5 @@
 acpid
 act-bin
-ahoviewer-git
 alacritty-git
 alacritty-themes
 allsorts-tools
@@ -56,6 +55,7 @@ clang
 cliphist
 coolercontrol-bin
 coturn
+cowsay
 cpupower
 cuda
 cuda-tools
@@ -70,6 +70,8 @@ discord
 dmidecode
 dnsmasq
 docker
+docker-buildx
+docker-compose
 doctl
 dolphin-emu
 dos2unix
@@ -295,6 +297,7 @@ otf-opendyslexic-nerd
 otf-overpass-nerd
 overdue
 paccat
+packer
 pacman-contrib
 pamixer
 pandoc-bin
