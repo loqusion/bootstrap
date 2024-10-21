@@ -143,7 +143,6 @@ gstreamer-vaapi
 gtk4-layer-shell
 gucharmap
 gum
-hadolint-bin
 helvum
 hexyl
 htop
@@ -414,6 +413,7 @@ ssh-audit
 sshfs
 starship
 steam
+strace
 swappy
 sway
 sway-audio-idle-inhibit-git
@@ -518,6 +518,7 @@ unace
 unarchiver
 unrar
 unzip
+vault
 vdhcoapp-bin
 via-bin
 virt-manager
