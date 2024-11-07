@@ -4,6 +4,8 @@ alacritty-git
 alacritty-themes
 allsorts-tools
 alsa-utils
+anki-bin
+ansible-core
 apple-fonts
 arandr
 archlinux-themes-sddm
@@ -72,6 +74,7 @@ dnsmasq
 docker
 docker-buildx
 docker-compose
+docker-credential-secretservice
 doctl
 dolphin-emu
 dos2unix
@@ -251,6 +254,7 @@ melody
 mesa-utils
 minecraft-launcher
 mkinitcpio-firmware
+mplayer
 mpv
 mpv-mpris
 mtr
@@ -372,6 +376,7 @@ qt6-wayland
 qt6-webengine
 qt6ct
 quickmedia-git
+radare2
 ranger
 rclone
 reapack
@@ -409,6 +414,7 @@ spotify-launcher
 spotify-tui
 spotifyd
 sq-bin
+sqlx-cli
 ssh-audit
 sshfs
 starship
