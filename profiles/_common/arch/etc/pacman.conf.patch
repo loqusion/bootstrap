@@ -1,12 +1,3 @@
-@@ -22,7 +22,7 @@
- Architecture = auto
- 
- # Pacman won't upgrade packages listed in IgnorePkg and members of IgnoreGroup
--#IgnorePkg   =
-+IgnorePkg   = hyprland hyprlang hyprutils hyprcursor hyprpaper hypridle hyprlock hyprpicker xdg-desktop-portal-hyprland
- #IgnoreGroup =
- 
- #NoUpgrade   =
 @@ -34,7 +34,7 @@
  #NoProgressBar
  CheckSpace
