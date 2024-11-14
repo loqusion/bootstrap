@@ -524,6 +524,7 @@ unace
 unarchiver
 unrar
 unzip
+uv
 vault
 vdhcoapp-bin
 via-bin
@@ -583,6 +584,7 @@ yazi
 yt-dlp
 zathura
 zathura-pdf-poppler
+zed
 zellij
 zig
 zip
