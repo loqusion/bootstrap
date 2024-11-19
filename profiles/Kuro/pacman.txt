@@ -440,6 +440,7 @@ texinfo
 tgpt-bin
 thermald
 thunderbird
+tinyxxd
 tmux
 tmux-plugin-manager
 tokei
