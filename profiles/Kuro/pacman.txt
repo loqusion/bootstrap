@@ -146,6 +146,7 @@ gstreamer-vaapi
 gtk4-layer-shell
 gucharmap
 gum
+helix
 helvum
 hexyl
 htop
@@ -182,6 +183,7 @@ kitty
 krita
 krita-plugin-gmic
 kseexpr
+kubeadm
 lazydocker-bin
 lazygit
 lf
@@ -254,6 +256,7 @@ melody
 mesa-utils
 minecraft-launcher
 mkinitcpio-firmware
+mold
 mplayer
 mpv
 mpv-mpris
