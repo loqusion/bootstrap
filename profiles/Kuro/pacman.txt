@@ -410,6 +410,7 @@ showmethekey
 skim
 slides-bin
 slurp
+smartmontools
 socat
 sockstat
 spdlog

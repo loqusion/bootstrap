@@ -12,6 +12,7 @@ nvidia-resume.service
 nvidia-suspend.service
 preload.service
 sddm.service
+smartd.service
 sshd.service
 systemd-network-generator.service
 systemd-networkd-wait-online.service

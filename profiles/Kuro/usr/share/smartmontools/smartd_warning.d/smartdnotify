@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+IFS=$'\n'
+for LINE in $(w -hs); do
+    grep -q 'systemd.*--user' <(echo "$LINE") && continue
+    # shellcheck disable=SC2086
+    USER=$(echo $LINE | awk '{print $1}')
+    USER_ID=$(id -u "$USER")
+    sudo -u "$USER" \
+        DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$USER_ID/bus" \
+        notify-send \
+        "S.M.A.R.T Error${SMARTD_FAILTYPE:+" ($SMARTD_FAILTYPE)"}" \
+        "${SMARTD_MESSAGE:-An unknown error occurred. Check the output of \`sudo smartctl -H /dev/device\` for more information.}" \
+        --icon=dialog-warning -u critical
+done
