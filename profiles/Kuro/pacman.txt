@@ -299,6 +299,7 @@ otf-droid-nerd
 otf-firamono-nerd
 otf-hasklig-nerd
 otf-hermit-nerd
+otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
 overdue
