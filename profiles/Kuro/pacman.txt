@@ -405,6 +405,7 @@ sccache
 sd
 sddm
 sddm-conf-git
+sddm-sugar-dark
 sddm-theme-tokyo-night
 seahorse
 showmethekey
