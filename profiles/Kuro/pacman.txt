@@ -118,10 +118,12 @@ gammastep
 gedit
 gedit-plugins
 ghcup-hs-bin
+ghostty
 gifcurry
 gifsicle
 gimp
 git
+git-absorb
 git-delta
 git-lfs
 github-cli
