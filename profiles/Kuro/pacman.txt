@@ -316,6 +316,7 @@ parted
 paru
 pass
 pavucontrol
+pax-utils
 pcsx2
 picom
 pigz
@@ -410,6 +411,7 @@ sddm-conf-git
 sddm-sugar-dark
 sddm-theme-tokyo-night
 seahorse
+shaderc
 showmethekey
 skim
 slides-bin
