@@ -478,7 +478,6 @@ ttf-fantasque-nerd
 ttf-fantasque-sans-mono
 ttf-firacode-nerd
 ttf-go-nerd
-ttf-google-fonts-typewolf
 ttf-hack-nerd
 ttf-heavydata-nerd
 ttf-iawriter-nerd
