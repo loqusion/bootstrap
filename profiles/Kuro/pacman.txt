@@ -109,6 +109,7 @@ fm-bin
 fmt
 fnlfmt
 font-manager
+fontforge
 fuzzel
 fwupd
 fzf
@@ -185,7 +186,6 @@ kitty
 krita
 krita-plugin-gmic
 kseexpr
-kubeadm
 lazydocker-bin
 lazygit
 lf
@@ -478,6 +478,7 @@ ttf-fantasque-nerd
 ttf-fantasque-sans-mono
 ttf-firacode-nerd
 ttf-go-nerd
+ttf-google-fonts-git
 ttf-hack-nerd
 ttf-heavydata-nerd
 ttf-iawriter-nerd
