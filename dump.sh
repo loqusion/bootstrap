@@ -72,12 +72,19 @@ _dump_services() {
 
 }
 
+_dump_groups() {
+	local DEST_DIR="$1"
+	groups >"$DEST_DIR/groups.txt"
+	git_add "$DEST_DIR/groups.txt"
+}
+
 dump_arch() {
 	local HOSTNAME
 	HOSTNAME=$(cat /etc/hostname)
 	local DEST_DIR="$DIR/profiles/$HOSTNAME"
 
 	_dump_services "$DEST_DIR"
+	_dump_groups "$DEST_DIR"
 
 	_dump_pacman "$DEST_DIR"
 	_dump_pipx "$DEST_DIR"
@@ -96,6 +103,9 @@ dump_macos() {
 	local HOSTNAME
 	HOSTNAME=$(hostname -s)
 	local DEST_DIR="$DIR/profiles/$HOSTNAME"
+
+	_dump_groups "$DEST_DIR"
+
 	_dump_brew "$DEST_DIR"
 	_dump_pipx "$DEST_DIR"
 }
