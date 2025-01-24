@@ -1,1 +1,1 @@
-sqruff 0.24.2
+sqruff 0.24.3
