@@ -318,6 +318,7 @@ pass
 pavucontrol
 pax-utils
 pcsx2
+perl-image-exiftool
 picom
 pigz
 pipewire-alsa
