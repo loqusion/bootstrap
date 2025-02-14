@@ -38,6 +38,8 @@ brightnessctl
 btop
 btrfs-progs
 bun-bin
+cargo-deny
+cargo-msrv
 cargo-nextest
 cargo-update
 cargo-watch
