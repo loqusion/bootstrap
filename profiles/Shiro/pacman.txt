@@ -54,6 +54,7 @@ direnv
 discord
 dmidecode
 docker
+docker-buildx
 docker-compose
 doctl
 dos2unix
