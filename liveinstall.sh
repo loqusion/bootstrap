@@ -186,8 +186,8 @@ fi
 echo
 
 sgdisk "$TARGET_DISK" -og
-sgdisk "$TARGET_DISK" -n=1:0:+512M -t=1:ef00 -c=1:"EFI system partition"
-sgdisk "$TARGET_DISK" -n=2:0:+4096M -t=2:8200 -c=2:"Linux swap"
+sgdisk "$TARGET_DISK" -n=1:0:+512M -t=1:ef00 -c=1:"EFI system partition" -I
+sgdisk "$TARGET_DISK" -n=2:0:+4096M -t=2:8200 -c=2:"Linux swap" -I
 sgdisk "$TARGET_DISK" -n=3:0:0 -t=3:830 -c=3:"Linux filesystem"
 sgdisk "$TARGET_DISK" -p
 
