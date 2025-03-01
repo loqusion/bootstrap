@@ -150,6 +150,8 @@ gstreamer-vaapi
 gtk4-layer-shell
 gucharmap
 gum
+handbrake
+handbrake-cli
 helix
 helvum
 hexyl
@@ -254,7 +256,7 @@ man-pages
 mangal-bin
 mangohud
 mdcat
-megasync-headless
+megasync-bin
 melody
 mesa-utils
 minecraft-launcher
@@ -321,6 +323,7 @@ pass
 pavucontrol
 pax-utils
 pcsx2
+perf
 perl-image-exiftool
 picom
 pigz
