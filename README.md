@@ -1,4 +1,4 @@
-# 🚀 Bootstrap
+# Bootstrap
 
 Keeps track of installed packages, enabled systemd services, _selected_ `/etc`
 configuration files (mostly diffs), bootloader entries, and `~/.config` files on
