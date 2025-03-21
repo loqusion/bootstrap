@@ -39,6 +39,7 @@ btop
 btrfs-progs
 bun-bin
 cargo-deny
+cargo-flamegraph
 cargo-msrv
 cargo-nextest
 cargo-update
@@ -98,6 +99,7 @@ fcitx5-mozc-ut
 fcitx5-qt
 fd
 feh
+festival
 ffmpegthumbnailer
 figlet
 file-roller
@@ -339,6 +341,7 @@ poppler
 power-profiles-daemon
 preload
 proton-ge-custom-bin
+protontricks
 protonvpn-cli
 python-aiodns
 python-aiohttp
@@ -425,6 +428,7 @@ smartmontools
 socat
 sockstat
 spdlog
+speech-dispatcher
 spotify-launcher
 spotify-tui
 spotifyd
@@ -542,6 +546,7 @@ unrar
 unzip
 uv
 uwsm
+valgrind
 vault
 vdhcoapp-bin
 via-bin
@@ -596,6 +601,7 @@ xorg-xlsclients
 xorg-xwayland
 xplr
 xss-lock
+yad
 yarn
 yazi
 yt-dlp
