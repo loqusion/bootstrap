@@ -40,6 +40,7 @@ btrfs-progs
 bun-bin
 cargo-deny
 cargo-flamegraph
+cargo-llvm-cov
 cargo-msrv
 cargo-nextest
 cargo-update
@@ -141,6 +142,7 @@ gobject-introspection
 goverlay
 gparted
 grc
+grcov
 greetd
 grim
 grimblast-git
@@ -283,7 +285,7 @@ nftables
 nm-connection-editor
 nmap
 nnn-nerd
-nodejs
+nodejs-lts-iron
 noto-fonts
 noto-fonts-cjk
 npm
