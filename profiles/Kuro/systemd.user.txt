@@ -1,5 +1,4 @@
 blackd.service
-dura.service
 gamemoded.service
 spotifyd.service
 syncthing.service

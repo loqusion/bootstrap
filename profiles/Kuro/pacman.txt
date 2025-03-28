@@ -1,7 +1,5 @@
 acpid
 act-bin
-alacritty-git
-alacritty-themes
 allsorts-tools
 alsa-utils
 anki-bin
@@ -201,7 +199,7 @@ lib32-mangohud
 lib32-nvidia-utils
 libfaketime
 libgit2-glib
-libnotify-git
+libnotify
 libray
 libretro-beetle-pce
 libretro-beetle-pce-fast
@@ -250,6 +248,7 @@ linux-firmware
 linux-zen
 linux-zen-headers
 lldb
+loupe
 lrzip
 lshw
 lua-sec
