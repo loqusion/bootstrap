@@ -343,7 +343,6 @@ power-profiles-daemon
 preload
 proton-ge-custom-bin
 protontricks
-protonvpn-cli
 python-aiodns
 python-aiohttp
 python-argcomplete
@@ -439,6 +438,7 @@ ssh-audit
 sshfs
 starship
 steam
+steamtinkerlaunch-git
 strace
 swappy
 sway
@@ -457,7 +457,6 @@ tcpdump
 tealdeer
 terraform
 texinfo
-tgpt-bin
 thermald
 thunderbird
 tinyxxd
