@@ -36,6 +36,7 @@ brightnessctl
 btop
 btrfs-progs
 bun-bin
+calibre
 cargo-deny
 cargo-flamegraph
 cargo-llvm-cov
@@ -152,6 +153,7 @@ gstreamer-vaapi
 gtk4-layer-shell
 gucharmap
 gum
+gzdoom
 handbrake
 handbrake-cli
 helix
@@ -383,6 +385,7 @@ python-trio
 python-ujson
 qbittorrent
 qpwgraph
+qsynth
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-styleplugins
@@ -611,5 +614,6 @@ zed
 zellij
 zig
 zip
+zmusic
 zoom
 zoxide
