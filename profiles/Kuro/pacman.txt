@@ -17,7 +17,6 @@ autotiling
 autotrash
 avizo
 awesome
-aws-cli-v2
 base
 base-devel
 bash-completion
