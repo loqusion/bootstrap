@@ -4,5 +4,4 @@ spotifyd.service
 syncthing.service
 wireplumber.service
 xdg-user-dirs-update.service
-autotrash.timer
 hyprshade.timer
