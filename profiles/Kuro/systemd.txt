@@ -1,6 +1,5 @@
 bluetooth.service
 coolercontrold.service
-cpupower.service
 docker.service
 firewalld.service
 irqbalance.service
@@ -10,6 +9,7 @@ lm_sensors.service
 nvidia-hibernate.service
 nvidia-resume.service
 nvidia-suspend.service
+power-profiles-daemon.service
 preload.service
 sddm.service
 smartd.service
