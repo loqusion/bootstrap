@@ -56,6 +56,13 @@ install_xdg() {
 		done
 }
 
+install_dconf() {
+	local SRC_DIR="$DIR/profiles/$1"
+	if [ -e "$SRC_DIR/dconf-settings.ini" ]; then
+		dconf load / <"$SRC_DIR/dconf-settings.ini"
+	fi
+}
+
 postinstall() {
 	SRC_DIR="$DIR/profiles/$1"
 	[ -x "$SRC_DIR/postinstall.sh" ] && "$SRC_DIR/postinstall.sh"
@@ -108,6 +115,9 @@ done <"$PROFILE_DIR/systemd.txt"
 while read -r service; do
 	systemctl --user enable --now "$service"
 done <"$PROFILE_DIR/systemd.user.txt"
+
+# Restore dconf settings
+install_dconf "$HOSTNAME"
 
 postinstall "_common/arch"
 postinstall "$HOSTNAME"

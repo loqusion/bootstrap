@@ -78,6 +78,13 @@ _dump_groups() {
 	git_add "$DEST_DIR/groups.txt"
 }
 
+_dump_dconf() {
+	local DEST_DIR="$1"
+	if command -v dconf &>/dev/null; then
+		dconf dump / >"$DEST_DIR/dconf-settings.ini"
+	fi
+}
+
 dump_arch() {
 	local HOSTNAME
 	HOSTNAME=$(cat /etc/hostname)
@@ -85,6 +92,7 @@ dump_arch() {
 
 	_dump_services "$DEST_DIR"
 	_dump_groups "$DEST_DIR"
+	_dump_dconf "$DEST_DIR"
 
 	_dump_pacman "$DEST_DIR"
 	_dump_pipx "$DEST_DIR"
