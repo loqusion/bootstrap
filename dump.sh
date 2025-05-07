@@ -82,6 +82,7 @@ _dump_dconf() {
 	local DEST_DIR="$1"
 	if command -v dconf &>/dev/null; then
 		dconf dump / >"$DEST_DIR/dconf-settings.ini"
+		git_add "$DEST_DIR/dconf-settings.ini"
 	fi
 }
 
