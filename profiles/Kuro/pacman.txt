@@ -164,6 +164,7 @@ gnome-user-share
 gnome-weather
 gnuplot
 gobject-introspection
+godot
 goverlay
 gparted
 grc
