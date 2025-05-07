@@ -140,7 +140,6 @@ gnome-characters
 gnome-clocks
 gnome-color-manager
 gnome-connections
-gnome-console
 gnome-contacts
 gnome-control-center
 gnome-disk-utility
@@ -314,6 +313,7 @@ mtr
 namcap
 nasm
 nautilus
+nautilus-python
 ncdu
 neofetch
 neovide
