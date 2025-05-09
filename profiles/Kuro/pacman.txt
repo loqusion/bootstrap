@@ -215,6 +215,7 @@ i3blocks
 i3lock
 i3status
 ibus-mozc
+icu69-bin
 imagemagick
 inetutils
 informant
@@ -605,6 +606,7 @@ virt-manager
 virtualbox
 virtualbox-guest-iso
 virtualbox-host-dkms
+visual-studio-code-bin
 vkbasalt-git
 vkd3d
 vlc
