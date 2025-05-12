@@ -131,6 +131,7 @@ git-delta
 git-lfs
 github-cli
 gitoxide
+glab
 glow
 gnome-backgrounds
 gnome-browser-connector
@@ -149,6 +150,7 @@ gnome-logs
 gnome-maps
 gnome-menus
 gnome-music
+gnome-power-manager
 gnome-remote-desktop
 gnome-session
 gnome-settings-daemon
