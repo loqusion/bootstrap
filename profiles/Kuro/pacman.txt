@@ -165,6 +165,7 @@ gnome-user-docs
 gnome-user-share
 gnome-weather
 gnuplot
+go-yq
 gobject-introspection
 godot
 goverlay
