@@ -95,6 +95,7 @@ evince
 eww
 expect
 eza
+famistudio
 fd
 feh
 festival
@@ -156,7 +157,6 @@ gnome-session
 gnome-settings-daemon
 gnome-shell
 gnome-shell-extensions
-gnome-software
 gnome-system-monitor
 gnome-text-editor
 gnome-tour
