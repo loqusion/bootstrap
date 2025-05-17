@@ -78,10 +78,15 @@ _dump_groups() {
 	git_add "$DEST_DIR/groups.txt"
 }
 
+dconf_filter() {
+	# org/gnome/evolution-data-server/calendar: reminders-past leaks calendar info
+	grep -v '^reminders-past='
+}
+
 _dump_dconf() {
 	local DEST_DIR="$1"
 	if command -v dconf &>/dev/null; then
-		dconf dump / >"$DEST_DIR/dconf-settings.ini"
+		dconf dump / | dconf_filter >"$DEST_DIR/dconf-settings.ini"
 		git_add "$DEST_DIR/dconf-settings.ini"
 	fi
 }
