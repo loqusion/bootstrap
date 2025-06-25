@@ -246,6 +246,7 @@ libfaketime
 libgit2-glib
 libnotify
 libray
+libreoffice-still
 libretro-beetle-pce
 libretro-beetle-pce-fast
 libretro-beetle-psx
@@ -509,6 +510,7 @@ systemd-resolvconf
 tcpdump
 tealdeer
 tecla
+telegram-desktop
 terraform
 texinfo
 thermald
