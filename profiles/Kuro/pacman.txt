@@ -62,8 +62,6 @@ coolercontrol-bin
 coturn
 cowsay
 cpupower
-cuda
-cuda-tools
 cython
 decibels
 deno
