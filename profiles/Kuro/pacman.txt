@@ -324,6 +324,7 @@ neovide
 neovim
 neovim-symlinks
 net-tools
+network-manager-applet
 networkmanager
 networkmanager-openvpn
 nftables
@@ -389,6 +390,7 @@ poppler
 power-profiles-daemon
 preload
 proton-ge-custom-bin
+proton-vpn-gtk-app
 protontricks
 python-aiodns
 python-aiohttp
