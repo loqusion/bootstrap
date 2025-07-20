@@ -4,6 +4,9 @@ docker.service
 firewalld.service
 iwd.service
 laptop-mode.service
+nvidia-hibernate.service
+nvidia-resume.service
+nvidia-suspend.service
 sddm.service
 sshd.service
 systemd-network-generator.service
