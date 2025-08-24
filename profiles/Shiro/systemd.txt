@@ -2,12 +2,14 @@ bluetooth.service
 chronyd.service
 docker.service
 firewalld.service
-iwd.service
+gdm.service
 laptop-mode.service
+NetworkManager-dispatcher.service
+NetworkManager-wait-online.service
+NetworkManager.service
 nvidia-hibernate.service
 nvidia-resume.service
 nvidia-suspend.service
-sddm.service
 sshd.service
 systemd-network-generator.service
 systemd-networkd-wait-online.service
