@@ -68,6 +68,7 @@ electron34
 epiphany
 evince
 expect
+expressvpn
 eza
 fcitx5
 fcitx5-configtool
@@ -283,6 +284,7 @@ power-profiles-daemon
 powertop
 preload
 prettier
+proton-vpn-gtk-app
 pv
 python-aiodns
 python-aiohttp
@@ -342,7 +344,6 @@ sccache
 sd
 sddm
 sddm-conf-git
-sddm-theme-catppuccin-git
 sddm-theme-tokyo-night
 showmethekey
 simple-scan
