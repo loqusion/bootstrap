@@ -85,6 +85,7 @@ downgrade
 ds4drv
 dunst
 e2fsprogs
+earlyoom
 easy-rsa
 emacs
 epiphany

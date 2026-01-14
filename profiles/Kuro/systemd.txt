@@ -1,6 +1,7 @@
 bluetooth.service
 coolercontrold.service
 docker.service
+earlyoom.service
 firewalld.service
 gdm.service
 irqbalance.service
