@@ -3,5 +3,5 @@ gamemoded.service
 spotifyd.service
 syncthing.service
 wireplumber.service
-xdg-user-dirs-update.service
+xdg-user-dirs.service
 hyprshade.timer

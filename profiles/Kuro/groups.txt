@@ -1,1 +1,1 @@
-loqusion vboxusers nix-users libvirt docker disk wheel
+loqusion vboxusers wireshark nix-users libvirt docker disk wheel

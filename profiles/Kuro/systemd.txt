@@ -15,6 +15,7 @@ nvidia-resume.service
 nvidia-suspend.service
 power-profiles-daemon.service
 preload.service
+proton.VPN.service
 smartd.service
 sshd.service
 systemd-network-generator.service

@@ -22,7 +22,6 @@ base
 base-devel
 bash-completion
 bat
-bazel
 bc
 bemoji
 betterdiscordctl
@@ -84,6 +83,7 @@ dotbare
 downgrade
 ds4drv
 dunst
+dynamips
 e2fsprogs
 earlyoom
 easy-rsa
@@ -111,6 +111,7 @@ fmt
 fnlfmt
 font-manager
 fontforge
+fortune-mod
 fuzzel
 fwupd
 fzf
@@ -163,6 +164,8 @@ gnome-tweaks
 gnome-user-docs
 gnome-user-share
 gnome-weather
+gns3-gui
+gns3-server
 gnuplot
 go-yq
 gobject-introspection
@@ -332,13 +335,13 @@ nftables
 nm-connection-editor
 nmap
 nnn-nerd
-nodejs-lts-iron
+nodejs-lts-jod
 noto-fonts
 noto-fonts-cjk
 npm
 nss-mdns
 nushell
-nvidia-dkms
+nvidia-open-dkms
 nvidia-settings
 nwg-look
 nyaa
@@ -392,6 +395,7 @@ power-profiles-daemon
 preload
 proton-ge-custom-bin
 proton-vpn-gtk-app
+protonhax
 protontricks
 python-aiodns
 python-aiohttp
@@ -616,6 +620,7 @@ visual-studio-code-bin
 vkbasalt-git
 vkd3d
 vlc
+vlc-plugin-ffmpeg
 vulkan-tools
 w3m
 waifu2x-ncnn-vulkan
@@ -633,6 +638,7 @@ winetricks
 wireguard-tools
 wireless_tools
 wireplumber
+wireshark-qt
 wl-clip-persist-git
 wl-clipboard
 wlogout
