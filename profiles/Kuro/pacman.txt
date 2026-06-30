@@ -31,6 +31,7 @@ blueberry-wayland
 bluez
 bore
 bpython
+brave-bin
 brightnessctl
 btop
 btrfs-progs
@@ -61,6 +62,8 @@ coolercontrol-bin
 coturn
 cowsay
 cpupower
+cups
+cups-pdf
 cython
 decibels
 deno
@@ -112,6 +115,7 @@ fnlfmt
 font-manager
 fontforge
 fortune-mod
+foundry-bin
 fuzzel
 fwupd
 fzf
@@ -129,6 +133,7 @@ gimp
 git
 git-absorb
 git-delta
+git-filter-repo
 git-lfs
 github-cli
 gitoxide
@@ -164,8 +169,6 @@ gnome-tweaks
 gnome-user-docs
 gnome-user-share
 gnome-weather
-gns3-gui
-gns3-server
 gnuplot
 go-yq
 gobject-introspection
@@ -180,16 +183,15 @@ grim
 grimblast-git
 gst-libav
 gst-plugin-gtk
+gst-plugin-va
 gst-plugins-bad
 gst-plugins-ugly
-gstreamer-vaapi
 gtk4-layer-shell
 gucharmap
 gum
 gvfs-afc
 gvfs-dnssd
 gvfs-goa
-gvfs-google
 gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
@@ -199,20 +201,20 @@ gvfs-wsdd
 gzdoom
 handbrake
 handbrake-cli
+hardhat
 helix
 helvum
 hexyl
 htop
 hunspell
 hunspell-en_us
-hydrus
 hyperfine
 hypridle
 hyprland
 hyprlock
 hyprpaper
 hyprpicker
-hyprshade-rewrite-git
+hyprshade
 hyprswitch
 hyprutils
 i3-wm
@@ -223,11 +225,10 @@ ibus-mozc
 icu69-bin
 imagemagick
 inetutils
-informant
 innoextract
 intel-ucode
 inxi
-iptables-nft
+iptables
 ipython
 irqbalance
 iwd
@@ -238,6 +239,7 @@ kitty
 krita
 krita-plugin-gmic
 kseexpr
+ladybird
 lazydocker-bin
 lazygit
 lf
@@ -453,6 +455,7 @@ rclone
 reapack
 reaper
 rebuild-detector
+recoll
 reflector
 retroarch
 retroarch-assets-glui
@@ -485,6 +488,7 @@ smartmontools
 snapshot
 socat
 sockstat
+solidity-bin
 spdlog
 speech-dispatcher
 spotify-launcher
@@ -518,7 +522,7 @@ tecla
 telegram-desktop
 terraform
 texinfo
-thermald
+texlive-bin
 thunderbird
 tinyxxd
 tmux
@@ -599,6 +603,7 @@ ttf-ubuntu-nerd
 ttf-victor-mono
 ttf-victor-mono-nerd
 typst
+ubridge
 udiskie
 udisks2
 ueberzugpp
@@ -680,4 +685,5 @@ zig
 zip
 zmusic
 zoom
+zotero
 zoxide
